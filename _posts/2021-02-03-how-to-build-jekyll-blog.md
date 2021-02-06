@@ -56,10 +56,25 @@ Github Pages는 HTML, CSS, JS만으로도 구축할 수 있지만, `Markdown`을
 
 ## Jekyll 테마 사이트 목록
 
+Jekyll은 오픈소스 테마가 굉장히 많이 공유되고 있다. 너무 많아서 고르기가 힘들 정도인데, 다음의 사이트들을 하나씩 살펴보면서 마음에 드는 테마를 찾아보면 좋을 것 같다.
+
 1. [https://github.com/topics/jekyll-theme](https://github.com/topics/jekyll-theme)
-   - github에서 공유된 jekyll 테마 목록들이다. 다른 사이트들에 비해 가장 무난한 사이트인데, 그 이유는 필터링을 제공하기 때문이다. Star 순, Fork 순, 등록일자 순 등 다양한 기준으로 필터를 제공한다. 
-2. 
+    ![jekyll theme page(1)](/assets/images/2021-02-03-how-to-build-jekyll-blog/jekyll_theme_page(1).png)
+    - `Github`에 사용자들이 공유한 Jekyll Theme를 볼 수 있는 페이지이다. 
+    - 필터링 기능을 제공하기 때문에 사용이 편리하다는 장점이 있다.
+2. [https://jekyllthemes.io/free](https://jekyllthemes.io/free)
+    ![jekyll theme page(2)](/assets/images/2021-02-03-how-to-build-jekyll-blog/jekyll_theme_page(2).png)
+    ![jekyll theme page(2-1)](/assets/images/2021-02-03-how-to-build-jekyll-blog/jekyll_theme_page(2-1).png)
+    - 무료/유료 테마를 다운받을 수 있는 사이트이다. 
+    - 원하는 목적에 맞는 테마 목록들을 제공하고 있다는 장점이 있다.
 3. [http://jekyllthemes.org/](http://jekyllthemes.org/)
+    ![jekyll theme page(3)](/assets/images/2021-02-03-how-to-build-jekyll-blog/jekyll_theme_page(3).png)
+    - 심플한 구성이 특징인 사이트이다. 
+    - 필터링이나 카테고리 기능을 제공하지 않기 때문에 창고형 매장처럼 원하는 테마를 하나씩 찾아보아야 한다.
+4. [hhttp://themes.jekyllrc.org/](hhttp://themes.jekyllrc.org/)
+    ![jekyll theme page(4)](/assets/images/2021-02-03-how-to-build-jekyll-blog/jekyll_theme_page(4).png)
+    - `셔플` 기능이 특징인 사이트이다. 랜덤으로 돌리다가 원하는 테마를 찾는 재미가 쏠쏠하다.
+    - 페이지를 따로 넘기지 않고 한 페이지 안에 모두 테마를 볼 수 있어서 편하다는 장점이 있다.
 
 
 
