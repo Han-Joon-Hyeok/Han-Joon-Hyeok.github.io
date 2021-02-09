@@ -16,6 +16,32 @@ tags: [Data Structure]
 
 ## 나의 풀이
 
+케이스를 구분해서 접근해보았다.
+
+1. 연결 리스트 길이가 1인 경우
+   - 원소가 1개 존재하므로 `head = tail`이 된다. 
+   - 따라서 `self.head.data`를 반환한다.
+   - 그리고 `next`는 처음부터 존재하지 않았으므로, `head`와 `tail`만 `None`으로 바꿔준다.
+2. 연결 리스트 길이가 2 이상인 경우
+   1.  맨 앞의 원소인 경우
+       - `curr`는 `self.head`이다. 
+       - 따라서 `self.head.data`를 반환한다.
+       - `self.head`는 그 다음 원소인 `curr.next`가 된다.
+       - `curr.next`는 `None`가 된다.
+   2. `2 ~ n`번째 원소인 경우
+       - 함수를 최소한으로 사용하기 위해서 n번째가 아닌 n-1번째 원소를 구한다.
+       - `prev = self.getAt(pos-1)`
+      1. 마지막 원소인 경우
+         - `curr = prev.next`
+         - `self.tail`은 n-1번째 원소인 `prev`가 되어야 한다. `self.tail = prev`
+         - 그리고 `prev`가 마지막 원소가 되므로 `prev.next = None`이다.
+      2.  `2 ~ n-1` 번째 원소인 경우
+        - `curr = self.getAt(pos)`
+        - 이전 원소의 `next`와 현재 원소의 `next`만 변경해주면 된다.
+        - `prev.next = curr.next`
+
+다소 복잡하게 접근했지만, 결국 풀긴 풀었다.
+
 ``` python
 def popAt(self, pos):
     if pos < 1 or pos > self.nodeCount:
@@ -67,3 +93,16 @@ def popAt(self, pos):
         self.nodeCount -= 1
         return curr.data
 ```
+
+### 1. 첫 번째 원소인 경우
+
+- 반환하는 값은 `curr = self.head`의 `data`이다.
+- 마찬가지로 `self.head`만 다음 원소인 `curr.next`로 지정한다.
+- 만약 길이가 1인 연결 리스트인 경우에는, `self.head = self.tail` 상태가 된다.
+
+### 2. 두 번째 이후 원소인 경우
+
+- 맨 마지막 원소를 찾기 위해서는 `pos`로 주어진 원소를 찾으면 이전 원소에 대한 정보를 얻을 수 없다.
+- 따라서 n-1번째를 구하기 위해 `prev = getAt(pos-1)`로 설정한다. 
+- 그러면 마지막 원소도 자연스럽게 `curr = prev.next`로 구할 수 있다.
+- 만약 마지막 원소일 경우에는 `self.tail`이 n-1번째인 `prev`로 설정한다.
