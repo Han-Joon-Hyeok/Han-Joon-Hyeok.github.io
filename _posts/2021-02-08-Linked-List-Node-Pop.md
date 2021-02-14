@@ -5,6 +5,8 @@ categories: [Data Structure]
 tags: [Data Structure]
 ---
 
+> [프로그래머스 - 어서와! 자료구조와 알고리즘은 처음이지?](https://programmers.co.kr/learn/courses/57)를 공부하며 정리한 내용입니다.
+
 # 8강. 연결 리스트 노드 삭제하기
 
 # 연습문제
@@ -97,12 +99,12 @@ def popAt(self, pos):
 ### 1. 첫 번째 원소인 경우
 
 - 반환하는 값은 `curr = self.head`의 `data`이다.
-- 마찬가지로 `self.head`만 다음 원소인 `curr.next`로 지정한다.
-- 만약 길이가 1인 연결 리스트인 경우에는, `self.head = self.tail` 상태가 된다.
+- `self.head`만 다음 원소인 `curr.next`로 지정한다.
+- 만약 길이가 1인 연결 리스트인 경우에 남은 노드를 삭제하면 `head`와 `tail`이 같아진다.
 
 ### 2. 두 번째 이후 원소인 경우
 
-- 맨 마지막 원소를 찾기 위해서는 `pos`로 주어진 원소를 찾으면 이전 원소에 대한 정보를 얻을 수 없다.
-- 따라서 n-1번째를 구하기 위해 `prev = getAt(pos-1)`로 설정한다. 
+- 맨 마지막 원소를 `pos`로 찾으면 이전 원소(`pos-1`)에 대한 정보를 얻을 수 없다.
+- 따라서 n-1번째를 구하기 위해 `prev = getAt(pos-1)`로 `n-1`번째 원소를 구한다.
 - 그러면 마지막 원소도 자연스럽게 `curr = prev.next`로 구할 수 있다.
-- 만약 마지막 원소일 경우에는 `self.tail`이 n-1번째인 `prev`로 설정한다.
+- 만약 마지막 원소일 경우에는 `tail`은 기존에 n-1번째인 `prev`가 된다.
