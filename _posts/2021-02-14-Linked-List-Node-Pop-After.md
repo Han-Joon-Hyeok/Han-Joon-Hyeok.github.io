@@ -1,6 +1,6 @@
 ---
 title: 자료구조 - dummy head를 가지는 연결 리스트(Linked Lists) 노드 삭제
-date: 2021-02-014 14:54:00 +0900
+date: 2021-02-14 14:54:00 +0900
 categories: [Data Structure]
 tags: [Data Structure]
 ---
