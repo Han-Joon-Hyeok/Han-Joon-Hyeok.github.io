@@ -11,19 +11,19 @@ tags: [Data Structure]
 
 양방향(이중) 연결 리스트는 노드끼리 서로 연결되어 있는 리스트를 의미한다. 
 
-![Doubly Linked Lists(1)](../assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list(1).jpg)
+![Doubly Linked Lists(1)](/assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list(1).jpg)
 
 일반적인 연결 리스트는 한 방향으로(head에서 tail로)만 진행된다면, 양방향 연결 리스트는 앞, 뒤로도 진행이 가능하다.
 
 그래서 노드를 생성할 때, `prev`에 대한 정보를 함께 포함하게 된다.
 
-![Doubly Linked Lists(2)](../assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list(2).jpg)
+![Doubly Linked Lists(2)](/assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list(2).jpg)
 
 그리고 dummy 노드를 리스트 처음과 끝에 모두 두어야 데이터를 담고 있는 노드들은 모두 같은 형태를 띄고, 다양한 기능을 구현하는데 있어 편리해진다는 장점이 생긴다.
 
-![Doubly Linked Lists(3)](../assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list(3).jpg)
+![Doubly Linked Lists(3)](/assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list(3).jpg)
 
-![Doubly Linked Lists(4)](../assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list(4).jpg)
+![Doubly Linked Lists(4)](/assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list(4).jpg)
 
 빨간색 글자로 표시된 부분이 기존 연결 리스트의 생성자에서 추가된 부분이다.
 
@@ -43,7 +43,7 @@ def traverse(self):
 
 이처럼 조건이 바뀐 이유는 dummy 노드가 tail에도 추가되었기 때문이다. 만약 `curr.next` 조건을 그대로 사용한다면, 아무 값도 들어있지 않은 tail 노드가 불필요한 순회 대상이 되기 때문이다. 그림으로 표현하면 다음과 같다.
 
-![Doubly Linked Lists Traverse](../assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list-traverse.png)
+![Doubly Linked Lists Traverse](/assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list-traverse.png)
 
 ## 연습문제 1. 양방향 연결 리스트 역방향 순회
 
@@ -89,7 +89,7 @@ def reverse(self):
         return True
 ```
 
-![Doubly Linked Lists insertAfter](../assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list-insertAfter.png)
+![Doubly Linked Lists insertAfter](/assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list-insertAfter.png)
 
 위의 그림처럼 next와 prev가 무엇인지 파악하고, 노드를 서로 이어주면 간단하게 해결할 수 있다.
 
@@ -131,7 +131,7 @@ def popAfter(self, prev):
         return self.popAfter(self.getAt(pos-1))
 ```
 
-![Doubly Linked Lists popAfterBefore](../assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list-popAfterBefore.png)
+![Doubly Linked Lists popAfterBefore](/assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list-popAfterBefore.png)
 
 간단하게 그림으로 나타내면 위의 그림과 같다.
 
@@ -172,7 +172,7 @@ def concat(self, L):
 첫째는 빈 연결 리스트가 아닌 경우, 둘째는 빈 연결 리스트인 경우이다.
 다음의 그림을 이해한다면 어렵지 않게 해결할 수 있다.
 
-![Doubly Linked Lists concat(1)](../assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list-concat(1).png)
+![Doubly Linked Lists concat(1)](/assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list-concat(1).png)
 
-![Doubly Linked Lists concat(2)](../assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list-concat(2).png)
+![Doubly Linked Lists concat(2)](/assets/images/2021-02-21-Doubly-Linked-List/doubly-linked-list-concat(2).png)
 
