@@ -16,7 +16,7 @@ tags: [html]
 
 HTTP는 웹 클라이언트가 웹 서버에 어떻게 요청하고, 반대로 웹 서버는 어떻게 웹 클라이언트에게 전송하는 지를 정의하고 있는 프로토콜(규약, 약속)이다.
 
-![Client and Server Model](images/http_client_server.png)
+![Client and Server Model](/assets/images/2021-01-17-Comparison-of-GET-POST/http_client_server.png)
 
 HTTP는 클라이언트/서버 모델로 구성되어있다.
 - 클라이언트 : 브라우저에서 원하는 HTTP 객체를 웹 서버에 요청(request)하고, 이를 수신해서 화면에 띄운다.
@@ -26,7 +26,7 @@ HTTP는 클라이언트/서버 모델로 구성되어있다.
 
 클라이언트와 서버가 서로 정보를 요청하는 데 사용하는 메세지이다.
 
-![HTTP Request Message](images/http_request_message.png)
+![HTTP Request Message](/assets/images/2021-01-17-Comparison-of-GET-POST/http_request_message.png)
 
 Request message는 크게 4가지 부분으로 나뉜다.
 
@@ -113,7 +113,7 @@ GET은 요청을 전송할 때, 필요한 데이터를 Body가 아닌 쿼리스�
 
 그래서 프론트엔드 개발을 하다보면 정적 콘텐츠를 변경해도 내용이 바뀌지 않는 경우가 발생한다. 이는 브라우저에 저장된 캐시가 변경되지 않았기 때문인데, 브라우저의 캐시를 지워주면 다시 콘텐츠를 조회하기 위해 서버로 요청을 보내고, 변경한 내용이 반영된 것을 확인할 수 있다.
 
-![GET Method](images/http_get_method.png)
+![GET Method](/assets/images/2021-01-17-Comparison-of-GET-POST/http_get_method.png)
 
 위의 사진은 HTTP request message의 패킷 구조이다. 사진에 표시된 `URL`부분에 `Input Data`가 실려서 서버로 보내지는 것이다. 
 
@@ -134,7 +134,7 @@ POST는 **서버에 저장된 리소스를 생성 및 변경**하기 위해 설�
 - URL에 데이터가 노출되지 않기에 기본적인 보안은 보장된다.
 - 캐싱이 불가능하다.
 
-![POST Method](images/http_post_method.png)
+![POST Method](/assets/images/2021-01-17-Comparison-of-GET-POST/http_post_method.png)
 
 Body에 데이터를 넣어서 전송하기 때문에 헤더필드에서 데이터에 대한 설명을 담은 `Content-Type` 헤더 필드가 들어가고, 어떤 데이터 타입인지 명시해주어야 한다.
 
