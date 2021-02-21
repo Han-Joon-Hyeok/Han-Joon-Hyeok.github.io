@@ -255,7 +255,7 @@ HTML5에서부터 제출양식(form 태그)에서 사용할 수 있는 다양한
 
 `<form>` 태그에서 절대 빠질 수 없는 것이 GET과 POST 방식의 차이이다. 이에 대한 자세한 설명은 다른 문서에서 자세히 다루었다.
 
-- [GET과 POST 방식의 차이](2021-01-17-Comparison-of-GET-POST.md)
+- [GET과 POST 방식의 차이](./2021-01-17-Comparison-of-GET-POST.md)
 
 
 ## `<iframe>` 태그
