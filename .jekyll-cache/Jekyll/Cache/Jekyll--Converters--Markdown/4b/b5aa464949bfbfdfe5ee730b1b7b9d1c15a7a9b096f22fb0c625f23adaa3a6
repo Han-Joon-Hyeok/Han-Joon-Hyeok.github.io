@@ -1,0 +1,44 @@
+I"r
+<p>우선 <code class="language-plaintext highlighter-rouge">javascript</code>에서 시간을 계산하는 방법은 다음과 같다.</p>
+
+<ol>
+  <li>Javascript의 <code class="language-plaintext highlighter-rouge">getTime()</code> 메소드는 현재 시간을 <code class="language-plaintext highlighter-rouge">1970년 1월 1일</code> 이후로부터 경과한 시간을 <code class="language-plaintext highlighter-rouge">millisecond(ms)</code> 단위로 계산을 한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">1초 = 1000ms</code> 이라는 점을 활용하면 일, 시, 분, 초까지 구할 수 있다.
+    <ul>
+      <li>초 : <code class="language-plaintext highlighter-rouge">1ms * 1000</code>는 1초</li>
+      <li>분 : <code class="language-plaintext highlighter-rouge">1ms * 1000</code>가 1초니까 여기서 <code class="language-plaintext highlighter-rouge">60</code>을 곱하면 1분</li>
+      <li>시 : <code class="language-plaintext highlighter-rouge">1ms * 1000 * 60</code>은 1분이니까, <code class="language-plaintext highlighter-rouge">60</code>을 곱하면 1시간</li>
+      <li>일 : <code class="language-plaintext highlighter-rouge">1ms * 1000 * 60 * 60</code>은 1시간이니까, <code class="language-plaintext highlighter-rouge">24</code>를 곱하면 1일</li>
+    </ul>
+  </li>
+  <li>하지만 <code class="language-plaintext highlighter-rouge">밀리세컨드</code>는 소수점 단위로 딱 맞게 떨어지지 않아서 남은 기간이 <code class="language-plaintext highlighter-rouge">1.3432...일</code> 소수로 떨어질 수 있다. 따라서 이런 경우에는 <code class="language-plaintext highlighter-rouge">Math.floor</code>메소드를 사용하여, 소숫점 단위를 강제로 내려준다.</li>
+</ol>
+
+<p>정리한 내용을 바탕으로 코드로 작성하면 다음과 같다.</p>
+
+<pre><code class="language-Javascript">const text = document.querySelector("h1");
+
+function getTime(){
+    const Dday = new Date("2021-08-29:00:00:00+0900");
+    const today = new Date();
+    const diff = Dday.getTime() - today.getTime(),
+        // Ms 단위로 변환
+        secInMs = Math.floor(difference / 1000),
+        minInMs = Math.floor(secInMs / 60),
+        hourInMs = Math.floor(minInMs / 60),
+        days = Math.floor(hourInMs / 24),
+        // 남은 시간 계산
+        seconds = secInMs % 60,
+        minutes = minInMs % 60,
+        hours = minutes % 24;
+
+    text.innerHTML = `${days}일 ${hours}시간 ${minutes}분 ${seconds}초`
+}
+
+function init(){
+    setInterval(getTime, 1000) // getTime이라는 함수를 1000ms(1초) 단위로 실행한다.
+}
+
+init()
+</code></pre>
+:ET

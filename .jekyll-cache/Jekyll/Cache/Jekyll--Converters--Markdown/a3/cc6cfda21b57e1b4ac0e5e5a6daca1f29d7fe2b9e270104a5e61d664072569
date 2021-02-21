@@ -1,0 +1,198 @@
+I"4@<blockquote>
+  <p><a href="https://programmers.co.kr/learn/courses/57">프로그래머스 - 어서와! 자료구조와 알고리즘은 처음이지?</a>를 공부하며 정리한 내용입니다.</p>
+</blockquote>
+
+<h1 id="9강-dummy-head를-가지는-연결-리스트-노드-삭제">9강. dummy head를 가지는 연결 리스트 노드 삭제</h1>
+
+<h1 id="연습문제">연습문제</h1>
+
+<blockquote>
+  <p>제 9 강에서 소개된 추상적 자료구조 LinkedList 는 dummy head node 를 가지는 연결 리스트입니다. 이 클래스의 아래와 같은 메서드들을, 강의 내용에 소개된 요구조건을 만족시키도록 구현하세요.</p>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td> --><td class="rouge-code"><pre><span class="n">popAfter</span><span class="p">()</span>
+<span class="n">popAt</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div>  </div>
+  <p>이 때, popAt() 메서드의 구현에서는 popAfter() 를 호출하여 이용하도록 합니다. (그렇게 하지 않을 수도 있지만, 여기에서는 popAfter() 의 이용에 의해서 코드 구현이 보다 쉬워지는 것을 확인하기 위함입니다.)
+초기 코드로 들어 있는 것은 solution() 함수를 포함하여 다른 부분은 수정하지 말고, def popAfter(self, prev): 와 def popAt(self, pos): 의 메서드 몸체만 구현하세요.
+만약, popAt() 메서드에 인자로 주어진 pos 가 올바른 범위의 값을 가지지 않는 경우에는 IndexError exception 을 발생시키도록 합니다. 이렇게 하기 위한 코드는 raise IndexError 입니다.</p>
+</blockquote>
+
+<h2 id="나의-풀이">나의 풀이</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td> --><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">popAfter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prev</span><span class="p">):</span>
+        <span class="c1"># prev가 마지막 노드일 경우, 삭제할 다음 노드 자체가 없으므로 반환값은 None
+</span>        <span class="k">if</span> <span class="n">prev</span><span class="p">.</span><span class="nb">next</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">curr</span> <span class="o">=</span> <span class="n">prev</span><span class="p">.</span><span class="nb">next</span>
+            <span class="n">answer</span> <span class="o">=</span> <span class="n">curr</span><span class="p">.</span><span class="n">data</span>
+            <span class="c1"># 삭제하는 노드가 리스트의 맨 마지막 노드인 경우, tail을 prev로 조정
+</span>            <span class="k">if</span> <span class="n">curr</span><span class="p">.</span><span class="nb">next</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">prev</span>
+                <span class="n">prev</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="c1"># 그 외의 경우
+</span>            <span class="k">else</span><span class="p">:</span>
+                <span class="n">prev</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">curr</span><span class="p">.</span><span class="nb">next</span>
+        
+        <span class="bp">self</span><span class="p">.</span><span class="n">nodeCount</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">curr</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="n">answer</span>
+
+    <span class="k">def</span> <span class="nf">popAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">nodeCount</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">IndexError</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prev</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">getAt</span><span class="p">(</span><span class="n">pos</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">popAfter</span><span class="p">(</span><span class="n">prev</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="피드백">피드백</h3>
+<ul>
+  <li>3~4번 테스트 케이스가 자꾸 런타임 에러가 났는데, <code class="language-plaintext highlighter-rouge">class</code> 내부의 함수를 호출할 때 <code class="language-plaintext highlighter-rouge">self.함수명</code>이 아닌 <code class="language-plaintext highlighter-rouge">함수명</code>으로만 호출을 한 것이 원인이었다.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">prev = getAt(pos-1)</code>이 아니라 <code class="language-plaintext highlighter-rouge">prev = self.getAt(pos-1)</code>로 작성해야 한다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">popAt</code> 함수의 예외사항 조건에 <code class="language-plaintext highlighter-rouge">pos &gt; self.nodeCount+1</code>이라고 생각했다. <code class="language-plaintext highlighter-rouge">popAfter</code> 함수에서 <code class="language-plaintext highlighter-rouge">prev가 마지막 노드</code>인 경우는 <code class="language-plaintext highlighter-rouge">self.nodeCount</code>가 <code class="language-plaintext highlighter-rouge">n+1</code>이라고 생각했기 때문이다. 하지만, <code class="language-plaintext highlighter-rouge">popAfter</code>는 <code class="language-plaintext highlighter-rouge">pos+1</code>번째 노드를 삭제하는 것이므로, <code class="language-plaintext highlighter-rouge">self.nodeCount</code>보다 큰 <code class="language-plaintext highlighter-rouge">pos</code>를 받아도 삭제할 <code class="language-plaintext highlighter-rouge">pos+1</code>번째 노드는 존재하지 않는다.
+    <ul>
+      <li>그리고 <code class="language-plaintext highlighter-rouge">popAfter</code>의 아래 코드를 삭제해서 실행해도 정답으로 인정이 되었다.
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td> --><td class="rouge-code"><pre><span class="c1"># prev가 마지막 노드일 경우, 삭제할 다음 노드 자체가 없으므로 반환값은 None
+</span>    <span class="k">if</span> <span class="n">prev</span><span class="p">.</span><span class="nb">next</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+</pre></td></tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">prev</code>가 마지막 노드로 주어지는 경우(<code class="language-plaintext highlighter-rouge">pos+1</code>)는 아예 <code class="language-plaintext highlighter-rouge">popAt</code> 예외조건에서 걸러지므로, 어떠한 경우에도 실행되지 않기 때문이다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="개선한-정답">개선한 정답</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td> --><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">popAfter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prev</span><span class="p">):</span>
+        <span class="c1"># prev가 맨 마지막 노드인 경우를 고려 X
+</span>        <span class="n">curr</span> <span class="o">=</span> <span class="n">prev</span><span class="p">.</span><span class="nb">next</span>
+        <span class="n">answer</span> <span class="o">=</span> <span class="n">curr</span><span class="p">.</span><span class="n">data</span>
+
+        <span class="c1"># 삭제하는 노드가 리스트의 맨 마지막 노드인 경우, tail을 prev로 조정
+</span>        <span class="k">if</span> <span class="n">curr</span><span class="p">.</span><span class="nb">next</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">prev</span>
+            <span class="n">prev</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c1"># 그 외의 경우
+</span>        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prev</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">curr</span><span class="p">.</span><span class="nb">next</span>
+        
+        <span class="bp">self</span><span class="p">.</span><span class="n">nodeCount</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">curr</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="n">answer</span>
+
+    <span class="k">def</span> <span class="nf">popAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">nodeCount</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">IndexError</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prev</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">getAt</span><span class="p">(</span><span class="n">pos</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">popAfter</span><span class="p">(</span><span class="n">prev</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">popAfter</code>를 prev가 맨 마지막 노드인 경우에 사용할 수 있는지는 모르겠지만, 위와 같이 수정해도 정답은 인정되었다.</p>
+
+<h2 id="다른-사람의-풀이">다른 사람의 풀이</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td> --><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">popAfter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prev</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">prev</span> <span class="o">==</span> <span class="bp">self</span><span class="p">.</span><span class="n">tail</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="n">curr</span> <span class="o">=</span> <span class="n">prev</span><span class="p">.</span><span class="nb">next</span>
+        <span class="n">prev</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">curr</span><span class="p">.</span><span class="nb">next</span>
+        <span class="k">if</span> <span class="n">curr</span><span class="p">.</span><span class="nb">next</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">prev</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">nodeCount</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">curr</span><span class="p">.</span><span class="n">data</span>
+
+
+    <span class="k">def</span> <span class="nf">popAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">nodeCount</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">IndexError</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">popAfter</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">getAt</span><span class="p">(</span><span class="n">pos</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="1-popafterself-prev">1. <code class="language-plaintext highlighter-rouge">popAfter(self, prev)</code></h3>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">prev</code>가 맨 마지막 노드인 경우 <code class="language-plaintext highlighter-rouge">None</code>을 리턴한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">prev.next = curr.next</code>를 먼저 설정한다. <code class="language-plaintext highlighter-rouge">curr</code>이 맨 마지막 노드인 경우에도 <code class="language-plaintext highlighter-rouge">curr.next = None</code>이므로 따로 <code class="language-plaintext highlighter-rouge">prev.next = None</code>으로 설정할 필요가 없는 것이다.</li>
+</ol>
+
+<h3 id="2-popatself-pos">2. <code class="language-plaintext highlighter-rouge">popAt(self, pos)</code></h3>
+
+<p><code class="language-plaintext highlighter-rouge">popAfter</code>의 인자로 주어지는 <code class="language-plaintext highlighter-rouge">prev</code> 변수를 따로 사용하지 않고, 함수의 리턴값을 그대로 인자로 넘겨줌으로써 간결하게 코드를 작성하였다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre><span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">popAfter</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">getAt</span><span class="p">(</span><span class="n">pos</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+:ET

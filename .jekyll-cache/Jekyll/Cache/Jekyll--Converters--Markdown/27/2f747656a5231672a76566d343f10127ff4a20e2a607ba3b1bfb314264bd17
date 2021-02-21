@@ -1,0 +1,345 @@
+I"�P<blockquote>
+  <p><a href="https://opentutorials.org/course/2039">생활코딩 - HTML</a>을 공부하며 정리한 내용입니다.</p>
+</blockquote>
+
+<h1 id="html-문법">HTML 문법</h1>
+
+<p>본 포스팅에서는 HTML 태그에 대해 전부 설명하지 않았습니다.
+복습을 하면서 필요한 내용만 기록해놓았으므로, 이 점 참고하셔서 읽어주시면 감사하겠습니다.</p>
+
+<h2 id="a태그"><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>태그</h2>
+
+<p>a태그는 <code class="language-plaintext highlighter-rouge">anchor(닻)</code>의 맨 앞글자인 a를 의미한다. 즉, 특정 URL에 연결되어 있다는 것으로 해석할 수 있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;a href="연결할 링크" target="_속성값" title="hover시 표시되는 문구"&gt;</code></p>
+
+<p>속성들의 순서는 전혀 상관없다.</p>
+
+<ul>
+  <li>target : 링크된 문서를 클릭했을 때, 문서가 열릴 위치를 명시해준다.
+|속성값|설명|
+|–|–|
+|_blank|링크된 문서를 새로운 윈도우나 탭에서 오픈함.|
+|_self(기본값)|링크된 문서를 링크가 위치한 현재 프레임에서 오픈함. 생략 가능. |
+|_parent|현재 프레임의 부모 프레임에서 오픈.|
+|_top|현재 윈도우 전체에서 오픈.|
+|프레임 이름|명시된 프레임에서 오픈. <code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code>과 함께 사용할 수 있지만, 최근에는 보안 문제로 사용하지 않는 것을 권장하고 있음.&lt;/iframe&gt;|</li>
+</ul>
+
+<h2 id="p-태그"><code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> 태그</h2>
+
+<p><code class="language-plaintext highlighter-rouge">Paragraph</code>의 맨 앞 글자인 p를 따서 만든 태그로, 단락을 의미한다. 블록 요소이기 때문에 다음 요소에 대해서는 자동으로 줄 바꿈이 수행되며, <code class="language-plaintext highlighter-rouge">&lt;br&gt;</code>태그가 2번 들어간 효과와 동일하다.</p>
+
+<pre><code class="language-HTML">&lt;p&gt;안녕하세요&lt;/p&gt;
+&lt;p&gt;반갑습니다&lt;/p&gt;
+&lt;p&gt;또 만나요&lt;/p&gt;
+
+&lt;!-- 결과 --&gt;
+안녕하세요
+
+반갑습니다
+
+또 만나요
+</code></pre>
+
+<h2 id="br-태그"><code class="language-plaintext highlighter-rouge">&lt;br&gt;</code> 태그</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;br&gt;</code>은 <code class="language-plaintext highlighter-rouge">A forced line-break</code>의 줄임말로, 1줄을 강제로 바꾸어버리는 태그이다. 위치에 상관없이 태그 내부, 태그 사이에서 모두 동일하게 적용할 수 있다. 태그를 연속해서 사용할 경우, 사용한 횟수만큼의 줄 간격이 벌어진다.</p>
+
+<pre><code class="language-HTML">&lt;!-- 태그 사이에서 사용 --&gt;
+&lt;a&gt;foo&lt;/a&gt;&lt;br&gt;
+&lt;a&gt;bar&lt;/a&gt;
+
+&lt;!--결과--&gt;
+foo
+bar
+
+&lt;!-- 태그 안에서 사용 --&gt;
+&lt;a&gt;foo&lt;br&gt;
+bar
+&lt;/a&gt;
+
+&lt;!--결과--&gt;
+foo
+bar
+
+&lt;!-- 여러 번 사용 --&gt;
+&lt;a&gt;foo&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;a&gt;bar&lt;/a&gt;
+
+&lt;!--결과--&gt;
+foo
+
+
+
+bar
+</code></pre>
+<p>보통 하나의 단락을 표현할 때는 <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>태그를 사용하며, <code class="language-plaintext highlighter-rouge">&lt;br&gt;</code>을 이용한 단락 구분은 잘 사용하지 않는다.</p>
+
+<p>만약 <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>태그의 단락 여백이 마음에 들지 않는다면, css의 <code class="language-plaintext highlighter-rouge">margin</code>이나 <code class="language-plaintext highlighter-rouge">padding</code> 속성값을 수정해서 조정할 수 있다.</p>
+
+<h3 id="참고-display-속성과-margin-padding-속성의-관계">[참고] display 속성과 margin, padding 속성의 관계</h3>
+
+<p>블록 요소는 <code class="language-plaintext highlighter-rouge">margin</code>, <code class="language-plaintext highlighter-rouge">padding</code>이 모두 작동하지만,</p>
+
+<p>인라인 요소는 <code class="language-plaintext highlighter-rouge">margin-left</code>, <code class="language-plaintext highlighter-rouge">margin-right</code>는 작동하지만, <code class="language-plaintext highlighter-rouge">margin-top</code>, <code class="language-plaintext highlighter-rouge">margin-bottom</code>은 작동하지 않는다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/54902347/105321407-c2a5b480-5c0a-11eb-8f50-72248efaf0fb.png" alt="p태그_margin" /></p>
+
+<p>만약 인라인 요소에도 적용하고 싶다면, <code class="language-plaintext highlighter-rouge">display</code>속성을 <code class="language-plaintext highlighter-rouge">block</code>이나 <code class="language-plaintext highlighter-rouge">inline-block</code>으로 변경하면 된다.</p>
+
+<h2 id="form태그"><code class="language-plaintext highlighter-rouge">&lt;form&gt;</code>태그</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;form&gt;</code>태그는 웹 페이지에서 사용자가 정보를 입력한 정보를 서버로 보낼 수 있는 기능을 수행한다.</p>
+
+<pre><code class="language-HTML">&lt;form action="http://localhost/login.php"&gt;
+   &lt;input type="text" name="id"&gt;
+   &lt;input type="password" name="pw"&gt;
+   &lt;input type="text" name="username"&gt;
+   &lt;input type="submit"&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;form&gt;</code>태그의 속성으로 <code class="language-plaintext highlighter-rouge">action</code>은 입력한 정보들을 어떤 링크로 전송할 것인지 결정하는 역할을 한다.</p>
+
+<p>그래서 위의 링크로 전송을 하면 다음과 같은 링크가 만들어진다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">http://localhost/login.php?id=아이디&amp;pw=1234&amp;username=한준혁</code></p>
+
+<p>여기서 <code class="language-plaintext highlighter-rouge">&amp;(앰퍼샌드)</code>는 각각의 <code class="language-plaintext highlighter-rouge">input</code>태그들이 가진 <code class="language-plaintext highlighter-rouge">name</code>속성에 따라 구분하는 기호이고, 입력된 데이터는 <code class="language-plaintext highlighter-rouge">name값=입력값</code>으로 전송된다. <code class="language-plaintext highlighter-rouge">name</code> 속성은 서버에서 각각의 <code class="language-plaintext highlighter-rouge">input</code>태그들을 구분하는 기준이 된다.</p>
+
+<p>추후에 상세히 서술하겠지만, 위와 같이 URL에 정보를 담아 서버에 보내는 것을 <code class="language-plaintext highlighter-rouge">GET</code> 방식이라고 한다. 이렇게 정보를 보내면 보안에 민감한 개인정보가 주소에 노출된다는 단점이 있다.</p>
+
+<p>따라서 이를 <code class="language-plaintext highlighter-rouge">POST</code>방식으로 전송하게 되면, <code class="language-plaintext highlighter-rouge">GET</code>이 HTTP 패킷의 header에 보내는 것과 달리 정보가 패킷의 body에 담기게 된다. 각각의 방식마다 장단점이 있으므로 상황에 맞게 사용을 하면 된다. <code class="language-plaintext highlighter-rouge">GET</code>과 <code class="language-plaintext highlighter-rouge">POST</code>에 대한 자세한 개념은 추후에 작성할 예정이다.</p>
+
+<h3 id="select-option태그"><code class="language-plaintext highlighter-rouge">&lt;select&gt;</code> <code class="language-plaintext highlighter-rouge">&lt;option&gt;</code>태그</h3>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;select&gt;</code>와 <code class="language-plaintext highlighter-rouge">&lt;option&gt;</code>태그는 사용자가 값을 선택할 수 있도록 도와주는 태그이다.</p>
+
+<pre><code class="language-HTML">&lt;select name="color"&gt;
+   &lt;option value="red"&gt;빨강&lt;/option&gt;
+   &lt;option value="blue"&gt;파랑&lt;/option&gt;
+   &lt;option value="yellow"&gt;노랑&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/54902347/105448160-1d95e500-5cb9-11eb-987d-3afbd2c9de2b.png" alt="Select_Option" /></p>
+
+<p>콤보박스 형태로 만들어지며, <code class="language-plaintext highlighter-rouge">option</code>의 <code class="language-plaintext highlighter-rouge">value</code>속성은 태그 안에 적힌 텍스트 <code class="language-plaintext highlighter-rouge">빨강</code> 또는 <code class="language-plaintext highlighter-rouge">파랑</code>이 아닌 서버로 실제로 전달되는 값이다. 태그 사이에 적은 텍스트는 사용자에게 보여지는 텍스트이므로 잘 구분해서 사용해야 한다.</p>
+
+<p>그리고 <code class="language-plaintext highlighter-rouge">&lt;select&gt;</code>에서 <code class="language-plaintext highlighter-rouge">multiple</code> 속성을 입력하면, 아래의 사진과 같이 여러 옵션을 선택할 수 있게 된다.</p>
+
+<pre><code class="language-HTML">&lt;select name="color" multiple&gt;
+   &lt;option value="red"&gt;빨강&lt;/option&gt;
+   &lt;option value="blue"&gt;파랑&lt;/option&gt;
+   &lt;option value="yellow"&gt;노랑&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+<p><img src="https://user-images.githubusercontent.com/54902347/105448381-95640f80-5cb9-11eb-8c15-4c530d0ea8c2.png" alt="Select_Multiple" /></p>
+
+<p>그러면 서버에서는 다음과 같이 2개의 옵션이 포함된 URL을 전달 받는다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">http://localhost/select.php?color2=red&amp;color2=blue</code></p>
+
+<h3 id="input태그"><code class="language-plaintext highlighter-rouge">&lt;input&gt;</code>태그</h3>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;input&gt;</code>태그는 사용자의 값을 입력 받는 기능을 수행한다.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">hidden</code> 속성 : UI상에는 보이지 않지만, 서버로 전송해야 하는 값이 있을 때 사용한다. 폼 제출 시 사용자가 변경해서는 안 되는 데이터를 보낼 때 사용한다.
+    <ul>
+      <li>예를 들어, 업데이트 되어야 하는 데이터베이스의 레코드를 저장하거나, 고유한 보안 토큰 등을 서버로 보낼 때 사용할 수 있다.</li>
+      <li>또 다른 예시로, 이전 요청처리에 대한 값을 다음 요청에서도 연속성을 갖기 위해 사용하며, 이는 세션으로 대체할 수 있다.
+``` HTML</li>
+    </ul>
+    <form action="hide.php">
+    <input type="text" name="id" />
+    <input type="hidden" name="hide" value="I'm hide" />
+    <input type="submit" />
+</form>
+    <p>```
+위와 같이 입력하면 URL은 다음과 같이 완성된다.
+<code class="language-plaintext highlighter-rouge">http://localhost/hide.php?id=?hide="I'm hide"</code></p>
+  </li>
+  <li>
+    <p>파일 업로드 : 다음과 같이 작성하면 파일 업로드 할 수 있는 input 태그가 만들어진다.</p>
+
+    <pre><code class="language-HTML">
+ &lt;form action="http://localhost/upload.php" method="post" enctype="multipart/form-data"&gt;
+    &lt;input type="file" name="profile"&gt;
+    &lt;input type="submit"&gt;
+ &lt;/form&gt;
+</code></pre>
+
+    <p>이때, 반드시 <code class="language-plaintext highlighter-rouge">&lt;form&gt;</code>태그의 <code class="language-plaintext highlighter-rouge">method</code>는 <code class="language-plaintext highlighter-rouge">post</code>, <code class="language-plaintext highlighter-rouge">enctype</code>은 <code class="language-plaintext highlighter-rouge">multipart/form-data</code>로 설정해야 한다.</p>
+
+    <p>그리고 <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code>태그에는 <code class="language-plaintext highlighter-rouge">name</code>속성이 설정되어 있어야 서버에서 정상적으로 처리가 가능하다.</p>
+  </li>
+</ul>
+
+<h3 id="새로운-제출양식들">새로운 제출양식들</h3>
+
+<p>HTML5에서부터 제출양식(form 태그)에서 사용할 수 있는 다양한 제출양식과 속성들이 추가되었다.</p>
+<h4 id="input-태그"><code class="language-plaintext highlighter-rouge">&lt;input&gt;</code> 태그</h4>
+
+<h5 id="type">type</h5>
+
+<p><code class="language-plaintext highlighter-rouge">type</code>에 새로운 값들을 입력받을 수 있게 되었다. 해당 타입들은 다음과 같다.</p>
+
+<ul>
+  <li>color</li>
+  <li>date</li>
+  <li>month</li>
+  <li>week</li>
+  <li>time</li>
+  <li>datetime</li>
+  <li>datetime-local</li>
+  <li>email</li>
+  <li>number</li>
+  <li>range</li>
+  <li>search</li>
+  <li>tel</li>
+  <li>url</li>
+</ul>
+
+<p>해당 속성들의 사용법은 필요할 때마다 검색해서 사용해보도록 하자.</p>
+
+<h5 id="속성">속성</h5>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">autocomplete="on/off"</code> : form 태그 내부의 input 태그들이 갖는 자동완성기능을 설정하는 속성이다. 필요한  input 태그만 지정해서 사용할 수도 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">placeholder="사용자에게 보여질 텍스트"</code> : input 태그가 아무것도 입력되지 않았을 때, 사용자에게 보여지는 텍스트이다.</li>
+  <li><code class="language-plaintext highlighter-rouge">autofocus</code> : 페이지에 접속하면 특정 input 태그로 자동으로 포커싱이 맞춰지는 기능이다.</li>
+  <li><code class="language-plaintext highlighter-rouge">required</code> : 사용자가 반드시 입력을 해야 하는 항목을 설정할 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">pattern="정규식"</code> : 사용자가 지정한 정규식에 맞도록 입력했는 지 확인할 수 있다. 정규식에 대한 자세한 내용은 추후에 다룰 예정이다.</li>
+</ul>
+
+<h4 id="label태그"><code class="language-plaintext highlighter-rouge">&lt;label&gt;</code>태그</h4>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;label&gt;</code> 태그는 <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code> 태그에 대한 설명을 붙여줄 때 사용하는데, <code class="language-plaintext highlighter-rouge">&lt;label&gt;</code>태그 안에 있는 텍스트를 클릭해도 <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code> 태그에 마우스 포커싱이 옮겨지는 효과를 구현할 수 있어서 사용자의 편리성을 높일 수 있다.</p>
+
+<pre><code class="language-HTML">&lt;form action=""&gt;
+   &lt;p&gt;
+      &lt;label for="id_txt"&gt;ID : &lt;/label&gt;
+      &lt;input id="id_txt" type="text" name="id"&gt;
+   &lt;/p&gt;
+   &lt;p&gt;
+      &lt;label for="PW"&gt;PW : 
+         &lt;input id="PW" type="password" name="pwd"&gt;
+      &lt;/label&gt;
+   &lt;/p&gt;
+   &lt;p&gt;
+&lt;/form&gt;
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">&lt;label&gt;</code>과 <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code>을 연결하기 위해서 전자에는 <code class="language-plaintext highlighter-rouge">for</code>속성값을, 후자에는 <code class="language-plaintext highlighter-rouge">id</code>속성값을 주면 된다.</p>
+
+<p>만약 <code class="language-plaintext highlighter-rouge">&lt;label&gt;</code> 태그 안에 <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code> 태그를 담는다면, 똑같은 효과를 내면서도 조금 더 간편하게 구현할 수 있다.</p>
+
+<pre><code class="language-HTML">&lt;!-- label에 id 속성을 주지 않고도 똑같은 효과를 내는 방법 --&gt;
+&lt;p&gt;
+   &lt;label&gt;
+         &lt;input type="checkbox" name="red"&gt; 빨간색
+   &lt;/label&gt;
+&lt;/p&gt;
+&lt;p&gt;
+   &lt;label&gt;
+         &lt;input type="checkbox" name="blue"&gt;파란색
+   &lt;/label&gt;
+&lt;/p&gt;
+</code></pre>
+
+<h4 id="get과-post-방식의-차이">GET과 POST 방식의 차이</h4>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;form&gt;</code> 태그에서 절대 빠질 수 없는 것이 GET과 POST 방식의 차이이다. 이에 대한 자세한 설명은 다른 문서에서 자세히 다루었다.</p>
+
+<ul>
+  <li><a href="/_posts/2021-01-17-Comparison-of-GET-POST.md">GET과 POST 방식의 차이</a></li>
+</ul>
+
+<h2 id="iframe-태그"><code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code> 태그</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code> 태그는 웹 페이지 안에 다른 웹 페이지를 삽입하는 태그이다. HTML4에서 등장하여 과거에는 많이 사용되었으나, iframe을 이용한 <strong>해킹이나 정보 유출과 같은 보안 상의 문제</strong>로 이제는 사용을 권장하지 않고 있다.</p>
+
+<p>iframe를 통해 불러오는 <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code> 자체는 위험하지 않지만, <code class="language-plaintext highlighter-rouge">Javascript</code>나 <code class="language-plaintext highlighter-rouge">&lt;form&gt;</code>태그를 통해서 사용자가 의도하지 않은 행동을 유도할 수 있게 된다.</p>
+
+<p>따라서 최신 버전인 HTML5에서는 자바스크립트의 실행과 폼 태그의 작동을 방지하기 위해서 <code class="language-plaintext highlighter-rouge">sandbox</code>라는 속성을 추가했다.</p>
+
+<pre><code class="language-HTML">&lt;iframe src="iframe_source.html" sandbox&gt;
+</code></pre>
+
+<h2 id="video-태그"><code class="language-plaintext highlighter-rouge">&lt;video&gt;</code> 태그</h2>
+
+<p>이미지를 삽입하는 것처럼 비디오 또한 삽입을 할 수 있도록 해주는 태그이다.</p>
+
+<p><img src="images/html_video_tag(1).png" alt="html video tag(1)" /></p>
+
+<pre><code class="language-HTML">&lt;video width="400" controls autoplay&gt;
+   &lt;source src="example.mp4"&gt;
+   &lt;source src="example.ogv"&gt;
+&lt;/video&gt;
+</code></pre>
+
+<p>비디오는 웹 브라우저마다 지원하는 동영상 포맷이 다르기 때문에 각 브라우저에 맞는 동영상을 등록하는 것이 중요하다. 이는 <code class="language-plaintext highlighter-rouge">&lt;source&gt;</code> 태그에서 동영상의 확장자로 설정을 할 수 있다. 최근에는 왠만한 브라우저에서 전부 지원을 하긴 하지만, 아래의 지원 목록을 참고해보도록 하자.</p>
+
+<h3 id="지원-브라우저-목록">지원 브라우저 목록</h3>
+
+<p align="center">
+   <img src="images/html_video_tag(2).png" />
+   <p align="center">출처 : <a href="https://www.w3schools.com/tags/tag_video.asp">https://www.w3schools.com/</a></p>
+</p>
+
+<h3 id="속성-목록">속성 목록</h3>
+
+<table>
+   <tr>
+      <th>속성</th>     
+      <th>설명</th>   
+   </tr>
+   <tr>
+      <td>autoplay</td>
+      <td>재생 준비가 되면 자동으로 재생</td>
+   </tr>
+   <tr>
+      <td>controls</td>
+      <td>동영상 탐색 도구를 표시</td>
+   </tr>
+   <tr>
+      <td>height / width</td>
+      <td>높이 / 너비를 픽셀 단위로 설정</td>
+   </tr>
+   <tr>
+      <td>loop</td>
+      <td>영상을 반복 재생</td>
+   </tr>
+   <tr>
+      <td>muted</td>
+      <td>음소거 상태로 영상을 실행</td>
+   </tr>
+   <tr>
+      <td>poster</td>
+      <td>영상이 다운로드 중일 때 보여주는 사진 설정</td>
+   </tr>
+   <tr>
+      <td>preload</td>
+      <td>페이지가 로딩될 때 동영상을 같이 불러올 것인지 설정(auto, metadata, none으로 설정 가능)</td>
+   </tr>
+   <tr>
+      <td>src</td>
+      <td>영상 원본의 주소를 설정</td>
+   </tr>
+</table>
+
+<p>자세한 기능 사용방법은 아래의 링크를 참고하도록 하자.</p>
+
+<p><a href="https://www.w3schools.com/tags/tag_video.asp">W3School HTML Video Tags</a></p>
+
+<h1 id="브라우저-버전별-태그-사용-여부-확인하기">브라우저 버전별 태그 사용 여부 확인하기</h1>
+
+<p><code class="language-plaintext highlighter-rouge">Can I Use</code>라는 페이지에서 브라우저마다 HTML 태그를 사용할 수 있는 지 여부를 확인할 수 있다.</p>
+
+<p><img src="images/html_can_i_use.png" alt="Can I Use" /></p>
+
+<p>사실 개발할 때 자주 사용하는 태그는 정해져있지만, 브라우저마다 지원하는 태그가 다를 수 있으므로 정확한 데이터에 기반한 브라우저 지원 여부를 확인하는 습관을 가져보자.</p>
+
+<p><a href="https://caniuse.com/">Can I Use</a></p>
+:ET
