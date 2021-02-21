@@ -1,3 +1,10 @@
+---
+title: GET과 POST 방식의 차이 및 비교
+date: 2021-01-16 09:00:00 +0900
+categories: [html]
+tags: [html]
+---
+
 # GET과 POST 방식
 
 웹 개발을 하면 `<form>` 태그의 속성으로 `method`를 설정해주어야 하는데, 크게 GET 방식과 POST 방식으로 나뉜다.
