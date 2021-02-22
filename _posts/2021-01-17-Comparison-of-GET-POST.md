@@ -1,6 +1,6 @@
 ---
 title: GET과 POST 방식의 차이 및 비교
-date: 2021-01-16 09:00:00 +0900
+date: 2021-01-17 09:00:00 +0900
 categories: [html]
 tags: [html]
 ---

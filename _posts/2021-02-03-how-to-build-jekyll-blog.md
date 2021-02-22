@@ -19,17 +19,17 @@ image:
 
 학습의 효과는 강의를 듣기만 하는 것보다 소리를 내어 말하는 것이 좋고, **가장 좋은 방법은 누군가를 가르칠 때 가장 큰 효과**를 보인다고 한다. 그래서 이 블로그에는 개발을 공부하며 배운 것들을 차근차근 하나씩 정리해나갈 예정이다. 지식의 정확도나 깊이가 좋지 않을 수 있지만, 이 글을 읽고 있는 여러분들의 피드백이나 질문은 언제나 환영이다.
 
-<p align="center">
+<div class="img-container">
     <img class="post-img" src="/assets/images/2021-02-03-how-to-build-jekyll-blog/learning_pyramid.png" alt="학습효과 피라미드">
-    <span align="center" class="post-img-caption">출처 : <a href="https://m.blog.naver.com/u2math/221346925531">https://m.blog.naver.com/u2math/221346925531</a></span>
-</p>
+    <p class="post-img-caption">출처 : <a href="https://m.blog.naver.com/u2math/221346925531">https://m.blog.naver.com/u2math/221346925531</a></p>
+</div>
 
 # 1. github.io란?
 
-<p align="center">
+<div class="img-container">
     <img class="post-img" src="/assets/images/2021-02-03-how-to-build-jekyll-blog/github_pages.jpg" alt="github pages">
-    <span align="center" class="post-img-caption">출처 : <a href="https://pages.github.com/">https://pages.github.com/</a></span>
-</p>
+    <p class="post-img-caption">출처 : <a href="https://pages.github.com/">https://pages.github.com/</a></p>
+</div>
 
 
 `github.io`는 github에서 제공하는 무료 호스팅 도메인이다. github에 가입되어 있다면 누구나 `https://(github 아이디).github.io` 주소를 가진 페이지를 가질 수 있다.
@@ -43,10 +43,10 @@ Github Pages는 HTML, CSS, JS만으로도 구축할 수 있지만, `Markdown`을
 
 # 2. Jekyll이란?
 
-<p align="center">
+<div class="img-container">
     <img class="post-img" src="/assets/images/2021-02-03-how-to-build-jekyll-blog/jekyll.png" alt="Jekyll">
-    <span align="center" class="post-img-caption">출처 : <a href="https://poiemaweb.com/jekyll-basics">https://poiemaweb.com/jekyll-basics</a></span>
-</p>
+    <p class="post-img-caption">출처 : <a href="https://poiemaweb.com/jekyll-basics">https://poiemaweb.com/jekyll-basics</a></p>
+</div>
 
 `Jekyll`은 `Ruby`로 만들어졌으며, `Markdown`으로 작성된 문서를 HTML로 변환해서 웹사이트를 구축할 수 있도록 도와주는 `Static Website Generator(정적 사이트 생성기)`이다. Jekyll은 전 세계 각지에서 다양한 사람들이 만든 블로그 테마들이 존재한다. 그래서 이 테마들을 이용하면 Jekyll에 대해서 잘 모르더라도 누구나 쉽고 빠르게 개인 블로그를 만들 수 있는 것이다. 
 
