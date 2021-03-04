@@ -9,11 +9,19 @@ tags: [git]
 
 `git`을 이용해서 버전관리를 시작해보자. `git`에서 주로 사용되는 명령어들 중에서 이번 포스팅에서는 다음의 내용들을 다루어보고자 한다.
 
-- `git init` : git 저장소 만들기
-- `git add` : git이 관리할 대상으로 파일 등록
-  - `git status` : git이 관리할 대상 파일들의 상태를 조회
-- `git commit` : 버전 만들기
-  - `git log` : 커밋 내역 확인
+- [1. git init : 저장소 만들기](#1-git-init--저장소-만들기)
+- [2. git add : git이 관리할 대상으로 파일 등록](#2-git-add--git이-관리할-대상으로-파일-등록)
+  - [사용법](#사용법)
+  - [작동원리](#작동원리)
+  - [git status : 파일의 상태를 조회](#git-status--파일의-상태를-조회)
+    - [git status의 원리](#git-status의-원리)
+  - [Staging Area](#staging-area)
+- [3. git commit : 버전 만들기](#3-git-commit--버전-만들기)
+  - [사용법](#사용법-1)
+  - [git commit의 원리](#git-commit의-원리)
+  - [git log : 커밋 내역 확인](#git-log--커밋-내역-확인)
+    - [사용법](#사용법-2)
+- [그렇다면 git add와 git commit은 왜 같이 쓰는 걸까?](#그렇다면-git-add와-git-commit은-왜-같이-쓰는-걸까)
 
 또한 `git add`, `git commit`, `git status`의 작동원리에 대해서 함께 소개하고자 한다.
 작동원리는 다소 초심자가 이해하기에는 다소 어려운 내용일 수 있으므로, 해당 내용은 건너뛰고 나중에 필요할 때 다시 읽어보는 것을 추천한다.
