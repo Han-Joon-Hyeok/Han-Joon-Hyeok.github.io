@@ -1,8 +1,8 @@
 ---
-title: github 잔디심기를 위한 git commit 날짜 바꾸기, 
+title: github 잔디심기를 위한 git commit 날짜 바꾸기
 date: 2021-03-05 08:55:00 +0900
-categories: [git]]
-tags: [git]]
+categories: [git]
+tags: [git]
 ---
 
 # 사용목적
