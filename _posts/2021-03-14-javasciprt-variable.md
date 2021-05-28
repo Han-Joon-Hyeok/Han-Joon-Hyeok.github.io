@@ -1,8 +1,8 @@
 ---
 title: Javascript - 자바스크립트 변수에 대해 알아보자
 date: 2021-03-14 23:00:00 +0900
-categories: [javascript]]
-tags: [javascript]]
+categories: [javascript]
+tags: [javascript]
 ---
 
 > [드림코딩 - 자바스크립트 입문편(ES5+)](https://www.youtube.com/watch?v=OCCpGh4ujb8&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=3)를 공부하며 정리한 내용입니다.
