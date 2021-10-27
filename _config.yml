@@ -15,7 +15,7 @@ timezone: Asia/Seoul
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
-title: 기억보다는 기록을                          # the main title
+title: Dev Joon                          # the main title
 
 tagline: 성장하는 개발자, 한준혁입니다.   # it will display as the sub-title
 
