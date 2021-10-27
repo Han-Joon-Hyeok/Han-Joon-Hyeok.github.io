@@ -1,5 +1,5 @@
 ---
-title: [프로그래머스] Level 1 - 하샤드 수 (Javascript)
+title: 프로그래머스 Level 1 - 하샤드 수 (Javascript)
 date: 2021-08-27 04:00:00 +0900
 categories: [programmers]
 tags: [level1, programmers]
