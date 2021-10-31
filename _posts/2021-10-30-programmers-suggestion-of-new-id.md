@@ -1,6 +1,6 @@
 ---
 title: 프로그래머스 Level 1 - 신규 아이디 추천 (Javascript)
-date: 2021-10-29 22:00:00 +0900
+date: 2021-10-30 22:00:00 +0900
 categories: [programmers]
 tags: [level1, programmers]
 ---
