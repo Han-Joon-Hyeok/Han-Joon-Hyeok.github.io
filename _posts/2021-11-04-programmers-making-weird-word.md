@@ -20,7 +20,7 @@ tags: [level1, programmers]
 
 ## 🙋‍♂️나의 풀이
 
-```jsx
+```javascript
 function solution(s) {
   const words = s.split(" ");
   const convertedArr = words.map((word) => {
@@ -48,7 +48,7 @@ function solution(s) {
 
 ## 👀참고한 풀이
 
-```jsx
+```javascript
 function solution(s) {
   return s
     .toUpperCase()
@@ -62,12 +62,39 @@ function solution(s) {
 
 # 배운 점
 
+## `replace`
+
+- `replace` 메서드는 다음과 같은 문법을 가지고 있다.
+
+```javascript
+var newStr = str.replace(regexp|substr, newSubstr|function)
+```
+
+- 만약, 첫 번째 인자에서 정규표현식을 사용하고, 두 번째 인자에 함수를 사용하면, 정규표현식에 match된 결과들이 인자로 넘어간다.
+
+```javascript
+const regex = /\d/g;
+const str = "12Three4";
+console.log(
+  str.replace(regex, (char) => {
+    console.log(char);
+    return "_";
+  })
+);
+
+// 숫자에 해당하는 글자만 출력 및 교체된다.
+// 1
+// 2
+// 4
+// __Three_
+```
+
 ## `for ... of`
 
 - `string` 은 iterable해서 `forEach` 문에 매개변수로 사용할 수 있을 거라 생각했지만, `Array` 에서만 사용 가능한 메소드이다. (Map, Set 등에서도 지원 가능)
 - 만약 인덱스는 사용하지 않고, 개별 값만 사용한다면 `for ... of` 를 사용할 수 있다.
 
-```jsx
+```javascript
 const str = "abc";
 for (const char of str) {
   console.log(char);
@@ -80,7 +107,7 @@ for (const char of str) {
 
 - `for ... of` 반복문은 ES6에 추가된 새로운 컬렉션 전용 반복 구문이다. iterable을 순회하면서 각 요소를 변수에 할당한다.
 
-```jsx
+```javascript
 for (변수 선언문 of 이터러블) { ... }
 ```
 
@@ -88,7 +115,7 @@ for (변수 선언문 of 이터러블) { ... }
 - 내부적으로 iterator의 netx 메서드를 호출하여 iterable을 순회하고, next 메서드가 반환한 iterator result 객체의 value 프로퍼티 값을 for ... of 문의 변수에 할당한다.
 - 그리고 iterator result 객체의 done 프로퍼티 값이 false이면 iterable의 순회를 계속하고, true이면 iterable의 순회를 중단한다.
 
-```jsx
+```javascript
 for (const item of [1, 2, 3]) {
   console.log(item);
 }
@@ -99,7 +126,7 @@ for (const item of [1, 2, 3]) {
 
 - 내부 동작을 `for` 문으로 표현하면 다음과 같다.
 
-```jsx
+```javascript
 const iterable = [1, 2, 3];
 
 const iterator = iterable[Symbol.iterator]();
@@ -120,11 +147,11 @@ for (;;) {
 
 - `for ... in` 문은 객체의 모든 프로퍼티를 순회하며 열거한다.
 
-```jsx
+```javascript
 for (변수선언문 in 객체) { ... }
 ```
 
-```jsx
+```javascript
 const person = {
   name: "joon",
   address: "Seoul",
@@ -140,7 +167,7 @@ for (const key in person) {
 
 - `for ... in` 문은 `in` 연산자처럼 순회 대상 객체의 프로퍼티 뿐만 아니라, 상속받은 프로토타입의 프로퍼티까지 열거한다. 하지만, 위의 예제에서는 `toString`과 같은 `Object.prototype`의 프로퍼티는 열거되지 않는다.
 
-```jsx
+```javascript
 const person = {
   name: "joon",
   address: "Seoul",
@@ -154,7 +181,7 @@ console.log("toString" in person);
 - 이는 `toString` 메서드가 열거할 수 없도록 정의된 프로퍼티이기 때문이다. 즉, `Object.prototype.string` 프로퍼티의 프로퍼티 어트리뷰트 [[Enumerable]] 값이 `false` 이기 때문이다.
 - 객체의 프로토타입 체인 상에 존재하는 모든 프로토타입의 프로퍼티 중에서 프로퍼티 어트리뷰트 [[Enumeralbe]]의 값이 true인 프로퍼티를 순회하며 열거한다.
 
-```jsx
+```javascript
 const person = {
   name: "joon",
   address: "Seoul",
@@ -172,7 +199,7 @@ for (const key in person) {
 
 - 이때, 프로퍼티 키가 Symbol인 프로퍼티는 열거하지 않는다.
 
-```jsx
+```javascript
 const sym = Symbol();
 const obj = {
   a: 1,
@@ -188,7 +215,7 @@ for (const key in obj) {
 
 - 상속받은 프로퍼티는 제외하고 객체 자신의 프로퍼티만 열거하려면 `Object.prototype.hasOwnProperty` 메서드를 사용하여 객체 자신의 프로퍼티인지 확인해야 한다.
 
-```jsx
+```javascript
 const person = {
   name: "joon",
   address: "Seoul",
@@ -206,7 +233,7 @@ for (const key in person) {
 
 - 가급적이면 배열에는 `for ... in` 문보다 일반적인 `for` 문이나 `for ... of` 또는 `Array.prototype.forEach` 메서드를 사용하기를 권장한다. 배열도 객체이기 때문에 프로퍼티와 상속받은 프로퍼티가 포함될 수 있다.
 
-```jsx
+```javascript
 const arr = [1, 2, 3];
 arr.x = 10;
 
