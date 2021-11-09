@@ -1,6 +1,6 @@
 ---
 title: 프로그래머스 Level 1 - 제일 작은 수 제거하기 (JavaScript)
-date: 2021-11-08 09:50:00 +0900
+date: 2021-11-09 09:50:00 +0900
 categories: [programmers]
 tags: [level1, programmers, javascript]
 ---
