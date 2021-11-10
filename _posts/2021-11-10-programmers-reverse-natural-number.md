@@ -34,7 +34,7 @@ function solution(n) {
 
 - n을 10으로 나눈 나머지는 맨 마지막 한 자리 정수이다.
 - n을 다시 10으로 나누어서 나머지를 배열에 추가한다.
-- 정수 내림차순으로 배치하기 문제와 접근 개념은 같다.
+- [정수 내림차순으로 배치하기](https://han-joon-hyeok.github.io/posts/programmers-sort-integer-by-descending/) 문제와 접근 개념은 같다.
 
 ### 2. 배열로 만들어서 거꾸로 뒤집기
 
