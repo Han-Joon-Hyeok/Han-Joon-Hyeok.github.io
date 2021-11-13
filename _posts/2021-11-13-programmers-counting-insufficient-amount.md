@@ -1,6 +1,6 @@
 ---
-title: 프로그래머스 Level 1 - 시저 암호 (JavaScript)
-date: 2021-11-12 12:05:00 +0900
+title: 프로그래머스 Level 1 - 부족한 금액 계산하기 (JavaScript)
+date: 2021-11-13 16:15:00 +0900
 categories: [programmers]
 tags: [level1, programmers, javascript]
 math_use: true
