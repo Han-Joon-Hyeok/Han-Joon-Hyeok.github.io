@@ -1,5 +1,5 @@
 ---
-title: 프로그래머스 Level 2 - 짝지기 (JavaScript)
+title: 프로그래머스 Level 2 - 짝지어 제거하기 (JavaScript)
 date: 2021-12-11 23:20:00 +0900
 categories: [programmers]
 tags: [level2, programmers, javascript]
