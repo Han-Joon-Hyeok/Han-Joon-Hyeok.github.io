@@ -1,8 +1,8 @@
 ---
 title: "[Jekyll] Liquid Exception Liquid syntax error Variable '{{a1}' was not properly terminated with regexp"
-date: 2022-02-15 15:20:00 +0900
-categories: [programmers]
-tags: [level2, programmers, JavaScript]
+date: 2022-02-15 17:00:00 +0900
+categories: [jekyll]
+tags: [jekyll]
 use_math: true
 ---
 
