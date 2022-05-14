@@ -3,3 +3,6 @@
 **/.jekyll-cache/
 
 .DS_store
+
+# jekyll server metadata for incremental build
+.jekyll-metadata
