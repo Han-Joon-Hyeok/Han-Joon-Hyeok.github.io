@@ -1,6 +1,6 @@
 ---
 title: 미로찾기 알고리즘 해결 전략 및 구현 (feat. DFS, BFS)
-date: 2022-05-18 16:30:00 +0900
+date: 2022-05-20 16:30:00 +0900
 categories: [Algorithm]
 tags: [Data Structure, DFS, BFS, C]
 use_math: true
