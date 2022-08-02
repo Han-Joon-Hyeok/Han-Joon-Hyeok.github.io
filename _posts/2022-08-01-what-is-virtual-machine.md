@@ -18,7 +18,7 @@ use_math: true
 
 ![출처: 영화 인셉션](/assets/images/2022-08-01-what-is-virtual-machine/inception.jpeg)
 
-출처: 영화 <인셉션>
+출처: 영화 인셉션
 
 그래서 가상 머신 안에 가상 머신을 설치할 수도 있는데, 영화 <인셉션>에서 꿈 속에 꿈에 계속해서 빠져드는 상황을 연출할 수도 있다.
 
