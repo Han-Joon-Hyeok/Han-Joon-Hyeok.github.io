@@ -16,15 +16,15 @@ use_math: true
 
 ## 구성 요소
 
-![출처: [johnloomis.org](https://johnloomis.org/ece314/notes/OperatingSystems/UNIX.html)](/assets/images/2022-08-02-what-is-operating-system/UNIX_structure.png)
+![출처: johnloomis.org](/assets/images/2022-08-02-what-is-operating-system/UNIX_structure.png)
 
 출처: [johnloomis.org](https://johnloomis.org/ece314/notes/OperatingSystems/UNIX.html)
 
 하드웨어 위에 커널(kernel)이 있고, 커널 위에서 쉘(shell)과 애플리케이션(application)이 실행된다. 사용자는 기본적으로 쉘을 통해 애플리케이션을 실행한다.
 
-![출처: [[리눅스] 커널(KERNEL)과 쉘(SHELL)의 개념, 쉘을 이해해보자](https://reakwon.tistory.com/135)](/assets/images/2022-08-02-what-is-operating-system/kernel.png)
+![출처: 리눅스 커널(KERNEL)과 쉘(SHELL)의 개념, 쉘을 이해해보자](/assets/images/2022-08-02-what-is-operating-system/kernel.png)
 
-출처: [[리눅스] 커널(KERNEL)과 쉘(SHELL)의 개념, 쉘을 이해해보자](https://reakwon.tistory.com/135)
+출처: [리눅스 커널(KERNEL)과 쉘(SHELL)의 개념, 쉘을 이해해보자](https://reakwon.tistory.com/135)
 
 ### 1. 커널(kernel)
 
@@ -79,9 +79,9 @@ use_math: true
 
 컴퓨터의 구조를 단순화 하면 아래의 그림과 같다.
 
-![출처: [[운영체제(OS)] 1. 운영체제란?](https://velog.io/@codemcd/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9COS-1.-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%9E%80) [velog]](/assets/images/2022-08-02-what-is-operating-system/booting.png)
+![출처: 운영체제(OS) 1. 운영체제란?](/assets/images/2022-08-02-what-is-operating-system/booting.png)
 
-출처: [[운영체제(OS)] 1. 운영체제란?](https://velog.io/@codemcd/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9COS-1.-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%9E%80) [velog]
+출처: [운영체제(OS) 1. 운영체제란?](https://velog.io/@codemcd/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9COS-1.-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%9E%80) [velog]
 
 Processor 는 일반적으로 CPU 를 의미한다.
 
@@ -98,15 +98,15 @@ POST 는 전원이 켜지면 가장 먼저 실행되는 프로그램으로 현�
 
 부트 로더는 하드 디스크에 저장된 운영체제를 찾아서 메인 메모리(RAM)에 가지고 온다. 이러한 부트 로더의 과정을 부팅이라고 한다.
 
-![출처: [[운영체제(OS)] 1. 운영체제란?](https://velog.io/@codemcd/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9COS-1.-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%9E%80) [velog]](/assets/images/2022-08-02-what-is-operating-system/booting2.png)
+![출처: 운영체제(OS) 1. 운영체제란?](/assets/images/2022-08-02-what-is-operating-system/booting2.png)
 
-출처: [[운영체제(OS)] 1. 운영체제란?](https://velog.io/@codemcd/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9COS-1.-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%9E%80) [velog]
+출처: [운영체제(OS) 1. 운영체제란?](https://velog.io/@codemcd/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9COS-1.-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%9E%80) [velog]
 
 위 그림은 부트 로더가 수행되는 과정이다. 위와 같은 상태가 되면 운영체제가 수행할 준비를 마친 것이다. 그리고 운영체제는 컴퓨터의 전원이 꺼지면 종료된다.
 
 # 참고자료
 
-- [[운영체제(OS)] 1. 운영체제란?](https://velog.io/@codemcd/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9COS-1.-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%9E%80) [velog]
+- [운영체제(OS) 1. 운영체제란?](https://velog.io/@codemcd/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9COS-1.-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%9E%80) [velog]
 - [운영체제](https://namu.wiki/w/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C) [나무위키]
 - [리눅스 커널과 디바이스 드라이버 1](https://cheonee.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%BB%A4%EB%84%90%EA%B3%BC-%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84) [티스토리]
-- [[리눅스] 커널(KERNEL)과 쉘(SHELL)의 개념, 쉘을 이해해보자](https://reakwon.tistory.com/135) [티스토리]
+- [리눅스 커널(KERNEL)과 쉘(SHELL)의 개념, 쉘을 이해해보자](https://reakwon.tistory.com/135) [티스토리]

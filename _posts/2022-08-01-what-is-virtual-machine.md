@@ -8,7 +8,7 @@ use_math: true
 
 # 가상 머신(Virtual Machine)이란?
 
-![출처: [잔재미코딩](https://www.fun-coding.org/virtualmachine.html)](/assets/images/2022-08-01-what-is-virtual-machine/virtual_machine.png)
+![출처: 잔재미코딩](/assets/images/2022-08-01-what-is-virtual-machine/virtual_machine.png)
 
 출처: [잔재미코딩](https://www.fun-coding.org/virtualmachine.html)
 
