@@ -112,7 +112,7 @@ WAS는 사용자의 요청에 맞게 동적 페이지를 제공해야 한다.
 
 ![top_gun](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/top_gun.gif)
 
-영화 <탑건> (1986)
+영화 탑건 1986
 
 CGI는 Common Gateway Interface의 약자로 웹 서버에서 프로그램을 동작시키기 위한 프로토콜이다. 
 
