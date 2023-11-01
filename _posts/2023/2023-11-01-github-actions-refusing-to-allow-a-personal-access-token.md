@@ -1,5 +1,5 @@
 ---
-title: [Github Actions] refusing to allow a Personal Access Token to create or update workflow 에러 해결 방법
+title: "[Github Actions] refusing to allow a Personal Access Token to create or update workflow 에러 해결 방법"
 date: 2023-11-01 23:50:00 +0900
 categories: [github]
 tags: [github, github actions]
