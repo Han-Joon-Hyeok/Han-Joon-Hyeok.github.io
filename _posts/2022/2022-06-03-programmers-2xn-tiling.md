@@ -57,13 +57,13 @@ function solution(n) {
 
 전체 가로 길이를 `n` 이라 해보자.
 
-![dynamic_programming-Page-3.drawio.png](/assets/images/2022-06-03-programmers-2xn-tiling/dynamic_programming-Page-3.drawio.png)
+![dynamic_programming-Page-3.drawio.png](/assets/images/2022/2022-06-03-programmers-2xn-tiling/dynamic_programming-Page-3.drawio.png)
 
 마지막에 놓는 타일은 가로가 1인 직사각형을 1개 배치하거나, 가로가 2인 직사각형을 2개 배치하는 방법이 있다. 그래서 가로의 길이가 `n` 인 직사각형을 만들기 위해서는 가로가 `n - 1` 인 직사각형을 만드는 경우의 수와 `n - 2` 인 직사각형을 만드는 경우의 수를 더한 것과 동일하다.
 
 그렇다면 가로가 `n - 1` 인 직사각형을 채우는 경우의 수는 가로가 `n - 2` 인 직사각형을 채우는 경우의 수와 `n - 3` 인 직사각형을 채우는 경우의 수를 더한 것과 같다.
 
-![dynamic_programming-Page-3.drawio (1).png](</assets/images/2022-06-03-programmers-2xn-tiling/dynamic_programming-Page-3.drawio%20(1).png>)
+![dynamic_programming-Page-3.drawio (1).png](</assets/images/2022/2022-06-03-programmers-2xn-tiling/dynamic_programming-Page-3.drawio%20(1).png>)
 
 즉, $D[n] = D[n - 1] + D[n - 2]$ 관계가 성립한다는 것이다.
 

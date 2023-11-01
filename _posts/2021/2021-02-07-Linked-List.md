@@ -9,7 +9,7 @@ tags: [Data Structure]
 
 # 7강. 연결 리스트(Linked Lists)
 
-![Linked List(1)](/assets/images/2021-02-07-Linked-List/linked-list(1).jpg)
+![Linked List(1)](/assets/images/2021/2021-02-07-Linked-List/linked-list(1).jpg)
 
 `연결 리스트(Linked List)`는 선형 구조 리스트 한 종류이다. 연결 리스트는 `선형 리스트`와는 달리 순서가 차례대로 늘어서있는 것이 아니라, 앞에 있는 데이터가 뒤에 이어지는 데이터를 가리키는 형태로 구성되어있다.
 
@@ -22,11 +22,11 @@ tags: [Data Structure]
 
 ## 연결 리스트의 구성
 
-![Linked List(2)](/assets/images/2021-02-07-Linked-List/linked-list(2).jpg)
+![Linked List(2)](/assets/images/2021/2021-02-07-Linked-List/linked-list(2).jpg)
 
 연결 리스트에 포함된 각각의 아이템을 `노드(Node)`라고 한다. 노드에는 `데이터`와 다음 데이터를 가리키는 `링크`가 함께 들어있다. 노드 내의 데이터는 문자열, 레코드, 또 다른 연결 리스트(2차원 연결 리스트)가 될 수 있다.
 
-![Linked List(3)](/assets/images/2021-02-07-Linked-List/linked-list(3).jpg)
+![Linked List(3)](/assets/images/2021/2021-02-07-Linked-List/linked-list(3).jpg)
 
 
 연결 리스트의 가장 맨 앞에 위치하는 아이템을 `헤드(Head)`라고 부르고, 맨 마지막에 위치한 아이템을 `테일(Tail)`, 꼬리라고 부른다.
@@ -55,7 +55,7 @@ tags: [Data Structure]
 
 ## 노드 클래스
 
-![Linked List(4)](/assets/images/2021-02-07-Linked-List/linked-list(4).jpg)
+![Linked List(4)](/assets/images/2021/2021-02-07-Linked-List/linked-list(4).jpg)
 
 ``` python
 class Node:
@@ -68,7 +68,7 @@ class Node:
 
 ## 연결 리스트(Linked List) 클래스
 
-![Linked List(5)](/assets/images/2021-02-07-Linked-List/linked-list(5).jpg)
+![Linked List(5)](/assets/images/2021/2021-02-07-Linked-List/linked-list(5).jpg)
 
 ```Python
 class LinkedList:
@@ -95,7 +95,7 @@ def getAt(self, pos):
 ```
 함수의 인자로 주어지는 `pos`는 `position`의 줄임말로, 이 함수는 특정 위치에 존재하는 원소를 찾기 위한 함수이다. 
 
-![getAt(1)](/assets/images/2021-02-07-Linked-List/getAt(1).png)
+![getAt(1)](/assets/images/2021/2021-02-07-Linked-List/getAt(1).png)
 
 위와 같은 연결 리스트가 있다고 해보자. 
 
@@ -110,13 +110,13 @@ def getAt(self, pos):
 
 다음으로 위의 조건을 만족하는 연결 리스트 범위 내의 인덱스라면, 현재 인덱스를 `i = 1`로 설정해준다. 그러면 현재 `curr(current)` 변수는 연결 리스트의 처음인 노드이므로 `curr = self.head` 로 설정한다. 
 
-![getAt(2)](/assets/images/2021-02-07-Linked-List/getAt(2).png)
+![getAt(2)](/assets/images/2021/2021-02-07-Linked-List/getAt(2).png)
 
 `while i < pos`는 탐색하고자 하는 인덱스 `pos`에 도달하기 전까지 반복문을 수행한다는 의미이다. 
 
 그래서 인덱스 값이 `pos`에 도달하기 전까지는 `curr` 변수에 그 다음 노드 `curr.next`를 가리킨다.
 
-![getAt(3)](/assets/images/2021-02-07-Linked-List/getAt(3).png)
+![getAt(3)](/assets/images/2021/2021-02-07-Linked-List/getAt(3).png)
 
 여기서 의아할 수 있는 점이, `next` 변수는 `Node` 클래스에 속해있는데, `LinkedList`의 변수인 `curr`가 어떻게 `Node` 클래스의 변수값을 가질 수 있냐는 것이다. 해당 강의를 듣는 다른 수강생들도 이 부분에 대해서 많이 궁금해하고, 이해하지 못해서 질문을 많이 올렸다.
 

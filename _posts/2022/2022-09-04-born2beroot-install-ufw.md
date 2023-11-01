@@ -51,41 +51,40 @@ iptables 는 지나가는 패킷의 헤더를 검사해서 패킷의 통과 여�
 ## UFW 설치 및 활성화
 
 1. 아래의 명령어를 입력해서 UFW 를 설치한다.
-    
-    ```bash
-    sudo apt install ufw
-    ```
-    
+
+   ```bash
+   sudo apt install ufw
+   ```
+
 2. UFW 의 상태를 확인하기 위해 다음의 명령어를 입력한다.
-    
-    ```bash
-    sudo ufw status verbose
-    ```
-    
-    - `verbose` 옵션은 `status` 옵션이 표시하는 정보에서 추가 정보를 표시하기 위해 사용한다.
-    
-    ![1](/assets/images/2022-09-04-born2beroot-install-ufw/1.png)
-    
+
+   ```bash
+   sudo ufw status verbose
+   ```
+
+   - `verbose` 옵션은 `status` 옵션이 표시하는 정보에서 추가 정보를 표시하기 위해 사용한다.
+
+   ![1](/assets/images/2022/2022-09-04-born2beroot-install-ufw/1.png)
+
 3. 다음의 명령어를 입력해서 부팅 시 UFW 가 작동하도록 한다.
-    
-    ```bash
-    sudo ufw enable
-    ```
-    
-    ![2](/assets/images/2022-09-04-born2beroot-install-ufw/2.png)
-    
+
+   ```bash
+   sudo ufw enable
+   ```
+
+   ![2](/assets/images/2022/2022-09-04-born2beroot-install-ufw/2.png)
+
 4. 다음의 명령어를 입력해서 4242 포트만 열어준다.
-    
-    ```bash
-    sudo ufw allow 4242
-    ```
-    
-    ![3](/assets/images/2022-09-04-born2beroot-install-ufw/3.png)
-    
+
+   ```bash
+   sudo ufw allow 4242
+   ```
+
+   ![3](/assets/images/2022/2022-09-04-born2beroot-install-ufw/3.png)
 
 # 참고자료
 
-- [방화벽](https://ko.wikipedia.org/wiki/%EB%B0%A9%ED%99%94%EB%B2%BD_(%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9)) [위키백과]
+- [방화벽](<https://ko.wikipedia.org/wiki/%EB%B0%A9%ED%99%94%EB%B2%BD_(%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9)>) [위키백과]
 - [정보보안 - 방화벽의 개념, 원리](https://dany-it.tistory.com/20) [티스토리]
 - [UFW](https://help.ubuntu.com/community/UFW) [ubuntu]
 - [UFW](https://ko.wikipedia.org/wiki/UFW) [위키백과]

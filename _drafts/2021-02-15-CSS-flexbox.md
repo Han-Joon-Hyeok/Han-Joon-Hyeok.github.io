@@ -9,7 +9,7 @@ tags: [css]
 
 # Flexbox?
 
-`Flexbox`는 행과 열로 HTML 요소들을 유연하고 빠르게 정렬하는 것을 도와주는 CSS의 속성이다. 
+`Flexbox`는 행과 열로 HTML 요소들을 유연하고 빠르게 정렬하는 것을 도와주는 CSS의 속성이다.
 
 기존에는 원하는 위치에 요소를 배치하기 위해서 `table`, `position`, `float`를 사용했었다. 하지만, 새로운 요소가 추가되면 전체적인 CSS를 변경해야 하거나, 요소들을 같은 간격으로 동일한 너비와 높이로 정렬하는 것은 어려운 문제였다.
 
@@ -54,11 +54,8 @@ tags: [css]
 flexbox는 메인축(`main axis`)과 반대축(`cross axis`)으로 구성이 되어있다. 만약 수평을 메인축으로 하면, 반대축은 수직이 되는 것이다. 기본값은 `수평`이 메인축이다.
 
 <p class="img-container">
-    <img class="post-img" src="/assets/images/2021-02-15-CSS-flexbox/flexbox-axis(1).png" alt="Jekyll">
+    <img class="post-img" src="/assets/images/2021/2021-02-15-CSS-flexbox/flexbox-axis(1).png" alt="Jekyll">
     <p class="post-img-caption">출처 : <a href="https://d2.naver.com/helloworld/8540176">https://d2.naver.com/helloworld/8540176</a></p>
 </p>
-
-
-
 
 참고자료 : https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/F

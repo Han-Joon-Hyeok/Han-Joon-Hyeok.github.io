@@ -6,7 +6,7 @@ tags: [dynamic programming, JavaScript]
 use_math: true
 ---
 
-![thumbnail](/assets/images/2022-06-03-dynamic-programming/thumbnail.png)
+![thumbnail](/assets/images/2022/2022-06-03-dynamic-programming/thumbnail.png)
 
 # 📌 동적 계획법 (Dynamic Programming) 이란?
 
@@ -39,7 +39,7 @@ const fibo = (n) => {
 
 이때, $fibo(3) = fibo(2) + fibo(1)$ 이다. 하지만, $fibo(2)$ 의 결과는 $fibo(3)$ 구할 때와 $fibo(4)$ 를 구할 때 모두 필요한데, 결과값을 따로 저장하지 않아서 매번 계산을 다시 해주어야 한다. 이를 그림으로 표현하면 다음과 같다.
 
-![dynamic_programming.drawio.png](/assets/images/2022-06-03-dynamic-programming/dynamic_programming.drawio.png)
+![dynamic_programming.drawio.png](/assets/images/2022/2022-06-03-dynamic-programming/dynamic_programming.drawio.png)
 
 즉, 재귀 함수로 구현하면 동일한 값을 2번씩 구하게 되며, 시간 복잡도는 $O(2^n)$ (f(4) = f(3) + f(2) + f(1) + f(0) + f(2) + f(1) + f(1)) 이 된다. 그래서 `n` 의 값이 커질 수록 연산이 기하급수 적으로 증가하는 문제가 생긴다.
 
@@ -58,7 +58,7 @@ const fibo = (n) => {
 
 결과값을 저장하는 `dp` 라는 1차원 배열이 있다고 하자. 초기 상태인 `dp[0]` 부터 시작해서 반복문을 통해 목표값인 `dp[n]` 까지 반복문을 통해 점화식으로 결과를 재활용하는 방식이다.
 
-![dynamic_programming-Page-2.drawio.png](/assets/images/2022-06-03-dynamic-programming/dynamic_programming-Page-2.drawio.png)
+![dynamic_programming-Page-2.drawio.png](/assets/images/2022/2022-06-03-dynamic-programming/dynamic_programming-Page-2.drawio.png)
 
 참고로 이 방식을 “Tabulation 방식" 이라고 부르는 이유는 반복을 통해 테이블의 처음부터 마지막까지 채우는 과정을 “table-filling” 이라고 부르기 때문이다.
 
@@ -137,7 +137,7 @@ memo[n] = top_down_fibo(n - 1) + top_down_fibo(n - 2);
 
 예를 들어서 n 이 7인 직사각형은 다음과 같이 채울 수 있습니다.
 
-![programmers_2xn_tiling.png](/assets/images/2022-06-03-dynamic-programming/programmers_2xn_tiling.png)
+![programmers_2xn_tiling.png](/assets/images/2022/2022-06-03-dynamic-programming/programmers_2xn_tiling.png)
 
 ## 제한 사항
 
@@ -146,13 +146,13 @@ memo[n] = top_down_fibo(n - 1) + top_down_fibo(n - 2);
 
 ## 문제 분석
 
-![dynamic_programming-Page-3.drawio.png](/assets/images/2022-06-03-dynamic-programming/dynamic_programming-Page-3.drawio.png)
+![dynamic_programming-Page-3.drawio.png](/assets/images/2022/2022-06-03-dynamic-programming/dynamic_programming-Page-3.drawio.png)
 
 마지막에 놓는 타일은 가로가 1인 직사각형을 1개 배치하거나, 가로가 2인 직사각형을 2개 배치하는 방법이 있다. 그래서 가로의 길이가 `n` 인 직사각형을 만들기 위해서는 가로가 `n - 1` 인 직사각형을 만드는 경우의 수와 `n - 2` 인 직사각형을 만드는 경우의 수를 더한 것과 동일하다.
 
 그렇다면 가로가 `n - 1` 인 직사각형을 채우는 경우의 수는 가로가 `n - 2` 인 직사각형을 채우는 경우의 수와 `n - 3` 인 직사각형을 채우는 경우의 수를 더한 것과 같다.
 
-![dynamic_programming-Page-3.drawio (1).png](</assets/images/2022-06-03-dynamic-programming/dynamic_programming-Page-3.drawio%20(1).png>)
+![dynamic_programming-Page-3.drawio (1).png](</assets/images/2022/2022-06-03-dynamic-programming/dynamic_programming-Page-3.drawio%20(1).png>)
 
 즉, $D[n] = D[n - 1] + D[n - 2]$ 관계가 성립한다는 것이다.
 

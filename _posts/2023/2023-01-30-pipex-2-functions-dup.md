@@ -20,7 +20,7 @@ int dup(int fildes);
 
 - 성공 : 복사된 파일 디스크립터 번호
 - 실패 : -1
-    - 발생한 오류에 따라 `errno` 가 설정됨
+  - 발생한 오류에 따라 `errno` 가 설정됨
 
 ## 예시
 
@@ -74,7 +74,7 @@ HELLO world
 
 # 파일 디스크립터 이해하기
 
-![1.png](/assets/images/2023-01-30-pipex-2-functions-dup/1.png)
+![1.png](/assets/images/2023/2023-01-30-pipex-2-functions-dup/1.png)
 
 출처: [wikipedia](https://en.wikipedia.org/wiki/File_descriptor)
 
@@ -136,13 +136,13 @@ int	main(void)
 
 ## dup 함수에 적용하기
 
-![2.png](/assets/images/2023-01-30-pipex-2-functions-dup/2.png)
+![2.png](/assets/images/2023/2023-01-30-pipex-2-functions-dup/2.png)
 
 `dup` 함수를 사용하기 전에는 `fd` 변수에 `hello.txt` 파일을 가리키는 포인터의 파일 디스크립터 3번이 저장되어 있었다.
 
 이때, `dup_fd` 변수에 `dup(fd)` 를 실행하면 사용 가능한 가장 낮은 디스크립터 번호인 4번에 `hello.txt` 를 가리키는 포인터를 저장하는 것이다. `fd` 변수는 `open` 할 때 읽기 및 쓰기 모드를 사용했는데, `dup` 함수는 파일 테이블 포인터도 동일하게 복사하기 때문에 동일한 파일을 가리킬 수 있게 되는 것이다.
 
-![3.png](/assets/images/2023-01-30-pipex-2-functions-dup/3.png)
+![3.png](/assets/images/2023/2023-01-30-pipex-2-functions-dup/3.png)
 
 # 참고 자료
 

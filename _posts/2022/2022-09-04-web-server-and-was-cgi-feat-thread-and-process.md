@@ -17,7 +17,7 @@ use_math: true
 
 클라이언트(브라우저)에서 특정 사이트에 접속하는 과정을 그림으로 표현하면 아래와 같다.
 
-![web_server_was](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/web_server_was.png)
+![web_server_was](/assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/web_server_was.png)
 
 출처: [웹서버 구조](https://velog.io/@ikswary/%EC%9B%B9%EC%84%9C%EB%B2%84-%EA%B5%AC%EC%A1%B0) [velog]
 
@@ -49,9 +49,9 @@ use_math: true
 요청의 종류에 따라 웹 서버가 수행하는 기능이 달라진다.
 
 1. 정적 콘텐츠 요청
-    - WAS를 거치지 않고 웹 서버에 저장된 자원을 바로 제공한다.
+   - WAS를 거치지 않고 웹 서버에 저장된 자원을 바로 제공한다.
 2. 동적 콘텐츠 요청
-    - 클라이언트의 요청을 WAS에 보내고, WAS가 처리한 결과를 클라이언트에게 전달한다.
+   - 클라이언트의 요청을 WAS에 보내고, WAS가 처리한 결과를 클라이언트에게 전달한다.
 
 # WAS(Web Application Server)
 
@@ -94,7 +94,7 @@ WAS는 사용자의 요청에 맞게 동적 페이지를 제공해야 한다.
 
 ## 비유를 통한 이해
 
-![ice_coffee](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/ice_coffee.jpeg)
+![ice_coffee](/assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/ice_coffee.jpeg)
 
 출처: [카카오TV 가짜사나이2](https://tv.kakao.com/channel/3665690/cliplink/414397937?metaObjectType=Channel)
 
@@ -104,17 +104,17 @@ WAS는 사용자의 요청에 맞게 동적 페이지를 제공해야 한다.
 
 이때, 편의점 캔커피는 웹 서버에 해당하고, WAS는 카페에서 직접 종업원이 내려주는 커피에 해당한다.
 
-편의점 캔커피는 이미 포장되어 있어서 바로 마실 수 있고, 언제 마셔도 항상 같은 맛을 느낄 수 있다. 하지만, 카페에서는 원두를 갈고, 에스프레소를 추출해서 커피를 완성하기 까지는 시간이 필요하다. 그리고 고객의 요청에 따라 커피를 진하게 만들거나 연하게 만드는 등 다양한 요구사항을 처리해야 한다. 
+편의점 캔커피는 이미 포장되어 있어서 바로 마실 수 있고, 언제 마셔도 항상 같은 맛을 느낄 수 있다. 하지만, 카페에서는 원두를 갈고, 에스프레소를 추출해서 커피를 완성하기 까지는 시간이 필요하다. 그리고 고객의 요청에 따라 커피를 진하게 만들거나 연하게 만드는 등 다양한 요구사항을 처리해야 한다.
 
 마찬가지로 웹 서버는 누구에게나 동일하게 보여지는 정적 데이터를 전달하고, WAS는 사용자의 요청에 따라 내용이 달라지는 동적 데이터를 전달하는 것이다.
 
 # CGI
 
-![top_gun](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/top_gun.gif)
+![top_gun](/assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/top_gun.gif)
 
 영화 탑건 1986
 
-CGI는 Common Gateway Interface의 약자로 웹 서버에서 프로그램을 동작시키기 위한 프로토콜이다. 
+CGI는 Common Gateway Interface의 약자로 웹 서버에서 프로그램을 동작시키기 위한 프로토콜이다.
 
 - 프로토콜 : 공통의 데이터 교환 방법 및 순서에 대해 정의한 의사소통 약속. 주로 통신에 많이 쓰이며, 주고 받는 메시지 양식과 규칙 체계를 의미한다.
 - 프로토콜이 필요한 이유는 원활한 데이터 교환을 수행하기 위해서다.
@@ -128,13 +128,13 @@ CGI는 Common Gateway Interface의 약자로 웹 서버에서 프로그램을 �
 
 CGI는 웹 서버에 미리 저장된 HTML을 전달하는 것 뿐만 아니라, 사용자의 요청을 CGI 규격을 준수한 프로그램에서 적절하게 처리하고, 처리 결과를 HTML로 생성하여 웹 서버에 전달한다.
 
-![cgi](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/cgi.png)
+![cgi](/assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/cgi.png)
 
 출처: [CGI 기술의 등장 배경과 WAS로의 발전](https://bentist.tistory.com/40) [티스토리]
 
 Python, Java, PHP 등의 프로그래밍 언어로 CGI 규격을 준수한 CGI Program을 만들면, 웹 서버는 CGI Program을 호출하고, 클라이언트의 요청에 대해 개별 프로세스를 생성한다.
 
-![cgi2](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/cgi2.png)
+![cgi2](/assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/cgi2.png)
 
 출처: [CGI 기술의 등장 배경과 WAS로의 발전](https://bentist.tistory.com/40) [티스토리]
 
@@ -146,7 +146,7 @@ CGI의 한계는 클라이언트의 요청이 많아지면 서버에 가해지�
 
 비유를 하자면, 보통 관광 버스에서는 가이드 1명이 주변 풍경을 보며 설명 해주는데, CGI는 승객 1명마다 가이드가 1명씩 붙어서 동일한 설명을 하는 것과 비슷하다. 여기서 버스는 서버, 관광객은 클라이언트, 설명하는 것은 CGI 프로그램이 프로세스를 생성하는 것에 해당한다. 승객에게 동일한 설명을 하는데 꼭 승객마다 가이드가 개별적으로 다 붙어서 설명할 필요는 없으며, 이는 자원을 비효율적으로 운영하는 것이다.
 
-![cgi3](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/cgi3.png)
+![cgi3](/assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/cgi3.png)
 
 출처: [CGI 기술의 등장 배경과 WAS로의 발전](https://bentist.tistory.com/40) [티스토리]
 
@@ -156,7 +156,7 @@ CGI의 한계는 클라이언트의 요청이 많아지면 서버에 가해지�
 
 첫 번째는 웹 서버에 스크립트 엔진(인터프리터)을 내장시켜 하나의 프로세스에서 여러 요청을 처리하는 것이다. 웹 서버 내장 모듈 방식으로도 불린다.
 
-두 번째는 사용자의 요청을 처리하는 프로그램을 데몬으로 실행시키는 것이다. 데몬이란 시스템 백그라운드 프로세스인데, 사용자의 요청을 기다리다가 요청이 발생하면 적절하게 수행한다. 이것이 WAS에 해당하는 것이다. 별도의 WAS를 두게 되면 웹 서버는 리버스 프록시를  통해 로드 밸런싱을 할 수 있게 된다.
+두 번째는 사용자의 요청을 처리하는 프로그램을 데몬으로 실행시키는 것이다. 데몬이란 시스템 백그라운드 프로세스인데, 사용자의 요청을 기다리다가 요청이 발생하면 적절하게 수행한다. 이것이 WAS에 해당하는 것이다. 별도의 WAS를 두게 되면 웹 서버는 리버스 프록시를 통해 로드 밸런싱을 할 수 있게 된다.
 
 리버스 프록시(Reverse Proxy)는 인터넷과 WAS 중간에서 WAS를 대신하여 중복으로 들어오는 정적 파일에 대한 요청은 웹 서버에서 처리하고, 동적인 처리는 WAS로 전달하는 역할을 한다. 또한, 사용자의 요청이 많아지면 서버에 부하가 발생하는데, 웹 서버는 로드 밸런싱(부하 분산)을 통해 여러 WAS로 요청하여 분산 처리할 수 있다. 즉, 웹 서버 1대에서 여러 대의 WAS에게 일을 시키는 것이다.
 
@@ -189,7 +189,7 @@ CGI의 한계는 클라이언트의 요청이 많아지면 서버에 가해지�
 
 프로그램과 프로세스를 그림으로 표현하면 다음과 같다.
 
-![process_thread.drawio (1).png](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(1).png)
+![process_thread.drawio (1).png](</assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(1).png>)
 
 정리하면, 프로그램은 코드 덩어리, 프로그램을 실행시킨 것이 프로세스다.
 
@@ -199,13 +199,13 @@ CGI의 한계는 클라이언트의 요청이 많아지면 서버에 가해지�
 
 시간이 지날수록 많은 작업을 동시에 수행해야 할 필요가 생겼고, 이에 따라 여러 프로세스를 동시에 또는 병렬적으로 처리하는 방법이 등장했다.
 
-하나의 CPU가 프로세스를 동시에 수행(concurrency)하는 것을 멀티 태스킹이라 한다. 사람 1명이 여러 가지 일을 조금씩 수행해나가는 것과 동일하다. 현재 처리하던 프로세스에서 다른 프로세스로 바꾸는 작업을 Context Switching이라 하는데, 이 과정이 사람의 인식보다 빠르게 진행되다보니 각각의 프로세스를 조금씩 수행하는 것이 아닌 동시에 여러 프로세스를 처리하는 것처럼 보이는 것이다. 그림으로 표현하면 다음과 같다. 
+하나의 CPU가 프로세스를 동시에 수행(concurrency)하는 것을 멀티 태스킹이라 한다. 사람 1명이 여러 가지 일을 조금씩 수행해나가는 것과 동일하다. 현재 처리하던 프로세스에서 다른 프로세스로 바꾸는 작업을 Context Switching이라 하는데, 이 과정이 사람의 인식보다 빠르게 진행되다보니 각각의 프로세스를 조금씩 수행하는 것이 아닌 동시에 여러 프로세스를 처리하는 것처럼 보이는 것이다. 그림으로 표현하면 다음과 같다.
 
-![process_thread.drawio (2).png](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(2).png)
+![process_thread.drawio (2).png](</assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(2).png>)
 
 한편, 병렬적(parallelism)으로 프로세스를 처리하는 것은 CPU 하나에 여러 개의 코어가 각각 동시에 작업을 수행하는 것이다. CPU의 속도가 발열 등의 물리적 제약 때문에 예전만큼 빠르게 발전하지 못해서 대안으로 코어를 여러 개 달아서 작업을 분담할 수 있도록 한 것이다. 그림으로 표현하면 다음과 같다.
 
-![process_thread.drawio (3).png](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(3).png)
+![process_thread.drawio (3).png](</assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(3).png>)
 
 이처럼 하나의 CPU가 여러 프로세스를 동시적 또는 병렬적으로 수행할 수 있게 되었지만, 하나의 프로세스 안에서도 여러 일을 수행해야 하는 경우가 생기게 되었다.
 
@@ -215,7 +215,7 @@ CGI의 한계는 클라이언트의 요청이 많아지면 서버에 가해지�
 
 한 프로그램을 처리하기 위한 프로세스를 여러 개 만들지 않는 이유는 운영체제가 안정성을 위해 프로세스는 각자 할당받은 메모리 내의 정보만 접근할 수 있도록 제약을 두고 있고, 이를 벗어나는 메모리에 접근하면 오류가 발생하기 때문이다.
 
-![process_thread.drawio (4).png](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(4).png)
+![process_thread.drawio (4).png](</assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(4).png>)
 
 컴퓨터는 프로세스마다 자원을 할당해서 처리하는데, 프로세스에게 할당된 자원을 여러 스레드가 공유해서 사용하면 속도와 효율적으로 처리할 수 있게 되는 장점이 생긴다.
 
@@ -227,11 +227,11 @@ CGI의 한계는 클라이언트의 요청이 많아지면 서버에 가해지�
 
 운영체제는 프로세스에게 시스템 자원을 할당할 때, 독립된 메모리 영역에 Code, Data, Stack, Heap 으로 구분지어 할당한다. 그래서 각 프로세스는 다른 프로세스의 변수나 자료에 접근할 수 없다.
 
-![process_thread.drawio (5).png](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(5).png)
+![process_thread.drawio (5).png](</assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(5).png>)
 
 하지만 스레드는 프로세스 내에서 메모리를 서로 공유하는데, 정확하게는 Code, Data, Heap 은 공유하고, 각각의 스레드는 별도의 Stack을 가지게 된다.
 
-![process_thread.drawio (6).png](/assets/images/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(6).png)
+![process_thread.drawio (6).png](</assets/images/2022/2022-09-04-web-server-and-was-cgi-feat-thread-and-process/process_thread.drawio_(6).png>)
 
 만약, 한 프로세스가 실행 중에 오류가 발생해서 강제로 종료된다면 다른 프로세스에 어떤 영향을 줄까? 프로세스 간에 공유하는 파일을 손상시키는 경우가 아니라면 아무런 영향이 없다.
 
@@ -239,7 +239,7 @@ CGI의 한계는 클라이언트의 요청이 많아지면 서버에 가해지�
 
 예컨대, C로 코드를 작성한 경우에 어떤 함수에서 Segmentation Fault 나 Bus Error 가 발생하면 다른 함수에 대한 모든 작업을 중단하고 프로세스 실행을 끝내는 경우가 이에 해당한다.
 
-실제 코드로 예시를 들면 다음과 같다. 
+실제 코드로 예시를 들면 다음과 같다.
 
 동적 할당한 포인터를 해제하고 나서 해당 포인터에 접근하는 예시이다.
 
@@ -285,7 +285,7 @@ CPU 입장에서는 스레드를 최소 작업 단위로 삼고 작업한다. �
 
 하나의 프로세스는 하나 이상의 스레드를 가지는데, 운영체제 입장에서는 프로세스가 최소 작업 단위이기 때문에 같은 프로세스의 스레드끼리는 메모리를 공유하게 되는 것이다.
 
-비유를 하자면, 학교(운영체제)에서 학기 초에 반마다 청소 도구를 나누어주고(자원 할당), 청소 시간에는 각 반 학생들(스레드)끼리 알아서 청소 도구를 나누어 사용하는 것이다. 어떤 반에서 유일하게 남은 빗자루가 부러졌다면 빗자루를 쓰고 싶은 다른 학생들은 빗자루를 쓰지 못한 채로 청소를 끝내야만 한다. 
+비유를 하자면, 학교(운영체제)에서 학기 초에 반마다 청소 도구를 나누어주고(자원 할당), 청소 시간에는 각 반 학생들(스레드)끼리 알아서 청소 도구를 나누어 사용하는 것이다. 어떤 반에서 유일하게 남은 빗자루가 부러졌다면 빗자루를 쓰고 싶은 다른 학생들은 빗자루를 쓰지 못한 채로 청소를 끝내야만 한다.
 
 즉, 운영체제가 프로세스가 실행될 때마다 할당한 자원들을 다시 회수하고 분배하는 것보다 프로세스에 한번 할당한 자원은 프로세스 내부에서 자율적으로 사용하도록 해야 효율적인 운영이 가능한 것이다.
 

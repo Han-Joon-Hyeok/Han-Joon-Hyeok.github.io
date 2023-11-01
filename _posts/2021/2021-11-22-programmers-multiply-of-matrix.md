@@ -44,7 +44,7 @@ function solution(arr1, arr2) {
 - 3중 반복문으로 푸는 방법이다.
 - 외부 - 중간 - 내부의 구조라고 하면, 외부 반복문은 첫 번째 행렬의 행의 개수를 기준으로, 중간 반복문은 두 번째 행렬의 열의 개수를 기준으로, 내부 반복문은 두 번째 행렬의 행의 개수를 기준으로 한다.
 - 그리고 다음의 그림과 같이 첫 번째 행렬의 행 만큼 연산을 반복한다.
-  ![picture](/assets/images/2021-11-22-programmers-multiply-of-matrix/picture.png)
+  ![picture](/assets/images/2021/2021-11-22-programmers-multiply-of-matrix/picture.png)
 
 ## 👀참고한 풀이
 

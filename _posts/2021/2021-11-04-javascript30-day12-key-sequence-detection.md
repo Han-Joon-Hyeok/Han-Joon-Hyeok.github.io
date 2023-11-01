@@ -18,7 +18,7 @@ tags: [javascript30, javascript]
 
 ## 구현 화면
 
-![screenshot](/assets/images/2021-11-04-javascript30-day12-key-sequence-detection/screenshot.gif)
+![screenshot](/assets/images/2021/2021-11-04-javascript30-day12-key-sequence-detection/screenshot.gif)
 
 ## 구현 코드 (JavaScript)
 

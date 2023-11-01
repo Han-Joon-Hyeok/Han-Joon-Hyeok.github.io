@@ -31,11 +31,11 @@ sudo systemctl disable lighttpd.service	# 부팅 시 서버 실행 정지
 
 워드 프레스는 DB와 정보를 주고 받기 위해 PHP를 사용한다.
 
-PHP는 Personal HomePage tools 의 줄임말로 서버 사이드 프로그래밍 언어이다. 주로 HTML 코드를 동적으로 생성하기 위해 사용한다. 
+PHP는 Personal HomePage tools 의 줄임말로 서버 사이드 프로그래밍 언어이다. 주로 HTML 코드를 동적으로 생성하기 위해 사용한다.
 
 아래의 그림은 PHP의 동작 원리를 간략하게 표현한 것이다.
 
-![php_works.png](/assets/images/2022-09-04-born2beroot-install-wordpress/php_works.png)
+![php_works.png](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/php_works.png)
 
 PHP를 설치하기 위해 아래의 명령어를 터미널에 입력한다.
 
@@ -67,12 +67,12 @@ sudo vim /etc/lighttpd/conf-available/15-fastcgi-php.conf
 "socket" => "/var/run/php/php7.4-fpm.sock",
 ```
 
-![1](/assets/images/2022-09-04-born2beroot-install-wordpress/1.png)
+![1](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/1.png)
 
 아래의 명령어를 입력하여 `lighttpd` 를 재시작 한다.
 
 ```bash
-sudo lighttpd-enable-mod fastcgi 
+sudo lighttpd-enable-mod fastcgi
 sudo lighttpd-enable-mod fastcgi-php
 sudo service lighttpd force-reload
 ```
@@ -88,11 +88,11 @@ VirtualBox 의 포트 포워딩에서 다음과 같이 추가한다.
 - Host IP / Host Port : 로컬 컴퓨터 IP 주소, 8080
 - Guest IP / Guest Port : 가상 머신 IP 주소, 80
 
-![2](/assets/images/2022-09-04-born2beroot-install-wordpress/2.png)
+![2](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/2.png)
 
 로컬 컴퓨터의 브라우저에서 `로컬 컴퓨터 IP주소:8080` 를 주소창에 입력하면 다음과 같은 페이지가 뜬다.
 
-![3](/assets/images/2022-09-04-born2beroot-install-wordpress/3.png)
+![3](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/3.png)
 
 위의 페이지는 `ligthttpd.conf` 파일의 `server.document-root` 에 해당하는 디렉토리인 `/var/www/html/` 의 `index.lighttpd.html` 파일을 보여준 것이다.
 
@@ -107,7 +107,7 @@ VirtualBox 의 포트 포워딩에서 다음과 같이 추가한다.
 
 그 다음 로컬 컴퓨터의 브라우저에서 `로컬 컴퓨터 IP주소:8080/info.php` 로 접속하면 아래와 같이 FPM/FastCGI 가 정상적으로 적용된 것을 확인할 수 있다.
 
-![4.png](/assets/images/2022-09-04-born2beroot-install-wordpress/4.png)
+![4.png](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/4.png)
 
 PHP 와 DB 를 연동하기 위한 패키지를 설치한다.
 
@@ -228,7 +228,7 @@ sudo tar -xvzf /tmp/wordpress.tar.gz -C /var/www/html
 
 `로컬 컴퓨터 IP주소:8080/wordpress` 에 접속하면 DB 설정 페이지가 표시된다.
 
-![5](/assets/images/2022-09-04-born2beroot-install-wordpress/5.png)
+![5](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/5.png)
 
 웹에서도 DB를 설정할 수 있지만, CLI 환경에서 설정하는 방법은 다음과 같다.
 
@@ -240,9 +240,9 @@ sudo tar -xvzf /tmp/wordpress.tar.gz -C /var/www/html
 sudo vim /var/www/html/wordpress/wp-config-sample.php
 ```
 
- `DB_NAME`,`DB_USER`, `DB_PASSWORD` 항목을 SQL 문법을 사용해서 생성한 정보와 동일하게 입력한다.
+`DB_NAME`,`DB_USER`, `DB_PASSWORD` 항목을 SQL 문법을 사용해서 생성한 정보와 동일하게 입력한다.
 
-![6](/assets/images/2022-09-04-born2beroot-install-wordpress/6.png)
+![6](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/6.png)
 
 그 다음 고유한 인증키를 설정하기 위해 아래 주소에 접속하여 표시되는 내용을 그대로 복사하여 붙여넣고 저장한다. 참고로 해당 페이지는 새로고침을 할 때마다 인증키가 바뀐다.
 
@@ -250,7 +250,7 @@ sudo vim /var/www/html/wordpress/wp-config-sample.php
 
 여기서 사용하는 salt 는 외부에서 사용자의 암호를 쉽게 파악하기 어렵도록 원본 데이터에 임의로 추가하는 데이터이다.
 
-![7](/assets/images/2022-09-04-born2beroot-install-wordpress/7.png)
+![7](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/7.png)
 
 `wp-config-sample.php` 파일을 `wp-config.php` 로 파일명을 변경한다.
 
@@ -260,13 +260,13 @@ sudo mv /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-
 
 로컬 컴퓨터의 브라우저에서 `로컬 컴퓨터 IP주소:8080/wordpress` 에 접속하면 다음과 같은 페이지가 표시된다.
 
-![8](/assets/images/2022-09-04-born2beroot-install-wordpress/8.png)
+![8](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/8.png)
 
 정보를 입력하고 Install WordPress 를 클릭한다.
 
 입력한 정보로 로그인하면 다음과 같이 Dashboard 페이지가 표시된다.
 
-![9.png](/assets/images/2022-09-04-born2beroot-install-wordpress/9.png)
+![9.png](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/9.png)
 
 # phpMyAdmin
 
@@ -300,11 +300,11 @@ sudo apt install -y php*
 
 phpmyadmin 패키지 설치시 다음과 같은 화면이 보인다. `No` 를 선택한다.
 
-![10](/assets/images/2022-09-04-born2beroot-install-wordpress/10.png)
+![10](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/10.png)
 
 방향키로 lighttpd 를 선택하고 스페이스바로 선택한다. 그 다음 엔터를 입력한다.
 
-![11](/assets/images/2022-09-04-born2beroot-install-wordpress/11.png)
+![11](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/11.png)
 
 lighttpd 서비스를 재시작한다.
 
@@ -320,11 +320,11 @@ sudo service lighttpd force-reload
 
 다음과 화면이 뜬다.
 
-![12.png](/assets/images/2022-09-04-born2beroot-install-wordpress/12.png)
+![12.png](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/12.png)
 
 사용자명에는 MariaDB 설정 시 사용했던 `DB_USER` , 암호에는 `DB_PASSWORD` 를 입력해서 로그인한다.
 
-![13.png](/assets/images/2022-09-04-born2beroot-install-wordpress/13.png)
+![13.png](/assets/images/2022/2022-09-04-born2beroot-install-wordpress/13.png)
 
 위와 같은 화면이 뜨면 정상적으로 설치된 것이다.
 
@@ -336,7 +336,7 @@ sudo service lighttpd force-reload
 - [lighttpd](https://www.lighttpd.net/) [lighttpd.net]
 - [Description of core php.ini directives](https://www.php.net/manual/en/ini.core.php#ini.cgi.fix-pathinfo) [php.net]
 - [Why WordPress Uses PHP?](https://code.tutsplus.com/tutorials/why-wordpress-uses-php--cms-31077) [envatotuts]
-- [PHP #1_ 웹 서버와 PHP란?](https://doorbw.tistory.com/29) [티스토리]
+- [PHP #1\_ 웹 서버와 PHP란?](https://doorbw.tistory.com/29) [티스토리]
 - [PHP 동작 원리](http://www.tcpschool.com/php/php_intro_works) [TCP School]
 - [[MariaDB] MariaDB란 무엇일까? MariaDB 소개 (MariaDB Overview)](https://engkimbs.tistory.com/931) [티스토리]
 - [[database] mysql과 mariaDB 중 어떤 DB가 나에게 맞을까?](https://sabarada.tistory.com/164) [티스토리]

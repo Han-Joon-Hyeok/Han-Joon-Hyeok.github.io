@@ -40,8 +40,7 @@ use_math: true
 
 ## 구조
 
-![1.png](/assets/images/2023-01-30-pipex-3-solution/1.png)
-
+![1.png](/assets/images/2023/2023-01-30-pipex-3-solution/1.png)
 
 ```bash
 ./pipex infile cmd1 cmd2 outfile
@@ -57,8 +56,7 @@ use_math: true
 
 ### 프로세스
 
-![2.png](/assets/images/2023-01-30-pipex-3-solution/2.png)
-
+![2.png](/assets/images/2023/2023-01-30-pipex-3-solution/2.png)
 
 출처: [[운영체제]멀티 프로세스 vs 멀티 스레드](https://wookkingkim.tistory.com/m/entry/%EB%A9%80%ED%8B%B0-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-vs-%EB%A9%80%ED%8B%B0-%EC%8A%A4%EB%A0%88%EB%93%9C) [티스토리]
 
@@ -206,32 +204,31 @@ $ ./pipex infile "grep hell" "ls -l" outfile
 
 1. 첫 번째 명령어가 존재하지 않을 때
 
-    ```bash
-    $ < infile NOT_VALID_CMD -l | wc -l > outfile
-    zsh: command not found: NOT_VALID_CMD
-    ```
+   ```bash
+   $ < infile NOT_VALID_CMD -l | wc -l > outfile
+   zsh: command not found: NOT_VALID_CMD
+   ```
 
-    이 경우에는 exit code 가 0 이 반환된다.
+   이 경우에는 exit code 가 0 이 반환된다.
 
 2. 두 번째 명령어가 존재하지 않을 때
 
-    ```bash
-    $ < infile ls -l | NOT_VALID_CMD -l > outfile
-    zsh: command not found: NOT_VALID_CMD
-    ```
+   ```bash
+   $ < infile ls -l | NOT_VALID_CMD -l > outfile
+   zsh: command not found: NOT_VALID_CMD
+   ```
 
-    파이프는 가장 마지막에 실행한 명령어의 실행 결과에 따라 exit code 가 바뀌는데, 이 경우에는 127(`command not found`)을 반환한다.
+   파이프는 가장 마지막에 실행한 명령어의 실행 결과에 따라 exit code 가 바뀌는데, 이 경우에는 127(`command not found`)을 반환한다.
 
 3. 첫 번째, 두 번째 명령어 모두 존재하지 않을때
 
-    ```bash
-    $ < infile NOT_VALID_CMD1 -l | NOT_VALID_CMD2 -l > outfile
-    zsh: command not found: NOT_VALID_CMD1
-    zsh: command not found: NOT_VALID_CMD2
-    ```
+   ```bash
+   $ < infile NOT_VALID_CMD1 -l | NOT_VALID_CMD2 -l > outfile
+   zsh: command not found: NOT_VALID_CMD1
+   zsh: command not found: NOT_VALID_CMD2
+   ```
 
-    이 경우도 마찬가지로 파이프의 마지막 명령어가 정상적으로 실행되지 않았으므로 exit code는 127을 반환한다.
-
+   이 경우도 마찬가지로 파이프의 마지막 명령어가 정상적으로 실행되지 않았으므로 exit code는 127을 반환한다.
 
 ### 5. `infile` 이 멈추지 않고 계속 들어오는 경우(urandom)
 
@@ -243,86 +240,75 @@ $ ./pipex infile "grep hell" "ls -l" outfile
 
 1. `infile` 을 `open` 함수로 연다.
 
-    ![3.png](/assets/images/2023-01-30-pipex-3-solution/3.png)
-
+   ![3.png](/assets/images/2023/2023-01-30-pipex-3-solution/3.png)
 
 2. `dup2(infile, STDIN_FILENO)` 를 실행하여 표준 입력 파일 디스크립터(0번)가 `infile` 을 가리키도록 한다.
 
-    ![4.png](/assets/images/2023-01-30-pipex-3-solution/4.png)
-
+   ![4.png](/assets/images/2023/2023-01-30-pipex-3-solution/4.png)
 
 3. 자식 프로세스를 생성하기 전에 부모 프로세스에서 `pipe` 를 생성한다.
 
-    ![5.png](/assets/images/2023-01-30-pipex-3-solution/5.png)
-
+   ![5.png](/assets/images/2023/2023-01-30-pipex-3-solution/5.png)
 
 4. `fork` 를 실행하면 자식 프로세스는 아래와 같이 `fork` 를 실행하는 당시 부모 프로세스의 파일 디스크립터 상태를 유지하며 생성된다.
 
-    ![6.png](/assets/images/2023-01-30-pipex-3-solution/6.png)
-
+   ![6.png](/assets/images/2023/2023-01-30-pipex-3-solution/6.png)
 
 5. 부모 프로세스는 자식 프로세스가 실행한 결과를 파이프로 받기 위해 `dup2(pipe_fd[0], STDIN_FILENO)` 를 실행한다. 그리고 부모 프로세스는 write 를 수행하지 않기 때문에 `close(pipe_fd[1])` 을 하고, 0번 파일 디스크립터가 파이프의 `read end` 를 가리키고 있기 때문에 `close(pipe_fd[0])` 를 하여 사용하지 않는 파일 디스크립터를 닫아준다.
 
-    ```c
-    // 부모 프로세스
-    close(pipe_fd[1]);
-    dup2(pipe_fd[0], STDIN_FILENO);
-    close(pipe_fd[0]);
-    waitpid(pid, NULL, WNOHANG);
-    ```
+   ```c
+   // 부모 프로세스
+   close(pipe_fd[1]);
+   dup2(pipe_fd[0], STDIN_FILENO);
+   close(pipe_fd[0]);
+   waitpid(pid, NULL, WNOHANG);
+   ```
 
-    그림으로 표현하면 다음과 같다.
+   그림으로 표현하면 다음과 같다.
 
-    ![7.png](/assets/images/2023-01-30-pipex-3-solution/7.png)
-
+   ![7.png](/assets/images/2023/2023-01-30-pipex-3-solution/7.png)
 
 6. 자식 프로세스는 명령어를 실행시킨 결과를 파이프의 `write end` 에 입력해야 하기 때문에 read 작업은 수행하지 않는다. 따라서 `close(pipe_fd[0])` 을 하고, `dup2(pipe_fd[1], STDOUT_FILENO)` 을 하여 표준 출력을 파이프의 `write end` 로 연결한다. 그리고 사용하지 않는 `pipe_fd[0]` 은 마찬가지로 `close` 한다. 이 과정이 끝나면 명령어를 실행한다.
 
-    ```c
-    // 자식 프로세스
-    close(pipe_fd[0]);
-    dup2(pipe_fd[1], STDOUT_FILENO);
-    close(pipe_fd[1]);
-    execute_cmd(argv, envp, pipex);
-    ```
+   ```c
+   // 자식 프로세스
+   close(pipe_fd[0]);
+   dup2(pipe_fd[1], STDOUT_FILENO);
+   close(pipe_fd[1]);
+   execute_cmd(argv, envp, pipex);
+   ```
 
-    그림으로 표현하면 다음과 같다.
+   그림으로 표현하면 다음과 같다.
 
-    ![8.png](/assets/images/2023-01-30-pipex-3-solution/8.png)
-
+   ![8.png](/assets/images/2023/2023-01-30-pipex-3-solution/8.png)
 
 7. 두 번째 명령어를 실행시킬 때는 첫 번째 명령어와 달리 표준 입력을 `infile` 이 아닌 첫 번째 명령어의 실행 결과가 담겨있는 `pipe_fd[0]` 에서 가져온다. 이때, 파이프는 자식 프로세스를 생성하기 전에 새롭게 생성한다. 이전에 부모 프로세스 실행했던 코드 그대로 작동시키면 아래와 같아진다.
 
-    ![9.png](/assets/images/2023-01-30-pipex-3-solution/9.png)
-
+   ![9.png](/assets/images/2023/2023-01-30-pipex-3-solution/9.png)
 
 8. 자식 프로세스도 이전에 수행했던 과정을 그대로 수행하면 아래의 그림과 같아진다.
 
-    ![10.png](/assets/images/2023-01-30-pipex-3-solution/10.png)
+   ![10.png](/assets/images/2023/2023-01-30-pipex-3-solution/10.png)
 
+   즉, 자식 프로세스는 표준 입력이 이전 파이프의 `read end` 와 연결된 상태로 두 번째 명령어를 실행하여 새롭게 만든 파이프의 `write end` 에 출력 결과를 입력한다. 명령어의 개수가 N개라면 이 과정을 N-1 번 수행한다. N-1 번 수행하는 이유는 마지막 명령어인 N번째 명령어는 `outfile` 에 기록해야 하기 때문이다.
 
-    즉, 자식 프로세스는 표준 입력이 이전 파이프의 `read end` 와 연결된 상태로 두 번째 명령어를 실행하여 새롭게 만든 파이프의 `write end` 에 출력 결과를 입력한다. 명령어의 개수가 N개라면 이 과정을 N-1 번 수행한다. N-1 번 수행하는 이유는 마지막 명령어인 N번째 명령어는 `outfile` 에 기록해야 하기 때문이다.
-
-    ```c
-    while (i < argc - 2)
-    		child_process(argv[i++], envp);
-    ```
+   ```c
+   while (i < argc - 2)
+   		child_process(argv[i++], envp);
+   ```
 
 9. 마지막 명령어를 실행할 때는 `dup2(outfile, STDOUT_FILENO)` 를 실행하여 표준 출력을 `outfile` 로 바꾸어주고, 표준 입력은 N-1 번째 명령어를 실행한 결과를 파이프의 `read_end` 에서 읽어오면 된다.
 
-    ![11.png](/assets/images/2023-01-30-pipex-3-solution/11.png)
+   ![11.png](/assets/images/2023/2023-01-30-pipex-3-solution/11.png)
 
-
-    ```c
-    dup2(pipex.outfile, STDOUT_FILENO);
-    execute_cmd(argv[argc - 2], envp);
-    ```
-
+   ```c
+   dup2(pipex.outfile, STDOUT_FILENO);
+   execute_cmd(argv[argc - 2], envp);
+   ```
 
 ## 2. here_doc
 
-![12.png](/assets/images/2023-01-30-pipex-3-solution/12.png)
-
+![12.png](/assets/images/2023/2023-01-30-pipex-3-solution/12.png)
 
 `heredoc` 을 실행하면 사용자의 입력을 받는 자식 프로세스를 생성한다. 사용자의 입력을 파이프의 `write end` 로 보내고 종료한다.
 

@@ -37,7 +37,7 @@ function debounce(func, wait = 20, immediate = true) {
 
 ### 1. 브라우저 높이 구하기
 
-![image001.jpg](/assets/images/2021-12-27-javascript30-day13-slide-in-on-scroll/image001.jpg)
+![image001.jpg](/assets/images/2021/2021-12-27-javascript30-day13-slide-in-on-scroll/image001.jpg)
 
 스크롤이 끝나는 시점에서 현재 위치를 구하기 위해서 우선 브라우저의 높이를 구한다. 아래의 두 가지는 다른 것이며, 여기서는 `innerHeight` 를 이용해서 구한다.
 
@@ -46,7 +46,7 @@ function debounce(func, wait = 20, immediate = true) {
 
 ### 2. viewport 하단 Y좌표 구하기
 
-![image002.jpg](/assets/images/2021-12-27-javascript30-day13-slide-in-on-scroll/image002.jpg)
+![image002.jpg](/assets/images/2021/2021-12-27-javascript30-day13-slide-in-on-scroll/image002.jpg)
 
 현재 보이는 브라우저 하단의 좌표를 구하기 위해서 문서의 상단으로부터 얼마나 이동했는지와 브라우저의 높이를 더한다.
 
@@ -58,7 +58,7 @@ const viewportBottom = window.innerHeight + window.scrollY;
 
 ### 3. 이미지의 Y좌표 구하기
 
-![image003.jpg](/assets/images/2021-12-27-javascript30-day13-slide-in-on-scroll/image003.jpg)
+![image003.jpg](/assets/images/2021/2021-12-27-javascript30-day13-slide-in-on-scroll/image003.jpg)
 
 이미지의 Y 좌표를 구하기 위해서 이미지가 문서 상단으로부터 얼마나 떨어져 있는지와 이미지의 높이를 구한다.
 

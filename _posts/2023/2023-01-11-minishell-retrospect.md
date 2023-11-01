@@ -10,7 +10,7 @@ use_math: true
 
 간략하게 표현한 플로우차트는 다음과 같다.
 
-![1.png](/assets/images/2023-01-11-minishell-retrospect/1.png)
+![1.png](/assets/images/2023/2023-01-11-minishell-retrospect/1.png)
 
 [gnu bash reference](https://www.gnu.org/software/bash/manual/bash.html) 를 참고해서 최대한 bash 와 유사하게 작동하도록 노력했다.
 
@@ -32,19 +32,19 @@ visual studio code 의 `live share` 확장 프로그램을 사용해서 함께 �
 
 ## 작업 관리
 
-![2.png](/assets/images/2023-01-11-minishell-retrospect/2.png)
+![2.png](/assets/images/2023/2023-01-11-minishell-retrospect/2.png)
 
 구현해야 하는 기능이나 수정해야 하는 기능은 `github project` 의 칸반보드를 사용해서 정리했다.
 
 이 곳에서 `Issue` 로 등록하면 번호가 자동으로 생성되기 때문에 commit 을 남기거나 브랜치를 생성할 때 이슈 번호를 등록해서 사용했다.
 
-![3.png](/assets/images/2023-01-11-minishell-retrospect/3.png)
+![3.png](/assets/images/2023/2023-01-11-minishell-retrospect/3.png)
 
 위의 사진과 같이 commit 에 이슈 번호를 입력하면 자동으로 github 에서 해당하는 이슈 번호로 링크가 생성된다.
 
 ## 브랜치 관리
 
-![4.png](/assets/images/2023-01-11-minishell-retrospect/4.png)
+![4.png](/assets/images/2023/2023-01-11-minishell-retrospect/4.png)
 
 브랜치 관리는 위와 같의 이미지와 같이 진행했다.
 
@@ -52,7 +52,7 @@ visual studio code 의 `live share` 확장 프로그램을 사용해서 함께 �
 - `develop` : 실질적인 개발이 이루어지는 브랜치로 사용했다. 기능 구현이나 버그를 발견하면 하위 브랜치를 생성하고, 구현이 끝나면 다시 `develop` 브랜치로 합쳤다. 빠르게 기능을 고쳐야 할 때는 `develop` 브랜치에서 모두 진행하기도 했다.
 - `feat / fix` : 기능 구현이나 버그 수정을 위해 사용한 하위 브랜치이다. `develop` 브랜치에 모든 작업을 진행하면 충돌이 날 수 있기 때문에 충돌 위험을 줄이고자 하위 브랜치를 사용했다.
 
-![5.png](/assets/images/2023-01-11-minishell-retrospect/5.png)
+![5.png](/assets/images/2023/2023-01-11-minishell-retrospect/5.png)
 
 브랜치를 합칠 때는 pull request 를 생성해서 합쳤다.
 
@@ -150,7 +150,7 @@ bash와 최대한 유사하게 작동시키기 위해 수 많은 테스트 케�
 
 소스 파일이 적고, 오브젝트 파일이 적을 때는 못 느꼈지만, 이번에는 소스 파일만 40개가 넘어가다보니 다른 파일로 이동할 때 굉장히 불편했다.
 
-![6.gif](/assets/images/2023-01-11-minishell-retrospect/6.gif)
+![6.gif](/assets/images/2023/2023-01-11-minishell-retrospect/6.gif)
 
 오브젝트 파일이 소스 파일과 같이 생성되면서 다른 파일을 찾기 위해 한참을 내려야 했다. 여기서 낭비하는 시간이 생각보다 꽤 많았다.
 

@@ -31,13 +31,13 @@ use_math: true
 
 핵심적인 접근은 다음의 그림과 같다.
 
-![hanoi.drawio.png](/assets/images/2022-07-19-programmers-hanoi/hanoi.drawio.png)
+![hanoi.drawio.png](/assets/images/2022/2022-07-19-programmers-hanoi/hanoi.drawio.png)
 
 큰 원판은 작은 원판보다 반드시 아래에 있어야 한다는 조건 때문에 작은 원판들은 출발지(from)에서 목적지(to)로 향할 때 반드시 경유지(by)가 있어야 한다.
 
 이는 원판이 2개인 상황을 보면 쉽게 이해할 수 있다.
 
-![hanoi.drawio (1).png](</assets/images/2022-07-19-programmers-hanoi/hanoi.drawio%20(1).png>)
+![hanoi.drawio (1).png](</assets/images/2022/2022-07-19-programmers-hanoi/hanoi.drawio%20(1).png>)
 
 알고리즘은 다음과 같이 작동한다.
 

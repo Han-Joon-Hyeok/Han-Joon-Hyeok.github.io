@@ -77,7 +77,7 @@ const countChangingChar = (char) => {
 
 예를 들어, `BBBAABB` 라는 문자열을 입력 받은 경우라면 다음과 같이 이해할 수 있다.
 
-![참고 : [뜬 눈으로 꾸는 꿈(티스토리)](https://bellog.tistory.com/152)](/assets/images/2022-01-02-programmers-joystick/image001.png)
+![참고 : [뜬 눈으로 꾸는 꿈(티스토리)](https://bellog.tistory.com/152)](/assets/images/2022/2022-01-02-programmers-joystick/image001.png)
 
 _참고 : [뜬 눈으로 꾸는 꿈(티스토리)](https://bellog.tistory.com/152)_
 

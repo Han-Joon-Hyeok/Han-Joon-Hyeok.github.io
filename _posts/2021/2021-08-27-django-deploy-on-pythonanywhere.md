@@ -23,7 +23,7 @@ pythonanywhere는 유료 서비스이지만, beginner account는 제한된 기�
 Github를 이용해서 배포가 이루어지므로 프로젝트를 Github repository에 업로드 해야 한다.
 이때, 프로젝트에서 사용하는 라이브러리들의 정보가 담긴 `requirements.txt` 파일로 만들어 두는 것을 추천한다. 가상환경을 실행시킨 다음 아래의 명령어를 터미널에 입력한다.
 
-``` bash
+```bash
 pip freeze > requirements.txt
 ```
 
@@ -32,7 +32,7 @@ pip freeze > requirements.txt
 - DEBUG 항목을 `True`에서 `False`로 변경
 - ALLOWED_HOSTS에 `"*"` 또는 아래와 같이 본인의 username이 포함된 주소를 입력하여 저장.
 
-``` python
+```python
 DEBUG = False
 
 ALLOWED_HOSTS = [
@@ -42,7 +42,7 @@ ALLOWED_HOSTS = [
 
 또한, 기존에 작성한 STATICFILES_DIRS는 주석처리 한다. 배포 시에는 static 파일을 하나의 폴더로 모아서 처리해야 한다.
 
-``` python
+```python
 STATIC_URL = '/static/'
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'base/static'),
@@ -54,7 +54,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, '.staticfiles')
 
 위와 같이 설정한 뒤, 터미널의 다음의 명령어를 수행한다.
 
-``` python
+```python
 python manage.py collectstatic
 ```
 
@@ -68,15 +68,15 @@ python manage.py collectstatic
 
 `Web` 탭으로 이동하여 새로운 어플리케이션을 생성해준다.
 
-![create-new-app](../assets/images/2021-08-27-django-deploy-on-pythonanywhere/create-new-app-1.png)
+![create-new-app](../assets/images/2021/2021-08-27-django-deploy-on-pythonanywhere/create-new-app-1.png)
 
 Django 선택.
 
-![create-new-app](../assets/images/2021-08-27-django-deploy-on-pythonanywhere/create-new-app-2.png)
+![create-new-app](../assets/images/2021/2021-08-27-django-deploy-on-pythonanywhere/create-new-app-2.png)
 
 개발한 파이썬 버전에 맞추어 선택
 
-![create-new-app](../assets/images/2021-08-27-django-deploy-on-pythonanywhere/create-new-app-3.png)
+![create-new-app](../assets/images/2021/2021-08-27-django-deploy-on-pythonanywhere/create-new-app-3.png)
 
 `Project Name` 항목에 프로젝트명을 입력한다. 참고로 아래 Console에서 git clone 시 사용할 폴더명과 동일하게 사용한다.
 
@@ -84,20 +84,20 @@ Django 선택.
 
 하단의 이미지와 같이 `Consoles` 탭으로 이동한 뒤, `Bash`를 클릭하여 콘솔 페이지로 접속한다.
 
-![console-bash](../assets/images/2021-08-27-django-deploy-on-pythonanywhere/console-bash.png)
+![console-bash](../assets/images/2021/2021-08-27-django-deploy-on-pythonanywhere/console-bash.png)
 
 ### git clone
 
 프로젝트 파일을 다운로드 받기 위해 다음과 같은 명령어를 입력한다.
 
-``` bash
+```bash
 git clone https://github.com/<github계정>/<repository>.git <프로젝트명>
 ```
 
 위의 명령어는 `<프로젝트명>`에 프로젝트를 저장한다는 의미이다.
 그 다음, 생성된 폴더로 이동한다.
 
-``` bash
+```bash
 cd <프로젝트명>
 ```
 
@@ -106,7 +106,7 @@ cd <프로젝트명>
 가상환경 폴더를 생성하고, `requirements.txt`파일에 담긴 라이브러리를 설치한다.
 참고로 윈도우 사용자의 경우 가상환경 실행 시 `source <가상환경>/scripts/activate`를 사용하지만, 서버의 경우 Linux 기반으로 실행이 되기 때문에 `scripts`가 아닌 `bin`으로 입력해야 한다.
 
-``` bash
+```bash
 # 가상환경 생성
 python -m venv <가상환경이름>
 # 가상환경 실행
@@ -119,7 +119,7 @@ pip install -r requirements.txt
 
 데이터베이스 적용하기 위해 마이그레이션을 실행한다.
 
-``` bash
+```bash
 python manage.py migrate
 ```
 
@@ -128,7 +128,7 @@ python manage.py migrate
 위의 과정을 정상적으로 실행했다면, 아래의 명령어를 입력하여 서버를 테스트 구동시킨다.
 이 과정에서 오류가 발생한다면, 마이그레이션이나 static 환경 설정을 다시 점검해야 한다.
 
-``` bash
+```bash
 python manage.py runserver
 ```
 
@@ -155,9 +155,9 @@ WSGI configuration file에 해당하는 링크를 클릭하여 이동한다.
 그리고 다음의 항목을 수정한다.
 
 - `project_home` : Console에서 git clone을 진행한 폴더명을 맨 끝에 입력한다.
-- `DJANGO_SETTINGS_MODULE` : settings.py 파일이 포함된 폴더의 이름을 입력한다. 
+- `DJANGO_SETTINGS_MODULE` : settings.py 파일이 포함된 폴더의 이름을 입력한다.
 
-``` python
+```python
 ...
 project_home = '/home/<username>/Booklog'
 os.environ['DJANGO_SETTINGS_MODULE'] = '<config 폴더>.settings'

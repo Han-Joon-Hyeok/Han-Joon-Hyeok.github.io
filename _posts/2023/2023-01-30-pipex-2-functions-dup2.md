@@ -20,7 +20,7 @@ int dup2(int src_fildes, int dest_fildes);
 
 - 성공 : 복사된 파일 디스크립터 번호
 - 실패 : -1
-    - 발생한 오류에 따라 `errno` 가 설정됨
+  - 발생한 오류에 따라 `errno` 가 설정됨
 
 ## 예시
 
@@ -59,11 +59,11 @@ HELLO world
 
 `dup2` 를 실행하기 전에는 파일 디스크립터들이 다음과 같이 가리키고 있었다.
 
-![1.png](/assets/images/2023-01-30-pipex-2-functions-dup2/1.png)
+![1.png](/assets/images/2023/2023-01-30-pipex-2-functions-dup2/1.png)
 
 표준 출력(stdout)은 컴퓨터 화면에 출력할 수 있는 Inode 포인터를 가지고 있었지만, `dup2(fd, STDOUT_FILENO)` 를 실행하면 1번 파일 디스크립터는 컴퓨터 화면이 아닌 `hello.txt` 로 출력하게 된다.
 
-![2.png](/assets/images/2023-01-30-pipex-2-functions-dup2/2.png)
+![2.png](/assets/images/2023/2023-01-30-pipex-2-functions-dup2/2.png)
 
 `printf` 함수는 입력 받은 내용을 1번 파일 디스크립터로 출력하도록 동작하는데, `dup2` 함수를 통해 1번 디스크립터가 가리키는 포인터를 컴퓨터 화면이 아닌 `hello.txt` 파일로 변경했기 때문에 위와 같은 결과가 발생하는 것이다.
 

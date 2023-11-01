@@ -18,7 +18,7 @@ use_math: true
 
 `n = 5` 일때, 다음과 같은 규칙을 발견할 수 있다.
 
-![programmers_triangle_snail.drawio.png](/assets/images/2022-05-24-programmers-triangle-snail/programmers_triangle_snail.drawio.png)
+![programmers_triangle_snail.drawio.png](/assets/images/2022/2022-05-24-programmers-triangle-snail/programmers_triangle_snail.drawio.png)
 
 1. 아래 방향으로 끝까지 도달할 때까지 `n` 개의 수를 채운다.
 2. 오른쪽 방향으로 끝까지 도달할 때까지 `n - 1` 개의 수를 채운다.
@@ -100,13 +100,7 @@ while (pos.remain !== 0) {
 위의 과정을 거치면 다음과 같이 저장된다.
 
 ```javascript
-[
-  [1], 
-  [2, 12], 
-  [3, 13, 11], 
-  [4, 14, 15, 10], 
-  [5, 6, 7, 8, 9]
-];
+[[1], [2, 12], [3, 13, 11], [4, 14, 15, 10], [5, 6, 7, 8, 9]];
 ```
 
 마지막으로 2차원 배열을 1차원 배열로 저장하기 위해 `reduce` 함수를 사용했다.
@@ -244,13 +238,7 @@ while (remain > 0) {
 그 다음 반복문에서는 다음과 같이 저장하고, 실행을 마친다.
 
 ```javascript
-[
-  [1], 
-  [2, 12], 
-  [3, 13, 11], 
-  [4, 14, 15, 10], 
-  [5, 6, 7, 8, 9]
-];
+[[1], [2, 12], [3, 13, 11], [4, 14, 15, 10], [5, 6, 7, 8, 9]];
 ```
 
 마지막으로 2차원 배열을 `flat()` 함수를 이용해서 1차원 배열로 변환했다.

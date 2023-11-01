@@ -14,7 +14,7 @@ use_math: true
 
 # 미로찾기 알고리즘이란?
 
-![출처 : 교보문고](/assets/images/2022-05-20-maze-problem-with-dfs-bfs/book.jpeg)
+![출처 : 교보문고](/assets/images/2022/2022-05-20-maze-problem-with-dfs-bfs/book.jpeg)
 
 미로찾기 알고리즘은 코딩 테스트에서 자주 등장하는 알고리즘이다.
 
@@ -49,7 +49,7 @@ DFS 를 활용할 때는 백트래킹(backtracking) 알고리즘을 사용한다
 
 ## 🗺 미로 탈출 지점 찾기
 
-![maze1.png](/assets/images/2022-05-20-maze-problem-with-dfs-bfs/maze1.png)
+![maze1.png](/assets/images/2022/2022-05-20-maze-problem-with-dfs-bfs/maze1.png)
 
 `(0, 0)` 좌표에 귀여운 고양이 한 마리가 있다. 이 고양이는 `(4, 4)` 좌표에 있는 츄르를 먹기 위해 미로를 따라 이동한다.
 
@@ -62,13 +62,13 @@ DFS 를 활용할 때는 백트래킹(backtracking) 알고리즘을 사용한다
 
 처음 3번에 해당하는 순간은 다음과 같을 것이다.
 
-![maze2.png](/assets/images/2022-05-20-maze-problem-with-dfs-bfs/maze2.png)
+![maze2.png](/assets/images/2022/2022-05-20-maze-problem-with-dfs-bfs/maze2.png)
 
 `(2, 3)` 좌표에서 오른쪽으로도 갈 수 있었지만, 위쪽을 먼저 탐색한다는 조건이 있었기에 `(2, 2)` 좌표로 이동하여 해당 경로의 끝까지 이동한다.
 
 그리고 벽에 부딪힌 순간에는 다시 분기점으로 돌아서 나오고, 이동이 가능한 `(3, 3)` 방향으로 다시 진행한다.
 
-![maze3.png](/assets/images/2022-05-20-maze-problem-with-dfs-bfs/maze3.png)
+![maze3.png](/assets/images/2022/2022-05-20-maze-problem-with-dfs-bfs/maze3.png)
 
 위의 과정을 의사 코드로 구현하면 다음과 같다.
 
@@ -126,11 +126,11 @@ void find_path(maps, visited, pos)
 
 `(4, 0)` 에 도달한 시점에는 스택에는 다음과 같이 저장된다.
 
-![maze_stack1.png](/assets/images/2022-05-20-maze-problem-with-dfs-bfs/maze_stack1.png)
+![maze_stack1.png](/assets/images/2022/2022-05-20-maze-problem-with-dfs-bfs/maze_stack1.png)
 
 다시 돌아나갈 때는 분기점까지 쌓은 스택을 모두 빼내면 된다. 그리고 도착 지점에 도착했을 때는 스택에 다음과 같이 저장된다.
 
-![maze_stack2.png](/assets/images/2022-05-20-maze-problem-with-dfs-bfs/maze_stack2.png)
+![maze_stack2.png](/assets/images/2022/2022-05-20-maze-problem-with-dfs-bfs/maze_stack2.png)
 
 ## ✍️ 코드로 구현하기
 

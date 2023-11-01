@@ -95,7 +95,7 @@ CPU는 크게 3가지 주요 용어로 설명할 수 있다.
 
 그림으로 살펴보면 다음과 같다.
 
-![processor](/assets/images/2022-09-04-born2beroot-monitoring-system-and-cron/processor.jpeg)
+![processor](/assets/images/2022/2022-09-04-born2beroot-monitoring-system-and-cron/processor.jpeg)
 
 출처: [링크드인](https://www.linkedin.com/pulse/understanding-physical-logical-cpus-akshay-deshpande/)
 
@@ -103,7 +103,7 @@ CPU는 크게 3가지 주요 용어로 설명할 수 있다.
 
 위의 그림을 수치로 표현하면 1 Processor, 4 Physical core, 8 Logical core 가 있는 것이다.
 
-과제에서 요구하는 물리적 프로세서(Physical processor)가 의미하는 바는 물리적인 CPU의 개수(프로세서)를 의미하는 것이다. 
+과제에서 요구하는 물리적 프로세서(Physical processor)가 의미하는 바는 물리적인 CPU의 개수(프로세서)를 의미하는 것이다.
 
 ```bash
 # 설치된 모든 프로세서의 개수를 표시
@@ -165,16 +165,14 @@ free -m | grep Mem | awk '{printf"%d/%dMB (%.2f%%)\n", $3, $2, $3/$2 * 100}'
 
 - `{ action }` : action 으로 입력한 명령어를 실행한다.
 - `$N` : 0은 전체 열, 1부터는 첫 번째 열에 대응한다. (공백문자를 기준으로 구분)
-    
-    ```bash
-    free -m | grep Mem | awk '{ print $0 }'
-    Mem:             976          78         679           0         218         761
-    free -m | grep Mem | awk '{ print $1 }'
-    Mem:
-    free -m | grep Mem | awk '{ print $2 }'
-    976
-    ```
-    
+  ```bash
+  free -m | grep Mem | awk '{ print $0 }'
+  Mem:             976          78         679           0         218         761
+  free -m | grep Mem | awk '{ print $1 }'
+  Mem:
+  free -m | grep Mem | awk '{ print $2 }'
+  976
+  ```
 
 ### 4. 가용 메모리
 
@@ -326,7 +324,7 @@ lsblk | grep LVM | wc -l | awk '{if ($1 > 0) print "yes"; else print "no"}'
 
 `ss` 명령어는 소켓 상태를 조회한다.
 
-소켓이란 프로그램이 네트워크에서 데이터를 통신할 수 있도록 연결해주는 부분이다. 
+소켓이란 프로그램이 네트워크에서 데이터를 통신할 수 있도록 연결해주는 부분이다.
 
 ```bash
 joonhan@joonhan42:~$ ss

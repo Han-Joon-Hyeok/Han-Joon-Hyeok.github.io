@@ -229,7 +229,7 @@ const answer = dfs(0, k, dungeons, new Set());
 
 `dfs` 함수는 던전을 모두 순회하며 던전 입장 횟수를 구하도록 재귀적으로 구현했다. 그림으로 나타내면 다음과 같다.
 
-![programmers_dungeon_dfs.jpg](/assets/images/2022-05-16-programmers-fatigue/programmers_dungeon_dfs.jpg)
+![programmers_dungeon_dfs.jpg](/assets/images/2022/2022-05-16-programmers-fatigue/programmers_dungeon_dfs.jpg)
 
 백트래킹을 통해 유망하지 않은 경우는 더 이상 탐색하지 않는다. (빨간색 원)
 

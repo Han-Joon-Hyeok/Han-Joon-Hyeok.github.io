@@ -22,7 +22,7 @@ use_math: true
 
 그림으로 표현하면 다음과 같다.
 
-![n-queen.drawio (4).png](</assets/images/2022-07-06-programmers-n-queen/n-queen.drawio%20(4).png>)
+![n-queen.drawio (4).png](</assets/images/2022/2022-07-06-programmers-n-queen/n-queen.drawio%20(4).png>)
 
 현재 행에 퀸을 놓으면 현재 행에는 더 이상 퀸을 놓을 수 없으므로 다음 행에 퀸을 놓을 수 있는지 검사해나간다.
 
@@ -34,7 +34,7 @@ use_math: true
 
 그림으로 표현하면 다음과 같다.
 
-![n-queen.drawio.png](/assets/images/2022-07-06-programmers-n-queen/n-queen.drawio.png)
+![n-queen.drawio.png](/assets/images/2022/2022-07-06-programmers-n-queen/n-queen.drawio.png)
 
 1차원 배열의 인덱스는 열, 해당 인덱스에 저장되는 값은 행으로 저장한다.
 
@@ -54,15 +54,15 @@ use_math: true
 
 우선 가로에 퀸이 놓여져 있는지 확인하기 위해서 1차원 배열에 같은 값이 있는 지 확인한다.
 
-![n-queen.drawio (1).png](</assets/images/2022-07-06-programmers-n-queen/n-queen.drawio%20(1).png>)
+![n-queen.drawio (1).png](</assets/images/2022/2022-07-06-programmers-n-queen/n-queen.drawio%20(1).png>)
 
 다음으로 세로에 퀸이 놓여져 있는지 확인하기 위해서 1차원 배열의 현재 인덱스에 값이 이미 존재하는 지 확인한다.
 
-![n-queen.drawio (2).png](</assets/images/2022-07-06-programmers-n-queen/n-queen.drawio%20(2).png>)
+![n-queen.drawio (2).png](</assets/images/2022/2022-07-06-programmers-n-queen/n-queen.drawio%20(2).png>)
 
 마지막으로 대각선 검사는 현재 놓으려는 위치와 1차원 배열에 저장된 값들을 비교한다. 정사각형에서 직선의 기울기가 1 또는 -1 이면 대각선이므로 이 성질을 이용해서 퀸이 놓여있는 지 확인할 수 있다.
 
-![n-queen.drawio (3).png](</assets/images/2022-07-06-programmers-n-queen/n-queen.drawio%20(3).png>)
+![n-queen.drawio (3).png](</assets/images/2022/2022-07-06-programmers-n-queen/n-queen.drawio%20(3).png>)
 
 직선의 기울기는 `현재 위치의 세로 좌표 - 대상 위치의 세로 좌표 / 현재 위치의 가로 좌표 - 대상 위치의 가로 좌표` 를 계산하면 얻을 수 있다.
 

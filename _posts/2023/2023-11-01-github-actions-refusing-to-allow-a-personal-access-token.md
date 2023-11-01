@@ -23,9 +23,9 @@ tags: [github, github actions]
 - Github 페이지에서 Settings - Developer settings - Personal access tokens - Tokens 로 접속한다.
   - https://github.com/settings/tokens
 - 사용하고 있는 토큰 중에서 현재 작업 중인 PC 에 저장된 토큰을 클릭한다.
-  ![1](/assets/images/2023-11-01-github-actions-refusing-to-allow-a-personal-access-token/1.png)
+  ![1](/assets/images/2023/2023-11-01-github-actions-refusing-to-allow-a-personal-access-token/1.png)
 - 아래의 사진에 표시된 부분에 해당하는 `workflow` 버튼을 활성화하고, 하단에 있는 `Update token` 버튼을 눌러서 변경 사항을 저장한다.
-  ![2](/assets/images/2023-11-01-github-actions-refusing-to-allow-a-personal-access-token/2.png)
+  ![2](/assets/images/2023/2023-11-01-github-actions-refusing-to-allow-a-personal-access-token/2.png)
 - 다시 `git push` 를 시도하면 정상적으로 작동하는 것을 확인할 수 있다.
 
 # 참고자료

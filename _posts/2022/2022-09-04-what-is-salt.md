@@ -8,7 +8,7 @@ use_math: true
 
 # 솔트? 소금?
 
-![salt-bae](/assets/images/2022-09-04-what-is-salt/salt-bae.webp)
+![salt-bae](/assets/images/2022/2022-09-04-what-is-salt/salt-bae.webp)
 
 출처: [hospitality](https://www.hospitalitymagazine.com.au/salt-bae-nusret-gokce-accused-of-wage-theft/)
 
@@ -20,7 +20,7 @@ use_math: true
 
 단방향 해시 함수는 입력값을 문자와 숫자로 이루어진 일정한 길이로 데이터를 생성하는 함수이다. 해시 함수를 거친 암호화된 데이터를 다이제스트(digest)라 한다.
 
-![salt.png](/assets/images/2022-09-04-what-is-salt/salt.png)
+![salt.png](/assets/images/2022/2022-09-04-what-is-salt/salt.png)
 
 해시 함수는 단방향이기 때문에 암호화는 가능하지만, 복호화는 불가능해서 원본 데이터를 알 수 없다. 이러한 특징 때문에 패스워드를 저장할 때 원본을 저장하지 않고 단방향 암호화된 다이제스트를 저장하는 것이 보편화 되었다.
 
@@ -38,9 +38,9 @@ use_math: true
 
 솔트(salt)는 단방향 해시 함수에서 다이제스트를 생성할 때 추가되는 바이트 단위의 임의의 문자열이다. 이를 원본 데이터에 추가하여 다이제스트를 생성하는 것을 솔팅(salting)이라 한다.
 
-![salt2.png](/assets/images/2022-09-04-what-is-salt/salt2.png)
+![salt2.png](/assets/images/2022/2022-09-04-what-is-salt/salt2.png)
 
-이 방법을 사용하면 공격자가 원본 데이터의 다이제스트를 알아내더라도, 솔팅된 다이제스트를 대상으로 패스워드 일치 여부를 확인하기 어려워진다. 
+이 방법을 사용하면 공격자가 원본 데이터의 다이제스트를 알아내더라도, 솔팅된 다이제스트를 대상으로 패스워드 일치 여부를 확인하기 어려워진다.
 
 또한, 사용자마다 다른 솔트를 사용한다면 동일한 패스워드를 사용자의 다이제스트가 다르게 생성되어 쉽게 원본을 확인할 수 없게 된다.
 

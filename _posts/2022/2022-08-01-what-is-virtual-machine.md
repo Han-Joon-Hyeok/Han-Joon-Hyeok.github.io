@@ -8,7 +8,7 @@ use_math: true
 
 # 가상 머신(Virtual Machine)이란?
 
-![출처: 잔재미코딩](/assets/images/2022-08-01-what-is-virtual-machine/virtual_machine.png)
+![출처: 잔재미코딩](/assets/images/2022/2022-08-01-what-is-virtual-machine/virtual_machine.png)
 
 출처: [잔재미코딩](https://www.fun-coding.org/virtualmachine.html)
 
@@ -16,7 +16,7 @@ use_math: true
 
 대표적인 예시는 Mac OS 에서 자주 사용하는 패러렐즈(Parallels)가 있다. Mac OS 에서는 국내 공공기관 인증서 관련해서 정상적으로 진행되지 않는 문제가 있다. 패러렐즈는 이를 해결하기 위해 Mac OS 운영체제는 그대로 사용하면서, 가상의 Windows 운영체제를 이용할 수 있도록 한 것이다.
 
-![출처: 영화 인셉션](/assets/images/2022-08-01-what-is-virtual-machine/inception.jpeg)
+![출처: 영화 인셉션](/assets/images/2022/2022-08-01-what-is-virtual-machine/inception.jpeg)
 
 출처: 영화 인셉션
 
@@ -34,7 +34,7 @@ use_math: true
 
 사람이 하던 단순 반복 업무를 소프트웨어가 자동으로 수행하는 RPA(Robotic Process Automation)를 구축할 때 가상머신을 활용하기도 한다.
 
-![RPA](/assets/images/2022-08-01-what-is-virtual-machine/rpa.png)
+![RPA](/assets/images/2022/2022-08-01-what-is-virtual-machine/rpa.png)
 
 성능이 좋은 컴퓨터에서 여러 가상 머신을 설치한 뒤, 각 가상 머신마다 정해진 업무를 할당한다. 한 사람이 하던 수 많은 일을 여러 로봇이 나누어서 수행함으로써 빠른 시간 안에 업무를 마칠 수 있게 된다.
 

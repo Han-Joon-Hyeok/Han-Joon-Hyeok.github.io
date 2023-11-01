@@ -22,7 +22,7 @@ int pipe(int fildes[2]);
 
 - 성공 : 0
 - 오류 : -1
-    - 전역 변수 `errno` 에 발생한 에러 자동 설정
+  - 전역 변수 `errno` 에 발생한 에러 자동 설정
 
 ## 예시 코드
 
@@ -62,7 +62,7 @@ HELLO
 
 파이프가 동작하는 모습을 그림으로 표현하면 다음과 같다.
 
-![1.png](/assets/images/2023-01-30-pipex-2-functions-pipe/1.png)
+![1.png](/assets/images/2023/2023-01-30-pipex-2-functions-pipe/1.png)
 
 만약, `read end` 파이프를 먼저 닫고 데이터를 읽어오려고 하면 데이터를 읽어오지 못한다.
 
@@ -92,11 +92,11 @@ int	main(void)
 
 실행 결과는 아래의 이미지와 같으며, 실행 환경에 따라 쓰레기값이 출력되거나 빈 문자열이 출력될 수 있다.
 
-![2.png](/assets/images/2023-01-30-pipex-2-functions-pipe/2.png)
+![2.png](/assets/images/2023/2023-01-30-pipex-2-functions-pipe/2.png)
 
 그림으로 표현하면 다음과 같다.
 
-![3.png](/assets/images/2023-01-30-pipex-2-functions-pipe/3.png)
+![3.png](/assets/images/2023/2023-01-30-pipex-2-functions-pipe/3.png)
 
 `close` 를 수행하면 파일 디스크립터가 가리키고 있던 대상은 해제되며 해당 파일이 가지고 있던 데이터는 더 이상 접근할 수 없게 된다.
 
@@ -234,8 +234,7 @@ int	main(void)
 
 부모 프로세스는 자식 프로세스가 끝나기를 기다리고 있는데, 자식 프로세스에서는 파이프의 `write end` 로부터 데이터가 들어오기를 계속 기다리고 있다. 그래서 위의 코드를 실행하면 끝나지 않고 계속 대기하는 현상이 발생한다.
 
-![4.png](/assets/images/2023-01-30-pipex-2-functions-pipe/4.png)
-
+![4.png](/assets/images/2023/2023-01-30-pipex-2-functions-pipe/4.png)
 
 따라서 더 이상 사용하지 않는 파이프는 `close` 를 해주어야 무한 대기 현상 등을 방지할 수 있다.
 

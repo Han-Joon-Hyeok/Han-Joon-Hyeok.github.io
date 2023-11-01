@@ -8,7 +8,7 @@ use_math: true
 
 # 문제 상황
 
-![1](/assets/images/2022-09-04-born2beroot-improving-access-speed-to-wordpress/1.png)
+![1](/assets/images/2022/2022-09-04-born2beroot-improving-access-speed-to-wordpress/1.png)
 
 가상 머신에 워드프레스를 정상적으로 설치하고 나중에 다시 로컬 컴퓨터에서 접속하려고 하니 접속하는데 1~2분 정도 걸렸다. 그리고 이미지도 깨져서 나타나는 현상이 발생했다.
 
@@ -61,14 +61,14 @@ ipconfig getifaddr en0
 MariaDB에서 아래의 SQL문을 입력하여 현재 로컬 PC의 IP 주소로 변경한다.
 
 ```sql
-update wp_options 
+update wp_options
 set option_value="http://[현재 로컬 IP주소]:8080/wordpress"
 where option_id < 3;
 ```
 
 다시 로컬 PC에서 워드프레스를 접속하면 빠르게 접속되면서 이미지도 정상적으로 출력되는 것을 확인할 수 있다.
 
-![2](/assets/images/2022-09-04-born2beroot-improving-access-speed-to-wordpress/2.png)
+![2](/assets/images/2022/2022-09-04-born2beroot-improving-access-speed-to-wordpress/2.png)
 
 # 참고자료
 

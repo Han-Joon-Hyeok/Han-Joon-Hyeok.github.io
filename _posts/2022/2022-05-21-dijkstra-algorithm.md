@@ -18,21 +18,21 @@ use_math: true
 
 다음과 같이 1번 노드에서 각 노드까지 최단 거리를 구한다고 해보자.
 
-![dijkstra.drawio.png](/assets/images/2022-05-21-dijkstra-algorithm/dijkstra.drawio.png)
+![dijkstra.drawio.png](/assets/images/2022/2022-05-21-dijkstra-algorithm/dijkstra.drawio.png)
 
 노드 간의 거리를 저장하는 테이블에는 무한대의 값을 저장해서 영원히 닿을 수 없다는 의미로 초기화 했다.
 
 출발 노드는 1번 노드에서 시작한다. 1번 노드는 자기 스스로와 거리가 0 이기 때문에 먼저 0 으로 채워넣는다.
 
-![dijkstra.drawio (1).png](/assets/images/2022-05-21-dijkstra-algorithm/dijkstra.drawio (1).png))
+![dijkstra.drawio (1).png](/assets/images/2022/2022-05-21-dijkstra-algorithm/dijkstra.drawio (1).png))
 
 현재 1번 노드와 직접 연결된 노드는 2, 3번 노드이다. 각각의 노드까지 걸리는 거리를 다음과 같이 테이블에 저장한다.
 
-![dijkstra.drawio (2).png](/assets/images/2022-05-21-dijkstra-algorithm/dijkstra.drawio (2).png))
+![dijkstra.drawio (2).png](/assets/images/2022/2022-05-21-dijkstra-algorithm/dijkstra.drawio (2).png))
 
 이제 다음에 방문할 수 있는 노드는 2번과 3번 노드이다. 이 중에서 거리 테이블 상에서 가장 작은 값을 가진 3번 노드를 방문한다.
 
-![dijkstra.drawio (3).png](/assets/images/2022-05-21-dijkstra-algorithm/dijkstra.drawio (3).png))
+![dijkstra.drawio (3).png](/assets/images/2022/2022-05-21-dijkstra-algorithm/dijkstra.drawio (3).png))
 
 3번 노드와 4번 노드의 거리는 2 인데, 거리 테이블의 4번 노드 자리에
 
@@ -43,29 +43,29 @@ use_math: true
 
 그 다음, 다시 거리 테이블에서 가장 작은 값을 가졌고, 방문하지 않은 노드인 2번 노드를 방문한다.
 
-![dijkstra.drawio (4).png](/assets/images/2022-05-21-dijkstra-algorithm/dijkstra.drawio (4).png))
+![dijkstra.drawio (4).png](/assets/images/2022/2022-05-21-dijkstra-algorithm/dijkstra.drawio (4).png))
 
 2번 노드와 연결된 4번 노드까지 거리는 2이고, 2번 노드를 거쳐 4번 노드로 간다면 총 거리는 4가 된다. 하지만, 3번 노드를 거쳐서 간 거리가 훨씬 짧기 때문에 거리 테이블에서는 값을 갱신하지 않는다.
 
 마찬가지로 이전과 동일하게 거리 테이블 상에서 가장 작은 값을 가지면서, 방문하지 않은 4번 노드를 방문한다.
 
-![dijkstra.drawio (5).png](/assets/images/2022-05-21-dijkstra-algorithm/dijkstra.drawio (1).png))
+![dijkstra.drawio (5).png](/assets/images/2022/2022-05-21-dijkstra-algorithm/dijkstra.drawio (1).png))
 
 4번 노드부터 5번 노드와 6번 노드까지 거리를 기존에 이동한 거리와 더한 만큼 거리 테이블에 각각 저장한다.
 
 다음으로, 거리 테이블 상에서 가장 작은 값을 가진 5번 노드를 방문한다.
 
-![dijkstra.drawio (6).png](/assets/images/2022-05-21-dijkstra-algorithm/dijkstra.drawio (6).png))
+![dijkstra.drawio (6).png](/assets/images/2022/2022-05-21-dijkstra-algorithm/dijkstra.drawio (6).png))
 
 하지만 더 이상 이동할 경로가 없으므로 마지막 남은 6번 노드를 방문한다.
 
-![dijkstra.drawio (7).png](/assets/images/2022-05-21-dijkstra-algorithm/dijkstra.drawio (7).png))
+![dijkstra.drawio (7).png](/assets/images/2022/2022-05-21-dijkstra-algorithm/dijkstra.drawio (7).png))
 
 이제 모든 노드를 방문했기 때문에 탐색을 멈춘다.
 
 최종적으로 거리 테이블에 저장된 값들은 1번 노드에서 각각의 노드까지 최단 거리가 저장된 것이다. 즉, 3번 노드를 거쳐 가는 경로가 가장 최단 경로가 되는 것이다.
 
-![dijkstra.drawio (8).png](/assets/images/2022-05-21-dijkstra-algorithm/dijkstra.drawio (8).png))
+![dijkstra.drawio (8).png](/assets/images/2022/2022-05-21-dijkstra-algorithm/dijkstra.drawio (8).png))
 
 ## 특징
 
@@ -73,7 +73,7 @@ use_math: true
 
 한편, 다익스트라 알고리즘은 거리가 양수일 때만 사용할 수 있다.
 
-![dijkstra-Copy of Page-1.drawio.png](/assets/images/2022-05-21-dijkstra-algorithm/dijkstra-Copy%20of%20Page-1.drawio.png)
+![dijkstra-Copy of Page-1.drawio.png](/assets/images/2022/2022-05-21-dijkstra-algorithm/dijkstra-Copy%20of%20Page-1.drawio.png)
 
 위와 같이 2번 노드에서 4번 노드로 가는 거리를 모른다고 해보자. 그렇다면, 1번 노드에서 4번 노드로 가는 최단 경로가 3번 노드를 거쳐야 하는 것이라는 것을 보장할 수 있을까?
 
@@ -87,7 +87,7 @@ use_math: true
 
 아래와 같은 그래프에 대해 JavaScript 를 사용해서 구현했다.
 
-![programmers_delivery.png](/assets/images/2022-05-21-dijkstra-algorithm/programmers_delivery.png)
+![programmers_delivery.png](/assets/images/2022/2022-05-21-dijkstra-algorithm/programmers_delivery.png)
 
 ## 1. 순차 탐색
 

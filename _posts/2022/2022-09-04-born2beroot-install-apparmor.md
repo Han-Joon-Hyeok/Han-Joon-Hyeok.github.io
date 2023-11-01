@@ -19,7 +19,7 @@ sudo dpkg -l apparmor-utils
 
 만약 설치되지 않았다면 다음과 같이 `Version` 와 `Architecture` 항목이 `<none>` 으로 표시되고, `Description` 항목이 `(no description available)` 로 표시된다.
 
-![1](/assets/images/2022-09-04-born2beroot-install-apparmor/1.png)
+![1](/assets/images/2022/2022-09-04-born2beroot-install-apparmor/1.png)
 
 설치되지 않았다면 다음의 명령어를 사용해서 설치할 수 있다.
 
