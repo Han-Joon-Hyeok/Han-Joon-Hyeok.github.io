@@ -26,11 +26,11 @@ Github Actions 의 cron 기능을 이용해서 매일 슬랙 채널에 특정 �
 
 공공데이터포털에서 제공하는 기상청 단기예보 API 를 이용하면 구, 동 단위의 세부적인 지역을 선택해서 기상 예보 정보를 받을 수 있다.
 
-다만, 기상청 API 는 2년에 1번씩 API 키를 갱신해주어야 하기 때문에 만료 기간을 꼭 확인하자. 
+다만, 기상청 API 는 2년에 1번씩 API 키를 갱신해주어야 하기 때문에 만료 기간을 꼭 확인하자.
 
 단기예보 API 는 실시간 기상 정보를 제공해주지 않는다. 기상청에서 3시간마다 발표하는 시간별 기상 예측 정보를 제공한다.
 
-그 중에서도 당일 새벽 2시에 발표한 자료에는 당일 최저 기온과 최고 기온 정보가 포함되어 있다. 
+그 중에서도 당일 새벽 2시에 발표한 자료에는 당일 최저 기온과 최고 기온 정보가 포함되어 있다.
 
 # 기상청 단기예보 API 사용법
 
@@ -48,16 +48,22 @@ Github Actions 의 cron 기능을 이용해서 매일 슬랙 채널에 특정 �
 
 사용하는 파라미터는 아래와 같다.
 
-| Key | 설명 | 필수 여부 |
-| --- | --- | --- |
-| serviceKey | 개인 API 인증키 | 필수 |
-| pageNo | numOfRows 만큼 요청 했을 때 받고자 하는 페이지 번호 | 필수 |
-| numOfRows | API 요청 시 반환하는 자료의 개수 | 선택 |
-| dataType | API 응답 시 반환하는 자료 형식 (JSON 또는 XML) | 선택 |
-| base_date | 예보 발표 기준 날짜 | 필수 |
-| base_time | 예보 발표 기준 시간 | 필수 |
-| nx | 예보 구역 위도 | 필수 |
-| ny | 예보 구역 위도 | 필수 |
+| Key        | 설명                                                | 필수 여부 |
+| ---------- | --------------------------------------------------- | --------- |
+| serviceKey | 개인 API 인증키                                     | 필수      |
+| pageNo     | numOfRows 만큼 요청 했을 때 받고자 하는 페이지 번호 | 필수      |
+| numOfRows  | API 요청 시 반환하는 자료의 개수                    | 선택      |
+| dataType   | API 응답 시 반환하는 자료 형식 (JSON 또는 XML)      | 선택      |
+| base_date  | 예보 발표 기준 날짜                                 | 필수      |
+| base_time  | 예보 발표 기준 시간                                 | 필수      |
+| nx         | 예보 구역 위도                                      | 필수      |
+| ny         | 예보 구역 위도                                      | 필수      |
+
+`serviceKey` 는 공공데이터포털에서 url encoding 값과 decoding 값 2개를 제공해주는데, 둘 중 하나를 입력해서 작동하는 것으로 사용하면 된다.
+
+참고로 url encoding 이란 특수 문자를 `%` 와 16진수의 값으로 변환하는 것을 의미한다.
+
+예를 들면, url 에 포함된 `=` 는 `%3D` 로 변환된다.
 
 Python 으로 JSON 형식으로 응답을 받고자 하는 코드는 아래와 같이 작성할 수 있다.
 
@@ -87,8 +93,8 @@ params = {
 
 '''
 category: 예보 항목
-- TMN : 최저 기온 - 오전 6시 
-- TMX : 최고 기온 - 오후 3시 
+- TMN : 최저 기온 - 오전 6시
+- TMX : 최고 기온 - 오후 3시
 - SKY : 하늘 상태
 - PTY : 강수 형태
 '''
@@ -141,7 +147,7 @@ def main():
     lowest_temp_of_today = weather.fetch_data_from_kma(current_time_kst, '5', 'TMN', '0600')
     highest_temp_of_today = weather.fetch_data_from_kma(current_time_kst, '16', 'TMX', '1500')
 
-    if (sky == None or precipitation == None or 
+    if (sky == None or precipitation == None or
         lowest_temp_of_today == None or highest_temp_of_today == None):
         weather_msg = "날씨 정보를 가져오지 못했습니다. 😢"
     else:
@@ -161,7 +167,7 @@ def main():
 
 다른 블로그에서는 하루의 모든 자료를 요청해서 가져오셨다. 이 방식은 약 200개가 넘는 데이터를 가져오는데, 불필요한 데이터까지 모두 요청하기 때문에 비효율적이다.
 
-그래서 `pageNo` 와 `numOfRows` 를 적절하게 설정하면 필요한 최소한의 데이터만 요청해서 가져올 수 있다. 필요한 데이터가 포함된 20개의 데이터만 요청함으로써 실행 속도도 높이고, 네트워크 사용량도 줄일 수 있다. 
+그래서 `pageNo` 와 `numOfRows` 를 적절하게 설정하면 필요한 최소한의 데이터만 요청해서 가져올 수 있다. 필요한 데이터가 포함된 20개의 데이터만 요청함으로써 실행 속도도 높이고, 네트워크 사용량도 줄일 수 있다.
 
 # 참고자료
 
