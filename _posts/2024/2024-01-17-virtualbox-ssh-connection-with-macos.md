@@ -8,8 +8,8 @@ tags: []
 # 실행 환경
 
 - OS
-    - MacOS : Catalina 10.15.7
-    - Ubuntu : 22.04
+  - MacOS : Catalina 10.15.7
+  - Ubuntu : 22.04
 - Virtualbox : 6.1.48
 
 # 문제 상황
