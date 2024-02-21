@@ -157,7 +157,11 @@ stealth(self.browser,
 # 문제 해결
 
 `selenium_stealth` 라이브러리 사용이 문제 해결의 핵심이었다.
+그리고 이 라이브러리를 이용할 때 chromedriver 를 종료하는 함수는 `driver.close()` 가 아니라 `driver.quit()` 으로 바꿔주어야 한다.
 
+```python
+self.browser.quit() # chromedriver 종료
+```
 # 참고자료
 
 - [Selenium headless: How to bypass Cloudflare detection using Selenium](https://stackoverflow.com/questions/68289474/selenium-headless-how-to-bypass-cloudflare-detection-using-selenium) [stackoverflow]
