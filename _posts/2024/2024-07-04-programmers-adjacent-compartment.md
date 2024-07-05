@@ -1,5 +1,5 @@
 ---
-title: "[PCCE 기출문제] 9번 / 이웃한 칸 (Java)"
+title: "프로그래머스 Level 1 - [PCCE 기출문제] 9번 / 이웃한 칸 (Java)"
 date: 2024-07-04 09:50:00 +0900
 categories: [programmers]
 tags: [level1, programmers, Java]
