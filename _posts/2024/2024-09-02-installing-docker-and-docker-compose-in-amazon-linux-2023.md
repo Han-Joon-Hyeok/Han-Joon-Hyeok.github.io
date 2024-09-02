@@ -20,23 +20,23 @@ AWS EC2 에서 사용하는 Amazon Linux 2023 에서 Docker 와 Docker Compose �
 
 2. docker 를 설치한다.
 
-```bash
-sudo yum install -y docker
-```
+    ```bash
+    sudo yum install -y docker
+    ```
 
-1. `ec2-user` 로 로그인한 경우 해당 유저를 `docker` 그룹에 추가한다.
+3. `ec2-user` 로 로그인한 경우 해당 유저를 `docker` 그룹에 추가한다.
 
     ```bash
     sudo usermod -a -G docker ec2-user
     ```
 
-2. docker 서비스를 시작한다.
+4. docker 서비스를 시작한다.
 
     ```bash
     sudo service docker start
     ```
 
-3. 정상적으로 실행되는지 확인한다.
+5. 정상적으로 실행되는지 확인한다.
 
     ```bash
     docker ps
