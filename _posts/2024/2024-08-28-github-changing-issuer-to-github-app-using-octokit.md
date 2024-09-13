@@ -56,15 +56,15 @@ Issue 를 생성하려면 Personal Access Token 이 필요한데, 이 토큰의 
 
 1. GitHub 홈페이지 우측 상단에서 환경 설정 버튼 클릭 후 [Settings] 페이지로 이동한다.
 
-![4.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/4.png)
+    ![4.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/4.png)
 
 2. 좌측 하단에 [Developers settings] 를 클릭한다.
 
-![5.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/5.png)
+    ![5.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/5.png)
 
 3. [New GitHub App] 버튼을 클릭한다.
 
-![6.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/6.png)
+    ![6.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/6.png)
 
 4. [GitHub App name] 과 [Homepage URL] 을 입력한다.
     1. [GitHub App name] 은 GitHub 내에서 고유한 이름을 가져야 한다. 다른 사람들이 사용하는 이름과 겹치면 생성이 되지 않는다.
@@ -74,34 +74,34 @@ Issue 를 생성하려면 Personal Access Token 이 필요한데, 이 토큰의 
 
 5. [Webhook] 은 사용하지 않을 것이기 때문에 [Active] 박스의 선택을 해제해준다.
 
-![8.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/8.png)
+    ![8.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/8.png)
 
 6. [Permissions] 에서 [Repository permissions] 를 클릭하여 [Issues] 의 권한을 `Read and write` 로 설정한다.
 
-![9.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/9.png)
+    ![9.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/9.png)
 
 7. [Create GitHub App] 버튼을 클릭해서 생성한다.
 
-![10.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/10.png)
+    ![10.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/10.png)
 
 8. GitHub App 을 Repository 에 설치하기 위해서는 Private Key 가 필요하다. 이를 위해 화면 하단에 있는 [Generate a private key] 버튼을 클릭한다.
 
-![11.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/11.png)
+    ![11.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/11.png)
 
-![12.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/12.png)
+    ![12.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/12.png)
 
 9. 버튼을 클릭하면 `pem` 파일을 다운로드 하는 창이 표시된다. 기억하기 쉬운 위치에 저장한다.
 
-![13.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/13.png)
+    ![13.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/13.png)
 
 
 10. [Install App] 탭으로 이동해서 [Install] 버튼을 클릭한다.
 
-![14.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/14.png)
+    ![14.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/14.png)
 
 11. [Only select repositories] 를 선택하고, App 을 사용하고자 하는 Repository 를 선택 후 [Install] 버튼을 클릭한다.
 
-![15.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/15.png)
+    ![15.png](/assets/images/2024/2024-08-28-github-changing-issuer-to-github-app/15.png)
 
 
 아래와 같은 화면이 표시되면 정상적으로 설치된 것이다.
