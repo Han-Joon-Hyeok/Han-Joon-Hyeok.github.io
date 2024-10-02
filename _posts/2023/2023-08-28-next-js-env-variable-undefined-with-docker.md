@@ -2,7 +2,7 @@
 title: next.js 빌드 시 환경 변수가 undefined 인 문제 해결 (feat. docker-compose)
 date: 2023-08-28 01:25:00 +0900
 categories: [frontend]
-tags: [next.js, docker, docker-compose]
+tags: [Nextjs, docker, docker-compose]
 ---
 
 # 문제 상황

@@ -1,8 +1,8 @@
 ---
 title: "[Next.js] Failed to load SWC binary for linux/x64 해결 방법"
 date: 2024-03-04 00:30:00 +0900
-categories: [TypeScript, Next.js]
-tags: [TypeScript, Next.js]
+categories: [TypeScript, Nextjs]
+tags: [TypeScript, Nextjs]
 ---
 
 # 실행 환경
