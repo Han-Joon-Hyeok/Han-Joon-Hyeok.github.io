@@ -1,6 +1,6 @@
 ---
 title: "[GitHub] Pull Request 생성 시 빌드 및 테스트 통과 후에만 merge 가능하게 설정하기"
-date: 2024-10-08 20:10:00 +0900
+date: 2024-10-08 12:10:00 +0900
 categories: [github, github actions]
 tags: [github, github actions]
 ---
