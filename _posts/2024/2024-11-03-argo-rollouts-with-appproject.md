@@ -1,6 +1,6 @@
 ---
 title: "[ArgoCD] RBAC 적용을 위한 AppProject와 무중단 배포를 위한 Argo Rollouts 함께 사용하기"
-date: 2024-11-03 17:30:00 +0900
+date: 2024-11-03 17:20:00 +0900
 categories: [argocd]
 tags: []
 ---
@@ -296,7 +296,7 @@ ArgoCD 대시보드에서 배포가 된 것을 확인할 수 있다.
 - Ingress 가 계속 Progressing 으로 표시되는 현상
   ArgoCD 에서 health 라고 표시하는 조건을 LoadBalancer 의 개수가 0개 이상으로 걸려있어서 발생하는 현상이라고 한다.
   - 참고자료: [ArgoCD app stuck in Progressing for ingress workloads with no LB IP address](https://github.com/argoproj/argo-cd/issues/14607) [github]
-  실제로 배포된 Ingress 의 manifest 를 살펴보면 아래와 같이 되어 있다.
+    실제로 배포된 Ingress 의 manifest 를 살펴보면 아래와 같이 되어 있다.
   ```yaml
   status:
     loadBalancer: {}
