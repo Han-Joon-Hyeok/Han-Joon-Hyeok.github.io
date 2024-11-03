@@ -1,4 +1,4 @@
-name: 'Automatic build'
+name: "Automatic build"
 on:
   push:
     branches:
@@ -8,9 +8,12 @@ on:
       - README.md
       - LICENSE
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   continuous-delivery:
-
     runs-on: ubuntu-latest
 
     env:
@@ -20,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0  # for posts's lastmod
+          fetch-depth: 0 # for posts's lastmod
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
