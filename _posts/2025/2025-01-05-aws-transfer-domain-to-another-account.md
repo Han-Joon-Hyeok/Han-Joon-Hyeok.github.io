@@ -1,5 +1,5 @@
 ---
-title: "[AWS] [AWS] Route 53 계정 간 도메인 이전 방법 및 ACM 발급"
+title: "[AWS] Route 53 계정 간 도메인 이전 및 ACM 인증서 발급 방법"
 date: 2025-01-05 00:10:00 +0900
 categories: [aws]
 tags: []
