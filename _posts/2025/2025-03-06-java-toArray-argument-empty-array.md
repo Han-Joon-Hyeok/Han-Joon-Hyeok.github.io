@@ -160,6 +160,107 @@ if (a.length < size)
 
 물론 빈 배열로 넘긴다고 해서 완벽하게 동시성 문제를 처리할 수 있는 것은 아닙니다. 이를 해결하기 위해 SynchronizedList나 CopyOnWriteArrayList를 사용할 수 있습니다.
 
+### 빈 배열을 넘기지 않았을 때 마지막 원소가 null이 되는 예제 코드
+
+멀티 스레드 환경에서 toArray() 메서드의 매개변수로 빈 배열을 넘기지 않았을 때, 반환된 배열의 마지막 원소가 null이 되는지 확인하는 예제 코드입니다.
+
+```java
+package org.example;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Main extends Thread {
+
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("hello");
+        list.add("world");
+
+        Thread deleteThread = new Thread(() -> {
+            try {
+                Thread.sleep(1000);
+                list.remove(1);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        Thread convertThread = new Thread(() -> {
+            try {
+                Thread.sleep(999);
+                String[] arr = list.toArray(new String[list.size()]);
+                System.out.println(Arrays.toString(arr));
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        deleteThread.start();
+        convertThread.start();
+    }
+}
+```
+
+List의 원소를 삭제하는 deleteThread와 toArray() 메서드를 사용해서 배열로 변환하는 convertThread를 생성했습니다. convertThread가 먼저 실행되고 deleteThread가 실행되도록 스레드 실행 순서와 스레드 내의 sleep 시간을 조정했습니다.
+
+실행할 때마다 매번 null이 마지막 원소로 들어가는 것은 아니지만, 멀티 스레드 환경에서 toArray() 메서드를 사용하면 의도하지 않은 결과가 나타날 수 있습니다.
+
+![2.png](/assets/images/2025/2025-03-06-java-toArray-argument-empty-array/2.png)
+
+이러한 동시성 문제를 해결하기 위해 synchronizedList와 synchronized 키워드를 사용할 수 있습니다.
+
+```java
+package org.example;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class Main {
+
+    public static void main(String[] args) {
+        List<String> list = Collections.synchronizedList(new ArrayList<>());
+        list.add("hello");
+        list.add("world");
+
+        Thread deleteThread = new Thread(() -> {
+            try {
+                Thread.sleep(1000);
+                list.remove(1);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        Thread convertThread = new Thread(() -> {
+            try {
+                Thread.sleep(999);
+                String[] arr;
+
+                synchronized (list) {
+                    arr = list.toArray(new String[list.size()]);
+                }
+
+                System.out.println(Arrays.toString(arr));
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        deleteThread.start();
+        convertThread.start();
+
+    }
+}
+```
+
+코드를 여러 번 실행해도 List에서 배열로 변환하는 시점에는 List의 마지막 원소가 삭제되지 않은 상태가 보장되기 때문에 배열의 원소가 항상 2개로 출력되는 것을 확인할 수 있습니다.
+
+![3.png](/assets/images/2025/2025-03-06-java-toArray-argument-empty-array/3.png)
+
 # 참고자료
 
 - [[Java] ArrayList ↔ Array 변환](https://velog.io/@jwkim/java-arraylist-array-type-conversion) [velog]
