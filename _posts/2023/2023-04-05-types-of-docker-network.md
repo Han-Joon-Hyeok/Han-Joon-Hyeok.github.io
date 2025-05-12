@@ -85,8 +85,7 @@ macvlan 은 bridge 대신 하나의 부모 인터페이스를 이용해서 여�
 
 각 컨테이너는 고유한 MAC 주소를 가진다.
 
- [![7.png](/assets/images/2023/2023-04-05-types-of-docker-network/7.png)
- 네이버 블로그]](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/14a04c33-e451-42dd-8450-854aafdea4e1/Untitled.png)
+ ![7.png](/assets/images/2023/2023-04-05-types-of-docker-network/7.png)
 
 출처: [97. [Docker + Network] Docker 컨테이너의 Macvlan 사용해보기](https://m.blog.naver.com/alice_k106/220984112963)
  [네이버 블로그]
