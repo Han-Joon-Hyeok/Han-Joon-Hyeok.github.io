@@ -1,8 +1,8 @@
 ---
 title: "NAT란?"
 date: 2023-04-05 12:40:00 +0900
-categories: [network]
-tags: [network]
+categories: [Network]
+tags: [Network]
 ---
 # NAT
 

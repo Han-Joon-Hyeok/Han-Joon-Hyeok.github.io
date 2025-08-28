@@ -1,8 +1,8 @@
 ---
 title: "DNS 작동 방식"
 date: 2023-04-17 09:49:00 +0900
-categories: [network]
-tags: [network]
+categories: [Network]
+tags: [Network]
 ---
 
 # DNS란?
