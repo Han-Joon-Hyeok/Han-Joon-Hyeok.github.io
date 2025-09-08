@@ -1,7 +1,7 @@
 ---
-title: "LLR, CSF, RDI  개념 정리"
-date: 2025-09-01 15:45:00 +0900
-categories: [Network]
+title: "[AWS] EC2 인스턴스 ssh 키 없이 터미널 접속하는 방법 (AWS Session Manager)"
+date: 2025-09-08 21:35:00 +0900
+categories: [AWS]
 tags: []
 use_math: true
 ---
