@@ -12,6 +12,8 @@ use_math: true
 | Rocky | RHEL | RPM/DNF(YUM) | 엔터프라이즈 서버 |
 | Debian | Debian | DEB/APT | 안정성 중심 |
 | Ubuntu | Debian 기반 | DEB/APT | 대중성, 데스크톱, 클라우드 |
+
+
 1. CentOS (Community Enterprise Operating System)
     - 유료인 RHEL의 소스 코드를 가지고 Red Hat 관련 상표권(로고 등)을 다 떼고 만든 OS.
     - RHEL(Red Hat Enterprise Linux)
