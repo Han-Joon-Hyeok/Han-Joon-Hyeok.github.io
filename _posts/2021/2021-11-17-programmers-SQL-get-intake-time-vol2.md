@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 4 - 입양 시각 구하기(2) (MySQL)
 date: 2021-11-17 14:50:00 +0900
 categories: [programmers]
-tags: [level4, programmers, MySQL]
+tags: [level4, programmers, mysql]
 ---
 
 > [프로그래머스 - Level4 입양 시각 구하기(2)](https://programmers.co.kr/learn/courses/30/lessons/59413)

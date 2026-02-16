@@ -1,7 +1,7 @@
 ---
 title: "[Spring] Spring Rest Docs 적용 및 Github Pages 자동 배포"
 date: 2024-07-08 23:33:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 

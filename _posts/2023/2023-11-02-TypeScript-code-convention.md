@@ -1,8 +1,8 @@
 ---
 title: "TypeScript Code Convention"
 date: 2023-11-02 09:00:00 +0900
-categories: [TypeScript]
-tags: [TypeScript]
+categories: [typescript]
+tags: [typescript]
 ---
 
 # Code Convention

@@ -2,7 +2,7 @@
 title: "프로그래머스 Level 1 - 가장 많이 받은 선물 (Java)"
 date: 2024-07-08 14:40:00 +0900
 categories: [programmers]
-tags: [level1, programmers, Java]
+tags: [level1, programmers, java]
 use_math: true
 ---
 > [프로그래머스 - Level1 가장 많이 받은 선물](https://school.programmers.co.kr/learn/courses/30/lessons/258712)

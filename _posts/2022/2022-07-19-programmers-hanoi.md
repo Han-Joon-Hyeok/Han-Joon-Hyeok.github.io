@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 2 - 하노이의 탑 (JavaScript)
 date: 2022-07-19 11:00:00 +0900
 categories: [programmers]
-tags: [level2, programmers, JavaScript]
+tags: [level2, programmers, javascript]
 use_math: true
 ---
 

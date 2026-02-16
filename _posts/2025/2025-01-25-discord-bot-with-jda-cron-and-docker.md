@@ -1,7 +1,7 @@
 ---
 title: "[Java] JDA, cron, Docker를 활용한 Discord 메시지 전송 Bot 만들기"
 date: 2025-01-25 22:50:00 +0900
-categories: [Java]
+categories: [java]
 tags: []
 ---
 

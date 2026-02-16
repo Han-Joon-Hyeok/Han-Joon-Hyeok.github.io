@@ -1,8 +1,8 @@
 ---
 title: "[Nest.js] 협업을 위한 Google TyepScript Style 을 ESLint, Prettier 에 간단하게 적용하기"
 date: 2023-11-14 09:00:00 +0900
-categories: [TypeScript, Nest.js]
-tags: [TypeScript, Nest.js]
+categories: [typescript, nest.js]
+tags: [typescript, nest.js]
 ---
 
 # 설치 방법

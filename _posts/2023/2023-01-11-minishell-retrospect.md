@@ -1,7 +1,7 @@
 ---
 title: "[42Seoul] minishell (2) 프로젝트 회고"
 date: 2023-01-12 00:30:00 +0900
-categories: [42seoul]
+categories: [l42seoul]
 tags: [minishell]
 use_math: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: "[Born2beroot] 1. 가상 머신 및 데비안 설치"
 date: 2022-08-17 17:20:00 +0900
-categories: [42seoul]
+categories: [l42seoul]
 tags: [born2beroot]
 use_math: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: "[Spring] IntelliJ java: package org.springframework.boot does not exist 오류 해결"
 date: 2025-02-02 21:40:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 

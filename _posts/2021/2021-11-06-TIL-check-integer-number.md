@@ -2,7 +2,7 @@
 title: TIL - JavaScript 정수인지 확인하는 방법
 date: 2021-11-06 23:45:00 +0900
 categories: [javascript]
-tags: [javascript, TIL]
+tags: [javascript, til]
 ---
 
 주어진 number가 정수인지 확인하는 방법은 두 가지 방법이 있다.

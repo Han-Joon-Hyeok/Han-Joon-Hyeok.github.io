@@ -1,8 +1,8 @@
 ---
 title: 자료구조 - 이중 연결 리스트(Doubly Linked List)
 date: 2021-02-21 08:45:00 +0900
-categories: [Data Structure]
-tags: [Data Structure]
+categories: [data structure]
+tags: [data structure]
 ---
 
 > [프로그래머스 - 어서와! 자료구조와 알고리즘은 처음이지?](https://programmers.co.kr/learn/courses/57)를 공부하며 정리한 내용입니다.

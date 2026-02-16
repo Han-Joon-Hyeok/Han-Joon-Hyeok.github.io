@@ -1,7 +1,7 @@
 ---
 title: "[Spring] AOP 개념 정리"
 date: 2025-03-02 21:55:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 

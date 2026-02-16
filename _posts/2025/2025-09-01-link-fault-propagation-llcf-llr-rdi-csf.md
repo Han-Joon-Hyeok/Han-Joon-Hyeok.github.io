@@ -1,7 +1,7 @@
 ---
 title: "LLR, CSF, RDI  개념 정리"
 date: 2025-09-01 15:45:00 +0900
-categories: [Network]
+categories: [network]
 tags: []
 use_math: true
 ---

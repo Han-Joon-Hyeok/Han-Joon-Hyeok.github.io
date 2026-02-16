@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 0 - 저주의 숫자 3 (C++)
 date: 2023-10-31 18:00:00 +0900
 categories: [programmers]
-tags: [level0, programmers, C++]
+tags: [level0, programmers, c++]
 use_math: true
 ---
 > [프로그래머스 - Level0 저주의 숫자 3](https://school.programmers.co.kr/learn/courses/30/lessons/120871?language=cpp)

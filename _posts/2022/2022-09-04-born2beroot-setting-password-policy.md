@@ -1,7 +1,7 @@
 ---
 title: "[Born2beroot] 6. 비밀번호 정책 설정"
 date: 2022-09-04 22:45:00 +0900
-categories: [42seoul]
+categories: [l42seoul]
 tags: [born2beroot]
 use_math: true
 ---

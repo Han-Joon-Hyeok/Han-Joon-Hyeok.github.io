@@ -1,7 +1,7 @@
 ---
 title: "[Born2beroot] 5. SSH 설치 및 설정"
 date: 2022-09-04 22:40:00 +0900
-categories: [42seoul]
+categories: [l42seoul]
 tags: [born2beroot]
 use_math: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: "[Java] orElse 와 orElseGet 의 차이"
 date: 2024-07-18 10:55:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 # 개요

@@ -1,7 +1,7 @@
 ---
 title: "[Linux] 파일 write 작업 시 PermissionError: [Errno 13] Permission denied 오류 해결"
 date: 2023-12-09 21:00:00 +0900
-categories: [linux]
+categories: [inux]
 tags: []
 ---
 

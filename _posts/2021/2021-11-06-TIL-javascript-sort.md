@@ -2,7 +2,7 @@
 title: TIL - JavaScript Sort에 대해 알아보자
 date: 2021-11-06 23:55:00 +0900
 categories: [javascript]
-tags: [javascript, TIL]
+tags: [javascript, til]
 ---
 
 프로그래머스에서 문자열 정렬 문제를 푸는데, `sort` 를 실행해도 순서가 바뀌지 않아서 당황했다.

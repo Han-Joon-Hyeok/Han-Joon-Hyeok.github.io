@@ -1,7 +1,7 @@
 ---
 title: "[Java Spring] is 로 시작하는 변수의 이름이 json 객체에서 is 가 사라지는 문제"
 date: 2024-05-23 15:45:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 

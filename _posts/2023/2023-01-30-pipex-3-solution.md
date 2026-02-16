@@ -1,7 +1,7 @@
 ---
 title: "[42Seoul] pipex (3) 구현 과정"
 date: 2023-01-30 08:00:00 +0900
-categories: [42seoul]
+categories: [l42seoul]
 tags: [pipex]
 use_math: true
 ---

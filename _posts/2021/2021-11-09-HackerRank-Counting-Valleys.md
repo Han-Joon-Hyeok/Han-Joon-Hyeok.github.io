@@ -1,8 +1,8 @@
 ---
 title: HackerRank - Counting Valleys (JavaScript)
 date: 2021-11-09 11:24:00 +0900
-categories: [HackerRank]
-tags: [HackerRank, javascript]
+categories: [hackerrank]
+tags: [hackerrank, javascript]
 use_math: true
 ---
 

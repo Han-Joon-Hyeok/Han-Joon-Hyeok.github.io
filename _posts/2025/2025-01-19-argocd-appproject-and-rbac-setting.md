@@ -1,7 +1,7 @@
 ---
 title: "[ArgoCD] AppProject 생성 및 RBAC 설정 가이드"
 date: 2025-01-19 13:25:00 +0900
-categories: [ArgoCD]
+categories: [argocd]
 tags: []
 ---
 

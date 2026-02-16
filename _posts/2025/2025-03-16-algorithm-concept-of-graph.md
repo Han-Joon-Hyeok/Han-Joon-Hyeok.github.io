@@ -1,7 +1,7 @@
 ---
 title: "[알고리즘] 그래프(graph) 개념과 구현 방법(인접 행렬, 인접 리스트)"
 date: 2025-03-16 11:40:00 +0900
-categories: [Algorithm]
+categories: [algorithm]
 tags: []
 ---
 

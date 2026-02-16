@@ -1,7 +1,7 @@
 ---
 title: "[알고리즘] 신장 트리와 최소 비용 신장 트리 (feat. 프림 알고리즘)"
 date: 2025-04-05 08:30:00 +0900
-categories: [Algorithm]
+categories: [algorithm]
 tags: []
 ---
 

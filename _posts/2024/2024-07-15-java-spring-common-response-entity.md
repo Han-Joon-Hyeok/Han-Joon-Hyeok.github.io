@@ -1,7 +1,7 @@
 ---
 title: "[Spring] 공통 Response 클래스 구현"
 date: 2024-07-15 15:05:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 # 작업 환경

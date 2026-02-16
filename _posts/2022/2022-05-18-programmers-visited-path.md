@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 2 - 방문 길이 (JavaScript)
 date: 2022-05-18 16:30:00 +0900
 categories: [programmers]
-tags: [level2, programmers, JavaScript]
+tags: [level2, programmers, javascript]
 use_math: true
 ---
 

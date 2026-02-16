@@ -2,6 +2,9 @@
 
 source "https://rubygems.org"
 
+# Fix for Ruby 3.2 compatibility - liquid 4.0.3 uses deprecated tainted? method
+gem "liquid", "~> 4.0", ">= 4.0.4"
+
 gemspec
 
 group :test do

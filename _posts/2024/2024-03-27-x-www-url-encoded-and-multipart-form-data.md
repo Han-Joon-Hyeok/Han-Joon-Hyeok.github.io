@@ -1,7 +1,7 @@
 ---
 title: "application/x-www-form-urlencoded 와 multipart/form-data 차이"
 date: 2024-03-27 21:40:00 +0900
-categories: [Web]
+categories: [web]
 tags: []
 ---
 

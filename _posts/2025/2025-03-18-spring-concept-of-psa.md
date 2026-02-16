@@ -1,7 +1,7 @@
 ---
 title: "[Spring] PSA(Portable Service Abstraction) 개념 정리"
 date: 2025-03-18 18:00:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 

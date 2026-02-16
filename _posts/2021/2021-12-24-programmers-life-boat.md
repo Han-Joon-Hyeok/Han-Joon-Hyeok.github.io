@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 2 - 구명보트 (JavaScript)
 date: 2021-12-24 23:10:00 +0900
 categories: [programmers]
-tags: [level2, programmers, JavaScript]
+tags: [level2, programmers, javascript]
 use_math: true
 ---
 

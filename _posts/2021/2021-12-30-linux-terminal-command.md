@@ -1,8 +1,8 @@
 ---
 title: 리눅스 터미널 명령어 정리
 date: 2021-12-30 01:20:00 +0900
-categories: [linux]
-tags: [linux]
+categories: [inux]
+tags: [inux]
 ---
 
 > [필수 리눅스 명령어 정리 - 드림코딩](https://www.youtube.com/watch?v=EL6AQl-e3AQ) 영상을 정리한 글입니다.

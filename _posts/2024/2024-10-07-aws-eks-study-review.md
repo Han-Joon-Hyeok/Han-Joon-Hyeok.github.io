@@ -1,7 +1,7 @@
 ---
 title: "[EKS] AWS EKS Workshop 실습 스터디 2기 내용 정리"
 date: 2024-10-07 20:10:00 +0900
-categories: [AWS, EKS]
+categories: [aws, eks]
 tags: []
 ---
 

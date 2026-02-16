@@ -1,7 +1,7 @@
 ---
 title: "[회고] 42서울 C++ 기반 nginx 샘플링 프로젝트 회고"
 date: 2023-06-28 12:20:00 +0900
-categories: [Retrospect, 42seoul]
+categories: [retrospect, 42seoul]
 tags: []
 ---
 

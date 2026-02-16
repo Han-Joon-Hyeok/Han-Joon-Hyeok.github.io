@@ -1,7 +1,7 @@
 ---
 title: "[Visual Studio Code, Mac] ssh remote connect 오류 해결 : Could not establish connection to ~ Permission denied(publickey)."
 date: 2023-12-17 21:20:00 +0900
-categories: [개발환경]
+categories: [l개발환경]
 tags: []
 ---
 

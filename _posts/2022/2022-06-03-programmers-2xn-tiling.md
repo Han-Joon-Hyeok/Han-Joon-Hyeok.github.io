@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 2 - 2 x n 타일링 (JavaScript)
 date: 2022-06-03 15:50:00 +0900
 categories: [programmers]
-tags: [level2, programmers, JavaScript]
+tags: [level2, programmers, javascript]
 use_math: true
 ---
 

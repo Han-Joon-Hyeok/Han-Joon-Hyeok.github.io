@@ -1,7 +1,7 @@
 ---
 title: "[Linux] MacOS 에서 실행한 virtualbox 가상머신에 ssh 접속하기"
 date: 2024-01-17 14:38:00 +0900
-categories: [linux]
+categories: [inux]
 tags: []
 ---
 

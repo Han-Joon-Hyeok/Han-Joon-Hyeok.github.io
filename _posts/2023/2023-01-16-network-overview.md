@@ -1,8 +1,8 @@
 ---
 title: "네트워크 LAN, WAN / 스위치, 라우터 / IP 주소 / 서브넷 개념 정리"
 date: 2023-01-16 12:56:00 +0900
-categories: [Network]
-tags: [Network]
+categories: [network]
+tags: [network]
 ---
 
 # 네트워크?

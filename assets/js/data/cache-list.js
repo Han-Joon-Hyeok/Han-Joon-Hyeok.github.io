@@ -25,7 +25,7 @@ const include = [
   /*--- Icons ---*/
 
   {%- capture icon_url -%}
-    {{ "/assets/img/favicons" | relative_url }}
+    {{ "/assets/images/favicons" | relative_url }}
   {%- endcapture -%}
   '{{ icon_url }}/favicon.ico',
   '{{ icon_url }}/apple-icon.png',

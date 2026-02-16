@@ -1,7 +1,7 @@
 ---
 title: "Amazon Linux 2023 docker compose 설치"
 date: 2024-09-02 11:00:00 +0900
-categories: [AWS, docker]
+categories: [aws, docker]
 tags: []
 ---
 

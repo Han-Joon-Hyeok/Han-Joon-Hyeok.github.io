@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 2 - 카펫 (JavaScript)
 date: 2021-12-30 21:00:00 +0900
 categories: [programmers]
-tags: [level2, programmers, JavaScript]
+tags: [level2, programmers, javascript]
 use_math: true
 ---
 

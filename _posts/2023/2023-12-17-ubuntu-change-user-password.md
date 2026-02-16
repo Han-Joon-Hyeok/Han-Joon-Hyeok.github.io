@@ -1,7 +1,7 @@
 ---
 title: "[Linux] EC2 ubuntu 사용자 비밀번호 변경"
 date: 2023-12-17 21:20:00 +0900
-categories: [linux]
+categories: [inux]
 tags: []
 ---
 

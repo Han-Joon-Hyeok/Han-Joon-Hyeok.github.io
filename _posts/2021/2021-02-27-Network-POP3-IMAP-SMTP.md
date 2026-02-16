@@ -1,8 +1,8 @@
 ---
 title: 네트워크 - POP3, IMAP, SMTP 개념 및 차이점 비교
 date: 2021-02-27 23:44:00 +0900
-categories: [Network]
-tags: [Network]
+categories: [network]
+tags: [network]
 ---
 
 > 본 포스팅은 본인 소유의 [네이버 블로그](https://blog.naver.com/virq/222212181769)에서 작성한 글을 재게시하였습니다.

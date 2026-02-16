@@ -1,7 +1,7 @@
 ---
 title: "[spring boot] ddl-auto: update 옵션 분석"
 date: 2024-10-14 17:10:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "[Born2beroot] 7. 시스템 정보 출력(monitoring.sh)과 cron"
 date: 2022-09-04 22:50:00 +0900
-categories: [42seoul]
+categories: [l42seoul]
 tags: [born2beroot]
 use_math: true
 ---

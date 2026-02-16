@@ -1,8 +1,8 @@
 ---
 title: "Monorepo vs Multirepo"
 date: 2023-11-02 09:00:00 +0900
-categories: [개발환경]
-tags: [개발환경]
+categories: [l개발환경]
+tags: [l개발환경]
 ---
 
 # 프로젝트 구조 만들기

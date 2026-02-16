@@ -1,7 +1,7 @@
 ---
 title: "[42Seoul] 식사하는 철학자(Philosopher) 과제 구현 과정 및 회고"
 date: 2022-10-13 14:20:00 +0900
-categories: [42seoul]
+categories: [l42seoul]
 tags: []
 use_math: true
 ---

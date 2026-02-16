@@ -1,7 +1,7 @@
 ---
 title: "[AWS] EC2 에 ALB 없이 CloudFront, ACM 이용해서 HTTPS 인증서 적용하기"
 date: 2024-09-17 16:50:00 +0900
-categories: [AWS]
+categories: [aws]
 tags: []
 ---
 

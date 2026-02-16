@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 2 - 뉴스 클러스터링 (JavaScript)
 date: 2022-03-13 23:30:00 +0900
 categories: [programmers]
-tags: [level2, programmers, JavaScript]
+tags: [level2, programmers, javascript]
 use_math: true
 ---
 

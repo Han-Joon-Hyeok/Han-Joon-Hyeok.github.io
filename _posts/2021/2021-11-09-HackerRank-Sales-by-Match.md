@@ -1,8 +1,8 @@
 ---
 title: HackerRank - Sales by Match (JavaScript)
 date: 2021-11-09 10:50:00 +0900
-categories: [HackerRank]
-tags: [HackerRank, javascript]
+categories: [hackerrank]
+tags: [hackerrank, javascript]
 ---
 
 > [HackerRank - Sales by Match](https://www.hackerrank.com/challenges/sock-merchant/problem?filter=South%20Korea&filter_on=country&h_l=interview&page=2&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup)

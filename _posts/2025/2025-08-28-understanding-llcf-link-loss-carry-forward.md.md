@@ -1,7 +1,7 @@
 ---
 title: "LLCF 개념 및 장애 전파 작동 원리"
 date: 2025-08-28 15:30:00 +0900
-categories: [Network]
+categories: [network]
 tags: []
 use_math: true
 ---

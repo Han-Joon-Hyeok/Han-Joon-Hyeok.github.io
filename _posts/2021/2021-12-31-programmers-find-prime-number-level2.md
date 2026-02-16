@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 2 - 소수 찾기 (JavaScript)
 date: 2021-12-31 20:30:00 +0900
 categories: [programmers]
-tags: [level2, programmers, JavaScript]
+tags: [level2, programmers, javascript]
 use_math: true
 ---
 

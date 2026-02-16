@@ -2,7 +2,7 @@
 title: "프로그래머스 Level 1 - [PCCP 기출문제] 1번 / 붕대 감기 (Java)"
 date: 2024-07-05 16:40:00 +0900
 categories: [programmers]
-tags: [level1, programmers, Java]
+tags: [level1, programmers, java]
 use_math: true
 ---
 

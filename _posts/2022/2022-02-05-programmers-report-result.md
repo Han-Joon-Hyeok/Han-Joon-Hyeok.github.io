@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 1 - 신고 결과 받기 (JavaScript)
 date: 2022-02-05 21:15:00 +0900
 categories: [programmers]
-tags: [level1, programmers, JavaScript]
+tags: [level1, programmers, javascript]
 use_math: true
 ---
 

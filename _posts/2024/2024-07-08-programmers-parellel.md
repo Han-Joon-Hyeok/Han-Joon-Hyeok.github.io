@@ -2,7 +2,7 @@
 title: "프로그래머스 Level 0 - 평행 (Java)"
 date: 2024-07-09 15:00:00 +0900
 categories: [programmers]
-tags: [level1, programmers, Java]
+tags: [level1, programmers, java]
 use_math: true
 ---
 > [프로그래머스 - Level0 평행](https://school.programmers.co.kr/learn/courses/30/lessons/120875?language=java#)

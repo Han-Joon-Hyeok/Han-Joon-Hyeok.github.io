@@ -1,7 +1,7 @@
 ---
 title: "[Java] List에서 배열로 변환하는 toArray() 매개변수로 빈 배열을 넘기는 이유"
 date: 2025-03-06 23:15:00 +0900
-categories: [Java]
+categories: [java]
 tags: []
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "[Java Spring] A problem occured configuring root project 오류 해결 방법"
 date: 2024-03-04 17:35:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 

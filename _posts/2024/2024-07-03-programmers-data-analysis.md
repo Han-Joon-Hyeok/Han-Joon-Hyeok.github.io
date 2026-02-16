@@ -2,7 +2,7 @@
 title: "프로그래머스 Level 1 - [PCCE 기출문제] 10번 / 데이터 분석 (Java)"
 date: 2024-07-03 13:00:00 +0900
 categories: [programmers]
-tags: [level1, programmers, Java]
+tags: [level1, programmers, java]
 use_math: true
 ---
 

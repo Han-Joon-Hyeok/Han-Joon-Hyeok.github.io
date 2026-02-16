@@ -1,7 +1,7 @@
 ---
 title: "[ArgoCD] Kustomize를 사용한 Notification 템플릿 관리 및 배포"
 date: 2025-01-12 11:30:00 +0900
-categories: [ArgoCD]
+categories: [argocd]
 tags: []
 ---
 

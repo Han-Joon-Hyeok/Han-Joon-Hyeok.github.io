@@ -1,7 +1,7 @@
 ---
 title: "[Born2beroot] 8. WordPress 설치"
 date: 2022-09-04 22:55:00 +0900
-categories: [42seoul]
+categories: [l42seoul]
 tags: [born2beroot]
 use_math: true
 ---

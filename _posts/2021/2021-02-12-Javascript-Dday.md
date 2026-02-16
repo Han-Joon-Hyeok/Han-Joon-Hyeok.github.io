@@ -1,8 +1,8 @@
 ---
 title: Javascript - 시,분,초 D-Day 실시간 계산기 만들기
 date: 2021-02-10 20:24:00 +0900
-categories: [Javascript]
-tags: [Javascript]
+categories: [javascript]
+tags: [javascript]
 ---
 
 우선 `javascript`에서 시간을 계산하는 방법은 다음과 같다.

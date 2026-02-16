@@ -1,8 +1,8 @@
 ---
 title: HackerRank - 2D Array - DS (JavaScript)
 date: 2021-11-12 12:05:00 +0900
-categories: [HackerRank]
-tags: [HackerRank, javascript]
+categories: [hackerrank]
+tags: [hackerrank, javascript]
 ---
 
 > [HackerRank - 2D Array - DS](https://www.hackerrank.com/challenges/2d-array/problem)

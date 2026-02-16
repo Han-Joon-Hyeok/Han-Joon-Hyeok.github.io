@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 1 - 기사단원의 무기 (JavaScript)
 date: 2023-04-17 08:30:00 +0900
 categories: [programmers]
-tags: [level1, programmers, JavaScript]
+tags: [level1, programmers, javascript]
 use_math: true
 ---
 

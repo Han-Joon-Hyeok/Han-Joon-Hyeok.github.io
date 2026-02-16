@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 2 - 중복 제거하기 (MySQL)
 date: 2021-11-17 14:50:00 +0900
 categories: [programmers]
-tags: [level2, programmers, MySQL]
+tags: [level2, programmers, mysql]
 ---
 
 > [프로그래머스 - Level2 중복 제거하기](https://programmers.co.kr/learn/courses/30/lessons/59408)

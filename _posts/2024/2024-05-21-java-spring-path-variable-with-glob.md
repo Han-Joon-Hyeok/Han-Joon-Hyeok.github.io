@@ -1,7 +1,7 @@
 ---
 title: "[Java Spring] path variable 사용 시 Security 설정 확인 사항"
 date: 2024-05-21 22:50:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 

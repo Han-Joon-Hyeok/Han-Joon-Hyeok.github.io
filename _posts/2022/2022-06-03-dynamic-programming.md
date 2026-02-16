@@ -1,8 +1,8 @@
 ---
 title: 동적 계획법(Dynamic Programming) 개념과 구현 (feat. 2 x n 타일링)
 date: 2022-06-03 15:50:00 +0900
-categories: [Algorithm]
-tags: [dynamic programming, JavaScript]
+categories: [algorithm]
+tags: [dynamic programming, javascript]
 use_math: true
 ---
 

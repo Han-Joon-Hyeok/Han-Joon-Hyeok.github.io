@@ -1,8 +1,8 @@
 ---
 title: HTML video 영상이 보이지 않고 소리만 나오는 현상
 date: 2021-08-22 01:00:00 +0900
-categories: [HTML]
-tags: [HTML]
+categories: [html]
+tags: [html]
 ---
 
 # 현상

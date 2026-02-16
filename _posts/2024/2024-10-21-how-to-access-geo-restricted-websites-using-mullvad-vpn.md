@@ -1,7 +1,7 @@
 ---
 title: "국가 제한이 걸린 사이트에 접속하는 방법 (feat. Mullvad VPN)"
 date: 2024-10-21 11:30:00 +0900
-categories: [Network]
+categories: [network]
 tags: []
 ---
 

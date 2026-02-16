@@ -1,7 +1,7 @@
 ---
 title: "[Spring/Next.js] AWS S3 Presigned URL 이용해서 이미지 업로드 및 조회 구현하기"
 date: 2024-05-29 16:20:00 +0900
-categories: [Java, Spring, TypeScript, Nextjs]
+categories: [java, spring, typescript, nextjs]
 tags: []
 ---
 

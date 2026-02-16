@@ -1,7 +1,7 @@
 ---
 title: "[Java Spring] PostgreSQL 연동이 안될 때 해결 방법 (Failed to configure a DataSource)"
 date: 2024-03-04 19:35:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 

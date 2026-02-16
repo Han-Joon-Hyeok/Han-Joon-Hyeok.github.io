@@ -1,7 +1,7 @@
 ---
 title: "[Next.js] Vercel 대신 AWS 에 배포하기(feat.SST)"
 date: 2024-10-02 17:20:00 +0900
-categories: [AWS, Nextjs]
+categories: [aws, nextjs]
 tags: []
 ---
 

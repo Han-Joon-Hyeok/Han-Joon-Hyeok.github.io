@@ -2,7 +2,7 @@
 title: TIL - 소수 판별 알고리즘 (JavaScript)
 date: 2021-11-07 20:30:00 +0900
 categories: [javascript]
-tags: [javascript, TIL]
+tags: [javascript, til]
 use_math: true
 ---
 

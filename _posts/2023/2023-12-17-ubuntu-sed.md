@@ -1,7 +1,7 @@
 ---
 title: "[Linux] sed 명령어로 파일 내용 한번에 변경하기"
 date: 2023-12-17 21:20:00 +0900
-categories: [linux]
+categories: [inux]
 tags: []
 ---
 

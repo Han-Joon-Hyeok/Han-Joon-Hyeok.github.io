@@ -1,7 +1,7 @@
 ---
 title: "[Linux] ubuntu 사용 중인 포트 번호 확인"
 date: 2023-12-17 21:20:00 +0900
-categories: [linux]
+categories: [inux]
 tags: []
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "GitHub 오픈소스 기여하기"
 date: 2024-08-25 15:50:00 +0900
-categories: [GitHub]
+categories: [github]
 tags: []
 ---
 

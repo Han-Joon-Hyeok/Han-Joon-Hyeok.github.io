@@ -1,7 +1,7 @@
 ---
 title: "[Java] 문자열 클래스 String, StringBuffer, StringBuilder 정리"
 date: 2025-02-23 18:55:00 +0900
-categories: [Java]
+categories: [java]
 tags: []
 ---
 

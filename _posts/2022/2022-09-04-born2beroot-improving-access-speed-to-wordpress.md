@@ -1,7 +1,7 @@
 ---
 title: "WordPress 접속 느려지는 현상 해결방법"
 date: 2022-09-04 23:00:00 +0900
-categories: [42seoul]
+categories: [l42seoul]
 tags: [born2beroot]
 use_math: true
 ---

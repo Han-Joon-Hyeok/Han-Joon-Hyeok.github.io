@@ -1,7 +1,7 @@
 ---
 title: "IPv4 주소의 기본 구조"
 date: 2025-05-26 17:15:00 +0900
-categories: [Network]
+categories: [network]
 tags: []
 use_math: true
 ---

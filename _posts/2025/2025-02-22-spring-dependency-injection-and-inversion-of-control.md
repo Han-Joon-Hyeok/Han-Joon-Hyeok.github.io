@@ -1,7 +1,7 @@
 ---
 title: "[Spring] 의존성 주입(DI)과 제어의 역전(IoC) 개념 정리"
 date: 2025-02-22 00:30:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 

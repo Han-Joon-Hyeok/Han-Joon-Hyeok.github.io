@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 1 - 콜라 문제 (JavaScript)
 date: 2022-12-19 09:30:00 +0900
 categories: [programmers]
-tags: [level1, programmers, JavaScript]
+tags: [level1, programmers, javascript]
 use_math: true
 ---
 

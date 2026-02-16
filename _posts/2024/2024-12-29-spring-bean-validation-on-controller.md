@@ -1,7 +1,7 @@
 ---
 title: "[Spring] DTO 입력 값 검증하기 (Bean Validation 활용)"
 date: 2024-12-29 18:10:00 +0900
-categories: [Java, Spring]
+categories: [java, spring]
 tags: []
 ---
 

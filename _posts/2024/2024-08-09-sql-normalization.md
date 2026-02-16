@@ -1,7 +1,7 @@
 ---
 title: "[SQLD] 정규화, 비정규화, 정규형(1~5)"
 date: 2024-08-09 15:35:00 +0900
-categories: [SQL, SQLD]
+categories: [sql, sqld]
 tags: []
 ---
 

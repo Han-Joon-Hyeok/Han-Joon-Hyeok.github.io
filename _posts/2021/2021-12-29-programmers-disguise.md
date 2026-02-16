@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 2 - 위장 (JavaScript)
 date: 2021-12-29 20:20:00 +0900
 categories: [programmers]
-tags: [level2, programmers, JavaScript]
+tags: [level2, programmers, javascript]
 use_math: true
 ---
 

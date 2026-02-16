@@ -1,7 +1,7 @@
 ---
 title: "[Linux] python 을 crontab 으로 실행하도록 했는데 실행되지 않는 이유 (feat. 상대경로, 절대경로)"
 date: 2023-12-17 21:20:00 +0900
-categories: [linux]
+categories: [inux]
 tags: []
 ---
 

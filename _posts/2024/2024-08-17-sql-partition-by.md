@@ -1,7 +1,7 @@
 ---
 title: "[SQLD] PARTITION BY 이용해서 누적 합계 구하기"
 date: 2024-08-17 14:20:00 +0900
-categories: [SQL, SQLD]
+categories: [sql, sqld]
 tags: []
 ---
 

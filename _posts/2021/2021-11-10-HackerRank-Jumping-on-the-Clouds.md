@@ -1,8 +1,8 @@
 ---
 title: HackerRank - Jumping on the Clouds (JavaScript)
 date: 2021-11-10 14:40:00 +0900
-categories: [HackerRank]
-tags: [HackerRank, javascript]
+categories: [hackerrank]
+tags: [hackerrank, javascript]
 use_math: true
 ---
 

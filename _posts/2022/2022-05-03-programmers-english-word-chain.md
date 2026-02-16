@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 2 - 영어 끝말잇기 (JavaScript)
 date: 2022-05-03 21:00:00 +0900
 categories: [programmers]
-tags: [level2, programmers, JavaScript]
+tags: [level2, programmers, javascript]
 use_math: true
 ---
 

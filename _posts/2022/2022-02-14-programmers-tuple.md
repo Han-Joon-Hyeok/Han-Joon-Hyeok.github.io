@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 2 - 튜플 (JavaScript)
 date: 2022-02-14 15:20:00 +0900
 categories: [programmers]
-tags: [level2, programmers, JavaScript]
+tags: [level2, programmers, javascript]
 use_math: true
 ---
 

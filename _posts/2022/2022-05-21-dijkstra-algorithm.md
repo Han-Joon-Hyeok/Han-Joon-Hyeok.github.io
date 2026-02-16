@@ -1,8 +1,8 @@
 ---
 title: 다익스트라 알고리즘 개념 정리 및 구현 (JavaScript)
 date: 2022-05-21 17:50:00 +0900
-categories: [Algorithm]
-tags: [dijkstra, JavaScript]
+categories: [algorithm]
+tags: [dijkstra, javascript]
 use_math: true
 ---
 

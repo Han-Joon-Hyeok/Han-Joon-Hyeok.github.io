@@ -1,7 +1,7 @@
 ---
 title: "[회고] 2025 Seoulana 해커톤 회고"
 date: 2025-04-12 23:50:00 +0900
-categories: [Retrospect]
+categories: [retrospect]
 tags: []
 ---
 

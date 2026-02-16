@@ -1,7 +1,7 @@
 ---
 title: "생각 많은 ISTJ 개발자가 구글 캘린더를 활용하는 방법"
 date: 2025-10-05 20:35:00 +0900
-categories: [Productivity]
+categories: [productivity]
 tags: []
 use_math: true
 ---

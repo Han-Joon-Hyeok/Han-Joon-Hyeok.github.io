@@ -2,7 +2,7 @@
 title: 프로그래머스 Level 1 - 최댓값 구하기 (MySQL)
 date: 2021-11-17 14:50:00 +0900
 categories: [programmers]
-tags: [level1, programmers, MySQL]
+tags: [level1, programmers, mysql]
 ---
 
 > [프로그래머스 - Level1 최댓값 구하기](https://programmers.co.kr/learn/courses/30/lessons/59415)

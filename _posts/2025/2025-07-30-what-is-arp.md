@@ -1,7 +1,7 @@
 ---
 title: "ARP 개념 정리"
 date: 2025-07-30 16:30:00 +0900
-categories: [Network]
+categories: [network]
 tags: []
 use_math: true
 ---

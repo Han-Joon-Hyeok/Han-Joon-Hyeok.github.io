@@ -1,7 +1,7 @@
 ---
 title: "[GitHub] Octokit 을 이용한 Issue 생성 시 Issue 생성자를 GitHub Bot 으로 변경하기"
 date: 2024-08-28 15:10:00 +0900
-categories: [GitHub, JavaScript]
+categories: [github, javascript]
 tags: []
 ---
 
