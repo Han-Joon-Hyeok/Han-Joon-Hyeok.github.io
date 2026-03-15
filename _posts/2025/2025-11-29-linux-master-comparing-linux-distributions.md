@@ -1,7 +1,7 @@
 ---
 title: "[리눅스마스터 1급] 리눅스 배포판 종류별 특징"
 date: 2025-11-29 23:30:00 +0900
-categories: [l'inux master']
+categories: ['linux master']
 tags: []
 use_math: true
 ---
